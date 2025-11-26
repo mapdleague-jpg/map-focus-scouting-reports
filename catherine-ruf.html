@@ -1,6 +1,8 @@
-<!-- ============================= -->
-<!-- MAP BRAND STYLE (GLOBAL) -->
-<!-- ============================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Catherine Ruf — MAP Scouting Report</title>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
@@ -12,16 +14,34 @@
     color: #1a1a1a;
   }
 
+  /* HERO FIX */
   .prospect-hero {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
     gap: 1.25rem;
     padding: 1.5rem 1.25rem;
     border-radius: 12px;
     background: #2E5084;
     color: #ffffff;
     margin-bottom: 1.5rem;
+  }
+
+  .prospect-hero-main {
+    flex: 1 1 60%;
+    max-width: 70%;
+    min-width: 260px;
+  }
+
+  .prospect-grade-card {
+    flex: 0 0 200px;
+    width: 200px;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(4px);
   }
 
   .prospect-name {
@@ -33,7 +53,7 @@
   }
 
   .prospect-tagline {
-    margin: 0 0 0.15rem;
+    margin: 0 0 0.18rem;
     font-size: 0.95rem;
     font-weight: 600;
   }
@@ -44,39 +64,27 @@
     opacity: 0.9;
   }
 
-  .prospect-grade-card {
-    min-width: 180px;
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.15); /* FIXED */
-    border: 1px solid rgba(255,255,255,0.3);
-    backdrop-filter: blur(4px);
-  }
-
   .grade-label {
     font-size: 0.7rem;
     text-transform: uppercase;
     opacity: 0.8;
     margin-bottom: 0.25rem;
   }
-
   .grade-score {
     font-family: 'Archivo Black', sans-serif;
     font-size: 1.9rem;
     margin-bottom: 0.1rem;
   }
-
   .grade-tier {
     font-size: 0.8rem;
     font-weight: 600;
-    margin-bottom: 0.1rem;
   }
-
   .grade-note {
     font-size: 0.75rem;
     opacity: 0.85;
   }
 
+  /* META */
   .prospect-meta {
     display: flex;
     flex-wrap: wrap;
@@ -120,6 +128,7 @@
     margin-left: 1rem;
   }
 
+  /* SECTIONS */
   .prospect-section {
     margin-bottom: 1.25rem;
     padding: 1rem 1.1rem;
@@ -138,33 +147,19 @@
 
   .section-body {
     font-size: 0.88rem;
-    line-height: 1.48;
+    line-height: 1.45;
   }
 
   .section-list {
     padding-left: 1.1rem;
-    margin: 0;
     font-size: 0.88rem;
     line-height: 1.48;
   }
 
-  .section-list li {
-    margin-bottom: 0.35rem;
-  }
-
-  @media (max-width: 640px) {
-    .meta-list li {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .meta-value {
-      text-align: left;
-      margin-left: 0;
-      margin-top: 0.1rem;
-    }
-  }
 </style>
+</head>
 
+<body>
 <div class="prospect-page">
 
   <section class="prospect-hero">
@@ -186,23 +181,23 @@
     <div class="meta-column">
       <h2 class="meta-title">Prospect Info</h2>
       <ul class="meta-list">
-        <li><span class="meta-key">School</span><span class="meta-value">Columbia University</span></li>
-        <li><span class="meta-key">Major</span><span class="meta-value">Financial Economics</span></li>
-        <li><span class="meta-key">Minor</span><span class="meta-value">N/A</span></li>
-        <li><span class="meta-key">Year</span><span class="meta-value">2028</span></li>
-        <li><span class="meta-key">Sport</span><span class="meta-value">Rowing</span></li>
-        <li><span class="meta-key">Hometown</span><span class="meta-value">Greenwich, CT</span></li>
+        <li><span>School</span><span class="meta-value">Columbia University</span></li>
+        <li><span>Major</span><span class="meta-value">Financial Economics</span></li>
+        <li><span>Minor</span><span class="meta-value">N/A</span></li>
+        <li><span>Year</span><span class="meta-value">2028</span></li>
+        <li><span>Sport</span><span class="meta-value">Rowing</span></li>
+        <li><span>Hometown</span><span class="meta-value">Greenwich, CT</span></li>
       </ul>
     </div>
 
     <div class="meta-column">
       <h2 class="meta-title">MAP Profile</h2>
       <ul class="meta-list">
-        <li><span class="meta-key">Fall Rank</span><span class="meta-value">4 / 63</span></li>
-        <li><span class="meta-key">GPA</span><span class="meta-value">3.5</span></li>
-        <li><span class="meta-key">Captain</span><span class="meta-value">Captain contention · locker room leader trajectory</span></li>
-        <li><span class="meta-key">Personality</span><span class="meta-value">9. Player-Coach</span></li>
-        <li><span class="meta-key">Performance</span><span class="meta-value">Top-5 performer · strong scrimmage + assignment execution</span></li>
+        <li><span>Fall Rank</span><span class="meta-value">4 / 63</span></li>
+        <li><span>GPA</span><span class="meta-value">3.5</span></li>
+        <li><span>Captain</span><span class="meta-value">Captain Contention</span></li>
+        <li><span>Personality</span><span class="meta-value">9. Player-Coach</span></li>
+        <li><span>Performance</span><span class="meta-value">High consistency · strong leadership wiring</span></li>
       </ul>
     </div>
   </section>
@@ -210,48 +205,42 @@
   <section class="prospect-section">
     <h2 class="section-title">Overview</h2>
     <p class="section-body">
-      A flagship Player-Coach archetype and one of the highest-floor prospects in the Diamond League class,
-      Catherine represents the precise cultural wiring elite banking teams bet on early: honor, discipline,
-      respect, and a deep sense of responsibility to her team and standards. A top-5 finisher in a highly
-      competitive 63-athlete cohort, she consistently models maturity beyond her years — always prepared,
-      thoughtful, and operating with a “raise the floor” mentality that strengthens every group she joins.
-      <br><br>
-      Her rowing résumé — Henley Royal Regatta champion, Youth Nationals medalist, and long-tenured varsity leader —
-      reflects years of high-pressure athletic success. Combine that with private equity exposure, IB externship
-      experience, and technical training through MAP + TTS, and Catherine profiles as a polished early recruit who
-      brings both intellectual and cultural value to a deal team from day one.
+      Catherine is one of the most disciplined and high-character prospects in the Diamond League class. A true Player-Coach
+      operator, she brings a rare combination of maturity, composure, and leadership that elevates every team she touches.
+      Her profile demonstrates both strong academic fundamentals and meaningful leadership experience, with a track record
+      that positions her as an early standout for investment banking recruiting.
     </p>
   </section>
 
   <section class="prospect-section">
     <h2 class="section-title">Strengths</h2>
     <ul class="section-list">
-      <li><strong>Player-Coach leadership:</strong> Upholds culture, discipline, and respect — teammates track her standards and follow her lead.</li>
-      <li><strong>Elite rowing pedigree:</strong> Henley Royal Regatta winner, Youth Nationals medalist, and 1V 8+ standout; proven under global pressure.</li>
-      <li><strong>Intentional communicator:</strong> Uses pause-plays to select relevant examples and deliver structured, composed answers.</li>
-      <li><strong>Early finance exposure:</strong> Private equity internship + IB externship + valuation and sector work through MAP.</li>
-      <li><strong>MAP standout:</strong> Ranked 4 / 63 — consistent, high-quality execution across the C&amp;R case.</li>
-      <li><strong>Service-driven leader:</strong> Barat Foundation, Coffee for Good &amp; FSYC signal maturity, empathy, and integrity.</li>
+      <li><strong>High character & discipline:</strong> Reinforces culture and standards across every deliverable.</li>
+      <li><strong>Leadership wiring:</strong> Embodies the Player-Coach style — structured, principled, dependable.</li>
+      <li><strong>Strong communicator:</strong> Thoughtful, measured, confident under pressure.</li>
+      <li><strong>Academic readiness:</strong> Relevant coursework & demonstrated intellectual discipline.</li>
+      <li><strong>Team-first approach:</strong> Prioritizes team cohesion and sets a consistent example.</li>
     </ul>
   </section>
 
   <section class="prospect-section">
     <h2 class="section-title">Areas for Development</h2>
     <ul class="section-list">
-      <li>Continue refining interview storytelling to match depth of experience.</li>
-      <li>Lean more proactively into vocal leadership moments in professional settings.</li>
-      <li>Accelerate technical reps (modeling speed, accounting depth) to strengthen Day-1 readiness.</li>
+      <li>Continue building technical fluency across valuation frameworks.</li>
+      <li>More early verbal assertiveness during team case work.</li>
+      <li>Practice adding sharper, more concise storytelling elements.</li>
     </ul>
   </section>
 
   <section class="prospect-section">
     <h2 class="section-title">Projection</h2>
     <p class="section-body">
-      Round 1–2 MAP prospect with the pedigree, discipline, and cultural wiring of a future tone-setter on any
-      investment banking team. With continued technical reps and communication refinement, she projects as a
-      high-floor, high-character analyst capable of elevating the entire class around her.
+      A Round 1–2 MAP prospect with leadership traits firms actively seek. Catherine’s discipline, character, and
+      consistency give her a high floor, while her growing technical foundation positions her to become a culture-driver
+      inside any analyst program.
     </p>
   </section>
 
 </div>
-
+</body>
+</html>
