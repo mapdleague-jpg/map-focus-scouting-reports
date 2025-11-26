@@ -1,0 +1,280 @@
+<!-- ============================= -->
+<!-- MAP BRAND STYLE (GLOBAL) -->
+<!-- ============================= -->
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+  .prospect-page {
+    max-width: 960px;
+    margin: 0 auto 2.5rem auto;
+    font-family: 'Montserrat', sans-serif;
+    color: #1a1a1a;
+  }
+
+  .prospect-hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding: 1.5rem 1.25rem;
+    border-radius: 12px;
+    background: #2E5084;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+  }
+
+  .prospect-name {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.85rem;
+    margin: 0 0 0.25rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .prospect-tagline {
+    margin: 0 0 0.15rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .prospect-subtitle {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.9;
+  }
+
+  .prospect-grade-card {
+    min-width: 180px;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(4px);
+  }
+
+  .grade-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 0.25rem;
+  }
+
+  .grade-score {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.9rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .grade-tier {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+  }
+
+  .grade-note {
+    font-size: 0.75rem;
+    opacity: 0.85;
+  }
+
+  .prospect-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .meta-column {
+    flex: 1 1 260px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    border: 1px solid #dce2ee;
+  }
+
+  .meta-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #2E5084;
+    margin: 0 0 0.6rem;
+  }
+
+  .meta-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .meta-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 0;
+    border-bottom: 1px dotted #e5e8f1;
+    font-size: 0.85rem;
+  }
+
+  .meta-value {
+    text-align: right;
+    margin-left: 1rem;
+  }
+
+  .prospect-section {
+    margin-bottom: 1.25rem;
+    padding: 1rem 1.1rem;
+    border-radius: 10px;
+    border: 1px solid #dce2ee;
+    background: #ffffff;
+  }
+
+  .section-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #2E5084;
+    margin: 0 0 0.6rem;
+  }
+
+  .section-body {
+    font-size: 0.88rem;
+    line-height: 1.48;
+  }
+
+  .section-list {
+    padding-left: 1.1rem;
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.48;
+  }
+
+  .section-list li {
+    margin-bottom: 0.35rem;
+  }
+
+  @media (max-width: 640px) {
+    .meta-list li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .meta-value {
+      text-align: left;
+      margin-left: 0;
+      margin-top: 0.1rem;
+    }
+  }
+</style>
+
+<div class="prospect-page">
+
+  <!-- ============================= -->
+  <!-- HERO -->
+  <!-- ============================= -->
+  <section class="prospect-hero">
+    <div class="prospect-hero-main">
+      <h1 class="prospect-name">NATHAN WEST</h1>
+      <p class="prospect-tagline">⭐️⭐️⭐️ Prospect · Underdog Archetype · Investment Banking Track</p>
+      <p class="prospect-subtitle">Columbia University · Track &amp; Field 🏃‍ · Class of 2028</p>
+    </div>
+
+    <div class="prospect-grade-card">
+      <div class="grade-label">MAP Prospect Grade</div>
+      <div class="grade-score">8.7</div>
+      <div class="grade-tier">Round 4–5 Candidate</div>
+      <div class="grade-note">High-upside profile with strong interviews and underdog drive</div>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- META -->
+  <!-- ============================= -->
+  <section class="prospect-meta">
+    <div class="meta-column">
+      <h2 class="meta-title">Prospect Info</h2>
+      <ul class="meta-list">
+        <li><span>School</span><span class="meta-value">Columbia University</span></li>
+        <li><span>Major</span><span class="meta-value">Financial Economics</span></li>
+        <li><span>Minor</span><span class="meta-value">N/A</span></li>
+        <li><span>Year</span><span class="meta-value">2028</span></li>
+        <li><span>Sport</span><span class="meta-value">Track &amp; Field</span></li>
+        <li><span>Hometown</span><span class="meta-value">Rexford, NY</span></li>
+      </ul>
+    </div>
+
+    <div class="meta-column">
+      <h2 class="meta-title">MAP Profile</h2>
+      <ul class="meta-list">
+        <li><span>Fall Rank</span><span class="meta-value">8 / 63</span></li>
+        <li><span>GPA</span><span class="meta-value">3.5</span></li>
+        <li><span>Personality</span><span class="meta-value">15. Underdog</span></li>
+        <li><span>Performance</span>
+          <span class="meta-value">
+            Strong résumé + interviews · several late assignments · Playoffs performance below expectations
+          </span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- OVERVIEW -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Overview</h2>
+    <p class="section-body">
+      Nathan is one of the most intriguing “Underdog” archetypes in the entire Diamond League class — highly motivated, deeply
+      competitive, and used to doing more with less. His background tells you everything: a high school athlete without a coach,
+      self-training his way into earning Division I recruitment. That same mentality shows up in his interview presence, where he
+      consistently impresses with maturity, clarity, and quiet confidence.
+      <br><br>
+      His high ranking reflects strong early-season execution and exceptional interview performances, though it does slightly
+      overstate his consistency: Nathan submitted several assignments late and did not deliver at the level expected during the
+      Playoffs. Still, his résumé is one of the stronger ones in the class — with meaningful real estate private equity,
+      investment analysis, and leadership experience across Project Destined, MAP, and Columbia Alpha Partners.
+      <br><br>
+      With more consistent follow-through, Nathan has the potential to significantly outperform his projection. He’s a strong,
+      driven candidate whose best work often comes when his back is against the wall.
+    </p>
+  </section>
+
+  <!-- ============================= -->
+  <!-- STRENGTHS -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Strengths</h2>
+    <ul class="section-list">
+      <li><strong>Underdog mentality:</strong> history of overcoming adversity; internally motivated and relentlessly driven.</li>
+      <li><strong>Strong interview presence:</strong> clear communicator with confident, grounded delivery.</li>
+      <li><strong>Real estate + finance depth:</strong> Project Destined, MAP IB casework, CRE director role.</li>
+      <li><strong>High maturity:</strong> D1 athlete balancing training, consulting-style work, and leadership commitments.</li>
+      <li><strong>Operational resilience:</strong> calm under pressure; excels in real-time problem solving.</li>
+      <li><strong>Leadership foundation:</strong> NCAA SAAC rep + CRE leadership + youth mentorship programs.</li>
+    </ul>
+  </section>
+
+  <!-- ============================= -->
+  <!-- AREAS FOR DEVELOPMENT -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Areas for Development</h2>
+    <ul class="section-list">
+      <li>Improve consistency — reduce late submissions and maintain focus through the full MAP season.</li>
+      <li>Deliver more polished and complete assignment outputs in high-stakes weeks.</li>
+      <li>Enhance technical precision and speed to match peers with stronger modeling experience.</li>
+    </ul>
+  </section>
+
+  <!-- ============================= -->
+  <!-- PROJECTION -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Projection</h2>
+    <p class="section-body">
+      A 3-Star, Round 4–5 MAP prospect with meaningful upside — especially given his strong interviews and authentic
+      Underdog DNA. Nathan’s competitiveness, drive, and adaptability give him a real shot to outperform expectations during the
+      2027 recruiting cycle. If he tightens his consistency and raises his technical polish, he has the ingredients to become a
+      much stronger late-cycle investment banking candidate than his grade initially suggests.
+    </p>
+  </section>
+
+</div>
