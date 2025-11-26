@@ -1,0 +1,277 @@
+<!-- ============================= -->
+<!-- MAP BRAND STYLE (GLOBAL) -->
+<!-- ============================= -->
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+  .prospect-page {
+    max-width: 960px;
+    margin: 0 auto 2.5rem auto;
+    font-family: 'Montserrat', sans-serif;
+    color: #1a1a1a;
+  }
+
+  .prospect-hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding: 1.5rem 1.25rem;
+    border-radius: 12px;
+    background: #2E5084;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+  }
+
+  .prospect-name {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.85rem;
+    margin: 0 0 0.25rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .prospect-tagline {
+    margin: 0 0 0.15rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .prospect-subtitle {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.9;
+  }
+
+  .prospect-grade-card {
+    min-width: 180px;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.15); /* FIXED */
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(4px);
+  }
+
+  .grade-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 0.25rem;
+  }
+
+  .grade-score {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.9rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .grade-tier {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+  }
+
+  .grade-note {
+    font-size: 0.75rem;
+    opacity: 0.85;
+  }
+
+  .prospect-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .meta-column {
+    flex: 1 1 260px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    border: 1px solid #dce2ee;
+  }
+
+  .meta-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #2E5084;
+    margin: 0 0 0.6rem;
+  }
+
+  .meta-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .meta-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 0;
+    border-bottom: 1px dotted #e5e8f1;
+    font-size: 0.85rem;
+  }
+
+  .meta-value {
+    text-align: right;
+    margin-left: 1rem;
+  }
+
+  .prospect-section {
+    margin-bottom: 1.25rem;
+    padding: 1rem 1.1rem;
+    border-radius: 10px;
+    border: 1px solid #dce2ee;
+    background: #ffffff;
+  }
+
+  .section-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #2E5084;
+    margin: 0 0 0.6rem;
+  }
+
+  .section-body {
+    font-size: 0.88rem;
+    line-height: 1.48;
+  }
+
+  .section-list {
+    padding-left: 1.1rem;
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.48;
+  }
+
+  .section-list li {
+    margin-bottom: 0.35rem;
+  }
+
+  @media (max-width: 640px) {
+    .meta-list li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .meta-value {
+      text-align: left;
+      margin-left: 0;
+      margin-top: 0.1rem;
+    }
+  }
+</style>
+
+<div class="prospect-page">
+
+  <!-- ============================= -->
+  <!-- HERO -->
+  <!-- ============================= -->
+  <section class="prospect-hero">
+    <div class="prospect-hero-main">
+      <h1 class="prospect-name">ELIZABETH OYLER</h1>
+      <p class="prospect-tagline">⭐️⭐️⭐️⭐️⭐️ Prospect · Give-and-Go Leader · Investment Banking Track</p>
+      <p class="prospect-subtitle">WashU in St. Louis · Swimming &amp; Diving 🏊‍♀️ · Class of 2028</p>
+    </div>
+
+    <div class="prospect-grade-card">
+      <div class="grade-label">MAP Prospect Grade</div>
+      <div class="grade-score">9.7</div>
+      <div class="grade-tier">Round 1 Candidate</div>
+      <div class="grade-note">Elite reliability, emotional intelligence, and upside</div>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- META -->
+  <!-- ============================= -->
+  <section class="prospect-meta">
+    <div class="meta-column">
+      <h2 class="meta-title">Prospect Info</h2>
+      <ul class="meta-list">
+        <li><span class="meta-key">School</span><span class="meta-value">WashU in St. Louis</span></li>
+        <li><span class="meta-key">Major</span><span class="meta-value">Psychology</span></li>
+        <li><span class="meta-key">Minor</span><span class="meta-value">French</span></li>
+        <li><span class="meta-key">Year</span><span class="meta-value">2028</span></li>
+        <li><span class="meta-key">Sport</span><span class="meta-value">Swimming &amp; Diving</span></li>
+        <li><span class="meta-key">Hometown</span><span class="meta-value">Chicago, IL</span></li>
+      </ul>
+    </div>
+
+    <div class="meta-column">
+      <h2 class="meta-title">MAP Profile</h2>
+      <ul class="meta-list">
+        <li><span class="meta-key">Fall Rank</span><span class="meta-value">6 / 63</span></li>
+        <li><span class="meta-key">GPA</span><span class="meta-value">3.77</span></li>
+        <li><span class="meta-key">Captain</span><span class="meta-value">Diamond League Investments Captain</span></li>
+        <li><span class="meta-key">Personality</span><span class="meta-value">4. Give-and-Go</span></li>
+        <li><span class="meta-key">Performance</span>
+          <span class="meta-value">
+            First on every MAP assignment · completed all Extra Reps · leadership exceeds rank
+          </span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- OVERVIEW -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Overview</h2>
+    <p class="section-body">
+      One of the most special prospects in the entire Diamond League class. Elizabeth was the first to submit 
+      every single MAP assignment — and uniquely completed all voluntary “Extra Rep” tasks, a rare indicator of 
+      internal drive and professional maturity. Her rank already places her in the top 10, but her leadership 
+      impact and consistency actually outperform that number by a wide margin.
+      <br><br>
+      As a Give-and-Go personality, she plays a stabilizing, emotionally intelligent role on any team — offering 
+      support, resolving issues, and maintaining cohesion without ever seeking credit. Layer that with captain-level 
+      leadership on the Guggenheim C&amp;R case, strong research experience, and a deep service portfolio, and Elizabeth 
+      profiles as one of the highest-floor, highest-character early candidates across the MAP ecosystem.
+    </p>
+  </section>
+
+  <!-- ============================= -->
+  <!-- STRENGTHS -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Strengths</h2>
+    <ul class="section-list">
+      <li><strong>Unmatched reliability:</strong> First to submit every assignment; completed all Extra Reps (extremely rare).</li>
+      <li><strong>Give-and-Go emotional intelligence:</strong> Stabilizes teams, supports peers, builds trust, and elevates morale.</li>
+      <li><strong>Leadership beyond rank:</strong> Captain of Diamond League C&amp;R team; execution and culture impact exceed her #6 finish.</li>
+      <li><strong>Academic excellence:</strong> 3.77 GPA · strong coursework in capital markets, statistics, and managerial environments.</li>
+      <li><strong>Research maturity:</strong> Hands-on psychology lab experience + entrepreneurship programs work at UChicago Polsky Center.</li>
+      <li><strong>Service-driven operator:</strong> DEI committee work, lifeguard leadership, and youth programs all reinforce character and responsibility.</li>
+    </ul>
+  </section>
+
+  <!-- ============================= -->
+  <!-- AREAS FOR DEVELOPMENT -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Areas for Development</h2>
+    <ul class="section-list">
+      <li>Continue asserting her voice earlier in high-stakes group discussions; her insights carry weight.</li>
+      <li>Expand technical fundamentals (valuation frameworks, modeling speed) to match her leadership ceiling.</li>
+      <li>Practice delivering more concise, high-impact responses during interviews.</li>
+    </ul>
+  </section>
+
+  <!-- ============================= -->
+  <!-- PROJECTION -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Projection</h2>
+    <p class="section-body">
+      A clear Round 1 MAP prospect — elite reliability, emotional intelligence, and leadership upside. Elizabeth’s 
+      consistency, character, and execution make her the type of analyst candidates model themselves after. With 
+      continued technical reps, she projects as a future culture-setter who will elevate any deal team from day one.
+    </p>
+  </section>
+
+</div>
