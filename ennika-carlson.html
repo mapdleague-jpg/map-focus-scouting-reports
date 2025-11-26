@@ -1,0 +1,281 @@
+<!-- ============================= -->
+<!-- MAP BRAND STYLE (GLOBAL) -->
+<!-- ============================= -->
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+  .prospect-page {
+    max-width: 960px;
+    margin: 0 auto 2.5rem auto;
+    font-family: 'Montserrat', sans-serif;
+    color: #1a1a1a;
+  }
+
+  .prospect-hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding: 1.5rem 1.25rem;
+    border-radius: 12px;
+    background: #2E5084;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+  }
+
+  .prospect-name {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.85rem;
+    margin: 0 0 0.25rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .prospect-tagline {
+    margin: 0 0 0.15rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .prospect-subtitle {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.9;
+  }
+
+  .prospect-grade-card {
+    min-width: 180px;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(4px);
+  }
+
+  .grade-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 0.25rem;
+  }
+
+  .grade-score {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.9rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .grade-tier {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+  }
+
+  .grade-note {
+    font-size: 0.75rem;
+    opacity: 0.85;
+  }
+
+  .prospect-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .meta-column {
+    flex: 1 1 260px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    border: 1px solid #dce2ee;
+  }
+
+  .meta-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #2E5084;
+    margin: 0 0 0.6rem;
+  }
+
+  .meta-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .meta-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 0;
+    border-bottom: 1px dotted #e5e8f1;
+    font-size: 0.85rem;
+  }
+
+  .meta-value {
+    text-align: right;
+    margin-left: 1rem;
+  }
+
+  .prospect-section {
+    margin-bottom: 1.25rem;
+    padding: 1rem 1.1rem;
+    border-radius: 10px;
+    border: 1px solid #dce2ee;
+    background: #ffffff;
+  }
+
+  .section-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #2E5084;
+    margin: 0 0 0.6rem;
+  }
+
+  .section-body {
+    font-size: 0.88rem;
+    line-height: 1.48;
+  }
+
+  .section-list {
+    padding-left: 1.1rem;
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.48;
+  }
+
+  .section-list li {
+    margin-bottom: 0.35rem;
+  }
+
+  @media (max-width: 640px) {
+    .meta-list li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .meta-value {
+      text-align: left;
+      margin-left: 0;
+      margin-top: 0.1rem;
+    }
+  }
+</style>
+
+<div class="prospect-page">
+
+  <!-- ============================= -->
+  <!-- HERO -->
+  <!-- ============================= -->
+  <section class="prospect-hero">
+    <div class="prospect-hero-main">
+      <h1 class="prospect-name">ENNIKA CARLSON</h1>
+      <p class="prospect-tagline">⭐️⭐️⭐️⭐️⭐️ Prospect · Two-Way Player Archetype · Investment Banking Track</p>
+      <p class="prospect-subtitle">Harvard University · Swimming &amp; Diving 🏊‍♀️ · Class of 2028</p>
+    </div>
+
+    <div class="prospect-grade-card">
+      <div class="grade-label">MAP Prospect Grade</div>
+      <div class="grade-score">9.6</div>
+      <div class="grade-tier">Round 1 Candidate</div>
+      <div class="grade-note">Pro-ready maturity, elite EQ, captain-level leadership</div>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- META -->
+  <!-- ============================= -->
+  <section class="prospect-meta">
+    <div class="meta-column">
+      <h2 class="meta-title">Prospect Info</h2>
+      <ul class="meta-list">
+        <li><span class="meta-key">School</span><span class="meta-value">Harvard University</span></li>
+        <li><span class="meta-key">Major</span><span class="meta-value">Applied Mathematics</span></li>
+        <li><span class="meta-key">Minor</span><span class="meta-value">N/A</span></li>
+        <li><span class="meta-key">Year</span><span class="meta-value">2028</span></li>
+        <li><span class="meta-key">Sport</span><span class="meta-value">Swimming &amp; Diving</span></li>
+        <li><span class="meta-key">Hometown</span><span class="meta-value">Dana Point, CA</span></li>
+      </ul>
+    </div>
+
+    <div class="meta-column">
+      <h2 class="meta-title">MAP Profile</h2>
+      <ul class="meta-list">
+        <li><span class="meta-key">Fall Rank</span><span class="meta-value">2 / 63</span></li>
+        <li><span class="meta-key">GPA</span><span class="meta-value">3.52</span></li>
+        <li><span class="meta-key">Personality</span><span class="meta-value">14. Two-Way Player</span></li>
+        <li><span class="meta-key">Performance</span>
+          <span class="meta-value">
+            Diamond League Captain · elite emotional intelligence · top 1% MAP performer
+          </span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- OVERVIEW -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Overview</h2>
+    <p class="section-body">
+      One of the most complete prospects in the MAP ecosystem — a polished, emotionally intelligent leader with 
+      pro-ready presence and captain-level execution. Ennika finished #2 out of 63 in the Fall Rankings and earned 
+      Diamond League Captain honors after placing in the top 1% of 250+ MAP athletes.
+      <br><br>
+      As a Two-Way Player personality type, she seamlessly blends high-EQ relationship management with strong analytical 
+      and project execution ability. Teammates consistently seek her out for guidance, and coaches trust her judgment in 
+      navigating group dynamics and supporting team morale. Her ability to listen first, process with empathy, and act 
+      decisively makes her one of the highest-floor behavioral interview candidates in the entire class.
+      <br><br>
+      Professionally, her résumé spans investment banking work through MAP x Guggenheim, commercial real estate 
+      experience at Berkshire Hathaway, cross-cultural teaching in Vietnam, long-term mentorship roles, and 
+      entrepreneurship. Layered with Division I athletics, national finalist diving accolades, and a decade of 
+      service-driven community involvement, she projects as an immediate culture-add to any firm.
+    </p>
+  </section>
+
+  <!-- ============================= -->
+  <!-- STRENGTHS -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Strengths</h2>
+    <ul class="section-list">
+      <li><strong>Elite emotional intelligence:</strong> Go-to peer for sensitive conversations; trusted by coaches for team dynamics insight.</li>
+      <li><strong>Two-Way Player versatility:</strong> Polished communicator and strong executor across technical and people-facing tasks.</li>
+      <li><strong>MAP excellence:</strong> Diamond League Captain · top 1% performer · flawless execution on Guggenheim case deliverables.</li>
+      <li><strong>Professional readiness:</strong> Real estate experience at Berkshire Hathaway + MAP banking leadership.</li>
+      <li><strong>Service &amp; impact:</strong> Guide Dogs of America ambassador, cross-cultural math/skills educator in Vietnam.</li>
+      <li><strong>Long-term leadership:</strong> 14 years of piano; multi-year educator; dog-training entrepreneur donating proceeds to service causes.</li>
+      <li><strong>High athletic pedigree:</strong> 5× Junior National Finalist; D1 athlete balancing 20+ hrs weekly training with academics.</li>
+    </ul>
+  </section>
+
+  <!-- ============================= -->
+  <!-- AREAS FOR DEVELOPMENT -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Areas for Development</h2>
+    <ul class="section-list">
+      <li>GPA is solid but not elite — continued consistency will strengthen academic profile.</li>
+      <li>Clarify long-term industry focus; expressed interest beyond IB should be narrative-polished for interviews.</li>
+    </ul>
+  </section>
+
+  <!-- ============================= -->
+  <!-- PROJECTION -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Projection</h2>
+    <p class="section-body">
+      A high-character, pro-ready Round 1 MAP prospect with elite emotional intelligence, strong leadership instincts, 
+      and a versatile, Two-Way Player skill set. Ennika projects as an immediate culture-add and a future anchor on any 
+      deal team. With narrative polish and continued academic consistency, she will stand out to top-tier banking and 
+      consulting programs as a uniquely balanced and dependable analyst candidate.
+    </p>
+  </section>
+
+</div>
