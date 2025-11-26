@@ -1,0 +1,284 @@
+<!-- ============================= -->
+<!-- MAP BRAND STYLE (GLOBAL) -->
+<!-- ============================= -->
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+  .prospect-page {
+    max-width: 960px;
+    margin: 0 auto 2.5rem auto;
+    font-family: 'Montserrat', sans-serif;
+    color: #1a1a1a;
+  }
+
+  .prospect-hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding: 1.5rem 1.25rem;
+    border-radius: 12px;
+    background: #2E5084;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+  }
+
+  .prospect-name {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.85rem;
+    margin: 0 0 0.25rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .prospect-tagline {
+    margin: 0 0 0.15rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .prospect-subtitle {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.9;
+  }
+
+  .prospect-grade-card {
+    min-width: 180px;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(4px);
+  }
+
+  .grade-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 0.25rem;
+  }
+
+  .grade-score {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.9rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .grade-tier {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+  }
+
+  .grade-note {
+    font-size: 0.75rem;
+    opacity: 0.85;
+  }
+
+  .prospect-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .meta-column {
+    flex: 1 1 260px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    border: 1px solid #dce2ee;
+  }
+
+  .meta-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #2E5084;
+    margin: 0 0 0.6rem;
+  }
+
+  .meta-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .meta-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 0;
+    border-bottom: 1px dotted #e5e8f1;
+    font-size: 0.85rem;
+  }
+
+  .meta-value {
+    text-align: right;
+    margin-left: 1rem;
+  }
+
+  .prospect-section {
+    margin-bottom: 1.25rem;
+    padding: 1rem 1.1rem;
+    border-radius: 10px;
+    border: 1px solid #dce2ee;
+    background: #ffffff;
+  }
+
+  .section-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #2E5084;
+    margin: 0 0 0.6rem;
+  }
+
+  .section-body {
+    font-size: 0.88rem;
+    line-height: 1.48;
+  }
+
+  .section-list {
+    padding-left: 1.1rem;
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.48;
+  }
+
+  .section-list li {
+    margin-bottom: 0.35rem;
+  }
+
+  @media (max-width: 640px) {
+    .meta-list li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .meta-value {
+      text-align: left;
+      margin-left: 0;
+      margin-top: 0.1rem;
+    }
+  }
+</style>
+
+<div class="prospect-page">
+
+  <!-- ============================= -->
+  <!-- HERO -->
+  <!-- ============================= -->
+  <section class="prospect-hero">
+    <div class="prospect-hero-main">
+      <h1 class="prospect-name">MICHAEL TZITZIKAKIS</h1>
+      <p class="prospect-tagline">⭐️⭐️⭐️⭐️ Prospect · Hustler Archetype · Investment Banking Track</p>
+      <p class="prospect-subtitle">Columbia University · Rowing 🚣 · Class of 2028</p>
+    </div>
+
+    <div class="prospect-grade-card">
+      <div class="grade-label">MAP Prospect Grade</div>
+      <div class="grade-score">9.1</div>
+      <div class="grade-tier">Round 2–3 Candidate</div>
+      <div class="grade-note">High-upside MAP alum · requires sponsorship (UK)</div>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- META -->
+  <!-- ============================= -->
+  <section class="prospect-meta">
+    <div class="meta-column">
+      <h2 class="meta-title">Prospect Info</h2>
+      <ul class="meta-list">
+        <li><span class="meta-key">School</span><span class="meta-value">Columbia University</span></li>
+        <li><span class="meta-key">Major</span><span class="meta-value">Mechanical Engineering</span></li>
+        <li><span class="meta-key">Minor</span><span class="meta-value">Computer Science</span></li>
+        <li><span class="meta-key">Year</span><span class="meta-value">2028</span></li>
+        <li><span class="meta-key">Sport</span><span class="meta-value">Rowing</span></li>
+        <li><span class="meta-key">Hometown</span><span class="meta-value">London, England</span></li>
+      </ul>
+    </div>
+
+    <div class="meta-column">
+      <h2 class="meta-title">MAP Profile</h2>
+      <ul class="meta-list">
+        <li><span class="meta-key">Fall Rank</span><span class="meta-value">28 / 63</span></li>
+        <li><span class="meta-key">GPA</span><span class="meta-value">3.5</span></li>
+        <li><span class="meta-key">Personality</span><span class="meta-value">6. Hustler</span></li>
+        <li><span class="meta-key">Performance</span>
+          <span class="meta-value">
+            Returning MAP alum · workload spans startup, VC, real estate · ranking undersells quality
+          </span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- OVERVIEW -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Overview</h2>
+    <p class="section-body">
+      Michael is a high-upside Hustler archetype with a rare blend of engineering rigor, early finance exposure,
+      and leadership across multiple high-intensity environments. A Mechanical Engineering major with a
+      Computer Science minor at Columbia Engineering, he pairs strong technical foundations with real reps in
+      venture capital, AI startups, and real estate capital advisory — all while competing as a Division I rower.
+      <br><br>
+      He first came through MAP as a freshman in finance fellowships with Morgan Stanley and Wells Fargo, then
+      proactively returned for Diamond League as a sophomore to get more reps and sharpen his front-office
+      toolkit. That decision, plus his continuous planning and goal orientation, speaks directly to his Hustler DNA:
+      he’s always thinking about the next step and doing the work to get there.
+      <br><br>
+      The main structural obstacle for firms is not ability — it is logistics: as a London-born candidate, Michael
+      will require sponsorship. For banks willing to navigate that, he offers a powerful combination of technical
+      skill, global perspective, and real deal-adjacent experience that significantly outperforms his mid-pack
+      ranking.
+    </p>
+  </section>
+
+  <!-- ============================= -->
+  <!-- STRENGTHS -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Strengths</h2>
+    <ul class="section-list">
+      <li><strong>Hustler drive:</strong> Always planning ahead, sustaining effort toward long-term goals across academics, athletics, and career.</li>
+      <li><strong>Technical horsepower:</strong> Mechanical Engineering + CS at Columbia; decorated maths/physics Olympiad record.</li>
+      <li><strong>Diverse finance exposure:</strong> Experience across AI healthcare startup, VC, and real estate capital advisory.</li>
+      <li><strong>MAP pedigree:</strong> Prior fellowships with Morgan Stanley and Wells Fargo; returning alum for Diamond League reps.</li>
+      <li><strong>Analytical and writing chops:</strong> LP report work, public comps benchmarking, and authored piece on Agentic AI.</li>
+      <li><strong>Leadership and responsibility:</strong> Boat Club Captain at Westminster; handled brand deals, events, and admin.</li>
+      <li><strong>Global perspective:</strong> London to NYC pathway, international competition experience, and cross-border work.</li>
+    </ul>
+  </section>
+
+  <!-- ============================= -->
+  <!-- AREAS FOR DEVELOPMENT -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Areas for Development</h2>
+    <ul class="section-list">
+      <li>Requires work sponsorship, which will narrow the set of firms able to fully engage.</li>
+      <li>GPA is solid but can trend higher to match his technical and experiential ceiling.</li>
+      <li>Needs to keep tightening the narrative that connects engineering, VC, startup, and real estate into a focused IB story.</li>
+      <li>Can further refine behavioral answers to simplify complex technical experiences for non-technical interviewers.</li>
+    </ul>
+  </section>
+
+  <!-- ============================= -->
+  <!-- PROJECTION -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Projection</h2>
+    <p class="section-body">
+      A Round 2–3 MAP prospect with the game to play at a Round 1 level for the right sponsor. Michael offers
+      a rare mix of technical skill, global experience, and demonstrated commitment to finance. For firms able to
+      sponsor international candidates, he represents a high-upside, multi-cycle value play — the type of analyst
+      who can grow into a versatile front-office contributor across banking, growth equity, or principal investing.
+    </p>
+  </section>
+
+</div>
