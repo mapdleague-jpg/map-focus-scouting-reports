@@ -1,0 +1,284 @@
+<!-- ============================= -->
+<!-- MAP BRAND STYLE (GLOBAL) -->
+<!-- ============================= -->
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+  .prospect-page {
+    max-width: 960px;
+    margin: 0 auto 2.5rem auto;
+    font-family: 'Montserrat', sans-serif;
+    color: #1a1a1a;
+  }
+
+  .prospect-hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding: 1.5rem 1.25rem;
+    border-radius: 12px;
+    background: #2E5084;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+  }
+
+  .prospect-name {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.85rem;
+    margin: 0 0 0.25rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .prospect-tagline {
+    margin: 0 0 0.15rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .prospect-subtitle {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.9;
+  }
+
+  .prospect-grade-card {
+    min-width: 180px;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(4px);
+  }
+
+  .grade-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 0.25rem;
+  }
+
+  .grade-score {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.9rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .grade-tier {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+  }
+
+  .grade-note {
+    font-size: 0.75rem;
+    opacity: 0.85;
+  }
+
+  .prospect-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .meta-column {
+    flex: 1 1 260px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    border: 1px solid #dce2ee;
+  }
+
+  .meta-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #2E5084;
+    margin: 0 0 0.6rem;
+  }
+
+  .meta-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .meta-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 0;
+    border-bottom: 1px dotted #e5e8f1;
+    font-size: 0.85rem;
+  }
+
+  .meta-value {
+    text-align: right;
+    margin-left: 1rem;
+  }
+
+  .prospect-section {
+    margin-bottom: 1.25rem;
+    padding: 1rem 1.1rem;
+    border-radius: 10px;
+    border: 1px solid #dce2ee;
+    background: #ffffff;
+  }
+
+  .section-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #2E5084;
+    margin: 0 0 0.6rem;
+  }
+
+  .section-body {
+    font-size: 0.88rem;
+    line-height: 1.48;
+  }
+
+  .section-list {
+    padding-left: 1.1rem;
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.48;
+  }
+
+  .section-list li {
+    margin-bottom: 0.35rem;
+  }
+
+  @media (max-width: 640px) {
+    .meta-list li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .meta-value {
+      text-align: left;
+      margin-left: 0;
+      margin-top: 0.1rem;
+    }
+  }
+</style>
+
+<div class="prospect-page">
+
+  <!-- ============================= -->
+  <!-- HERO -->
+  <!-- ============================= -->
+  <section class="prospect-hero">
+    <div class="prospect-hero-main">
+      <h1 class="prospect-name">LAUREN YU</h1>
+      <p class="prospect-tagline">⭐️⭐️⭐️⭐️⭐️ Prospect · Behind the Scenes Archetype · Investment Banking Track</p>
+      <p class="prospect-subtitle">UNC Chapel Hill · Fencing 🤺 · Class of 2028</p>
+    </div>
+
+    <div class="prospect-grade-card">
+      <div class="grade-label">MAP Prospect Grade</div>
+      <div class="grade-score">9.5</div>
+      <div class="grade-tier">Round 1–2 Candidate</div>
+      <div class="grade-note">Elite résumé + consistent execution; top performer all season</div>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- META -->
+  <!-- ============================= -->
+  <section class="prospect-meta">
+    <div class="meta-column">
+      <h2 class="meta-title">Prospect Info</h2>
+      <ul class="meta-list">
+        <li><span class="meta-key">School</span><span class="meta-value">UNC Chapel Hill</span></li>
+        <li><span class="meta-key">Major</span><span class="meta-value">Business Administration</span></li>
+        <li><span class="meta-key">Minor</span><span class="meta-value">Statistics & Analytics</span></li>
+        <li><span class="meta-key">Year</span><span class="meta-value">2028</span></li>
+        <li><span class="meta-key">Sport</span><span class="meta-value">Fencing</span></li>
+        <li><span class="meta-key">Hometown</span><span class="meta-value">Cresskill, NJ</span></li>
+      </ul>
+    </div>
+
+    <div class="meta-column">
+      <h2 class="meta-title">MAP Profile</h2>
+      <ul class="meta-list">
+        <li><span class="meta-key">Fall Rank</span><span class="meta-value">5 / 63</span></li>
+        <li><span class="meta-key">GPA</span><span class="meta-value">3.9</span></li>
+        <li><span class="meta-key">Personality</span><span class="meta-value">1. Behind the Scenes</span></li>
+        <li><span class="meta-key">Performance</span>
+          <span class="meta-value">
+            Top performer · flawless consistency · always early · one of the most accomplished Fellows
+          </span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- OVERVIEW -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Overview</h2>
+    <p class="section-body">
+      Lauren is one of the most accomplished and consistent Fellows in the entire Diamond League class — a 
+      high-performance operator with elite academic, athletic, and professional credentials. A 3.90 GPA at UNC 
+      Kenan-Flagler paired with Division I Fencing competitiveness reflects both intellectual sharpness and 
+      relentless discipline. Her résumé stands out as one of the deepest in the cohort, with meaningful experience 
+      across M&A, investment analysis, and data-driven research.
+      <br><br>
+      Her defining trait: **consistency**. Lauren submits work early, maintains meticulous detail across every 
+      assignment, and shows zero lapses in accountability or execution. She embodies the Behind the Scenes archetype 
+      with a high-performance edge — structured, prepared, reliable, and quietly effective.
+      <br><br>
+      Across MAP, she has looked like a prototypical Round 1–2 candidate: sharp, reliable, technically capable, 
+      and deeply polished. Her fencing background — national ranking, NCAA performance, ACC championships, and 
+      All-American honors — gives her a unique mental toughness and competitive maturity that translates directly 
+      into professional excellence.
+    </p>
+  </section>
+
+  <!-- ============================= -->
+  <!-- STRENGTHS -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Strengths</h2>
+    <ul class="section-list">
+      <li><strong>Elite consistency:</strong> Submits early, no lapses; delivers high-quality work every single week.</li>
+      <li><strong>Exceptional résumé depth:</strong> UNC M&A Group, investment research, valuation experience, Citi D1 program.</li>
+      <li><strong>Academic excellence:</strong> 3.90 GPA in Business Administration + Statistics & Analytics minor.</li>
+      <li><strong>High-level athletic pedigree:</strong> Division I fencer · NCAA competitor · nationally ranked · All-American.</li>
+      <li><strong>Technical skill stack:</strong> DCF, comps, precedent transactions, Python/R/Tableau, Figma, Adobe Suite.</li>
+      <li><strong>Leadership maturity:</strong> Mentor in Carolina Leadership Academy; leads workshops and supports first-year athletes.</li>
+      <li><strong>Creative + analytical duality:</strong> Award-winning artist + strong data modeling background.</li>
+    </ul>
+  </section>
+
+  <!-- ============================= -->
+  <!-- AREAS FOR DEVELOPMENT -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Areas for Development</h2>
+    <ul class="section-list">
+      <li>Could embrace more vocal leadership in team settings to match her high performance level.</li>
+      <li>Continue sharpening time-bound behavioral answers to fully showcase breadth of experience.</li>
+      <li>May benefit from taking on more front-facing or high-visibility roles within MAP or UNC organizations.</li>
+    </ul>
+  </section>
+
+  <!-- ============================= -->
+  <!-- PROJECTION -->
+  <!-- ============================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Projection</h2>
+    <p class="section-body">
+      A premium Round 1–2 MAP prospect with elite consistency, technical readiness, and a résumé 
+      already aligned with top investment banking and private equity pipelines. Lauren is a plug-and-play 
+      analyst with the preparation, discipline, and professional maturity to thrive from day one. Her blend 
+      of athletic competitiveness, academic strength, and leadership experience positions her as one of the 
+      most complete Fellows in this Diamond League class.
+    </p>
+  </section>
+
+</div>
