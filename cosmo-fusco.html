@@ -1,6 +1,8 @@
-<!-- ============================= -->
-<!-- MAP BRAND STYLE (GLOBAL) -->
-<!-- ============================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cosmo Fusco — MAP Scouting Report</title>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
@@ -12,16 +14,24 @@
     color: #1a1a1a;
   }
 
+  /* HERO */
   .prospect-hero {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
     gap: 1.25rem;
     padding: 1.5rem 1.25rem;
     border-radius: 12px;
     background: #2E5084;
     color: #ffffff;
     margin-bottom: 1.5rem;
+  }
+
+  .prospect-hero-main {
+    flex: 1 1 60%;
+    max-width: 70%;
+    min-width: 260px;
   }
 
   .prospect-name {
@@ -33,7 +43,7 @@
   }
 
   .prospect-tagline {
-    margin: 0 0 0.15rem;
+    margin: 0 0 0.18rem;
     font-size: 0.95rem;
     font-weight: 600;
   }
@@ -45,10 +55,11 @@
   }
 
   .prospect-grade-card {
-    min-width: 180px;
+    flex: 0 0 200px;
+    width: 200px;
     padding: 0.75rem 1rem;
     border-radius: 10px;
-    background: rgba(255,255,255,0.15); /* FIXED */
+    background: rgba(255,255,255,0.15);
     border: 1px solid rgba(255,255,255,0.3);
     backdrop-filter: blur(4px);
   }
@@ -77,6 +88,7 @@
     opacity: 0.85;
   }
 
+  /* META */
   .prospect-meta {
     display: flex;
     flex-wrap: wrap;
@@ -120,6 +132,7 @@
     margin-left: 1rem;
   }
 
+  /* SECTIONS */
   .prospect-section {
     margin-bottom: 1.25rem;
     padding: 1rem 1.1rem;
@@ -138,14 +151,14 @@
 
   .section-body {
     font-size: 0.88rem;
-    line-height: 1.48;
+    line-height: 1.45;
   }
 
   .section-list {
     padding-left: 1.1rem;
-    margin: 0;
     font-size: 0.88rem;
     line-height: 1.48;
+    margin: 0;
   }
 
   .section-list li {
@@ -153,6 +166,12 @@
   }
 
   @media (max-width: 640px) {
+    .prospect-hero {
+      flex-wrap: wrap;
+    }
+    .prospect-hero-main {
+      max-width: 100%;
+    }
     .meta-list li {
       flex-direction: column;
       align-items: flex-start;
@@ -164,112 +183,122 @@
     }
   }
 </style>
+</head>
 
+<body>
 <div class="prospect-page">
 
-  <!-- ============================= -->
   <!-- HERO -->
-  <!-- ============================= -->
   <section class="prospect-hero">
     <div class="prospect-hero-main">
       <h1 class="prospect-name">COSMO FUSCO</h1>
-      <p class="prospect-tagline">⭐️⭐️⭐️⭐️ Prospect · Point Guard Operator · Investment Banking Track</p>
+      <p class="prospect-tagline">⭐️⭐️⭐️ Prospect · Point Guard Archetype · Investment Banking / Markets Track</p>
       <p class="prospect-subtitle">University of Pennsylvania · Football 🏈 · Class of 2028</p>
     </div>
 
     <div class="prospect-grade-card">
       <div class="grade-label">MAP Prospect Grade</div>
-      <div class="grade-score">9.2</div>
-      <div class="grade-tier">Round 2–3 Candidate</div>
-      <div class="grade-note">High-upside academic profile with leadership wiring</div>
+      <div class="grade-score">8.5</div>
+      <div class="grade-tier">Round 3–4 Candidate</div>
+      <div class="grade-note">High-upside quant profile with early MAP momentum</div>
     </div>
   </section>
 
-  <!-- ============================= -->
   <!-- META -->
-  <!-- ============================= -->
   <section class="prospect-meta">
+    <!-- Prospect Info -->
     <div class="meta-column">
       <h2 class="meta-title">Prospect Info</h2>
       <ul class="meta-list">
-        <li><span class="meta-key">School</span><span class="meta-value">University of Pennsylvania</span></li>
-        <li><span class="meta-key">Major</span><span class="meta-value">Economics &amp; Mathematics</span></li>
-        <li><span class="meta-key">Minor</span><span class="meta-value">Statistics</span></li>
-        <li><span class="meta-key">Year</span><span class="meta-value">2028</span></li>
-        <li><span class="meta-key">Sport</span><span class="meta-value">Football</span></li>
-        <li><span class="meta-key">Hometown</span><span class="meta-value">Boonton, NJ</span></li>
+        <li><span>School</span><span class="meta-value">University of Pennsylvania</span></li>
+        <li><span>Major</span><span class="meta-value">Economics &amp; Mathematics</span></li>
+        <li><span>Minor</span><span class="meta-value">Statistics</span></li>
+        <li><span>Year</span><span class="meta-value">2028</span></li>
+        <li><span>GPA</span><span class="meta-value">3.85</span></li>
+        <li><span>Sport</span><span class="meta-value">Football</span></li>
+        <li><span>Hometown</span><span class="meta-value">Boonton, NJ</span></li>
       </ul>
     </div>
 
+    <!-- MAP Profile -->
     <div class="meta-column">
       <h2 class="meta-title">MAP Profile</h2>
       <ul class="meta-list">
-        <li><span class="meta-key">Fall Rank</span><span class="meta-value">12 / 63</span></li>
-        <li><span class="meta-key">GPA</span><span class="meta-value">3.85</span></li>
-        <li><span class="meta-key">Captain</span><span class="meta-value">Emerging locker room leader</span></li>
-        <li><span class="meta-key">Personality</span><span class="meta-value">11. Point Guard</span></li>
-        <li><span class="meta-key">Performance</span><span class="meta-value">Diamond League Fellow · Core C&amp;R case contributor</span></li>
+        <li><span>Official Points</span><span class="meta-value">947.5</span></li>
+        <li><span>Cumulative Rank</span><span class="meta-value">22 / 63</span></li>
+        <li><span>Phase 1 Rank</span><span class="meta-value">12 / 63</span></li>
+        <li><span>Phase 2 Rank</span><span class="meta-value">22 / 30</span></li>
+        <li>
+          <span>Personality</span>
+          <span class="meta-value">
+            11. Point Guard (Relationship-Oriented Personality · Optimism · Steady Presence)
+          </span>
+        </li>
+        <li>
+          <span>Leadership</span>
+          <span class="meta-value">
+            Pass the Baton — Democratic (Democratic Leader · Collaborative Decision-Making · Team Buy-In)
+          </span>
+        </li>
       </ul>
     </div>
   </section>
 
-  <!-- ============================= -->
   <!-- OVERVIEW -->
-  <!-- ============================= -->
   <section class="prospect-section">
     <h2 class="section-title">Overview</h2>
     <p class="section-body">
-      Classic Point Guard profile with real upside: a team-first operator who combines a 3.85 GPA in Economics
-      &amp; Mathematics with meaningful experience across venture capital, campus operations, and competitive
-      Division I football. Cosmo’s wiring is to keep the whole team organized — fostering strong relationships,
-      staying calm under pressure, and making disciplined decisions that move the ball downfield.
+      Cosmo is a high-upside Point Guard archetype with a serious quant backbone and a strong start to his MAP career.
+      A 3.85 GPA in Economics &amp; Mathematics with a Statistics minor sets a clear academic baseline, and his résumé already
+      includes meaningful experience in early-stage venture capital, financial modeling, and large-scale operations
+      management through Penn Residential Services.
       <br><br>
-      His résumé shows early exposure to financial modeling, valuation, and sector research through Fortitude Capital
-      and Wharton finance clubs, while his role with Penn Residential Services demonstrates the ability to manage
-      people, logistics, and high-volume operations. When fully locked in on deliverables, he brings a strong mix of
-      analytical horsepower, leadership potential, and poise that maps well to front-office deal teams.
+      In Phase 1, he came out of the gates strong — consistently on time, engaged, and competitive in individual
+      assignments. Phase 2’s live case environment stretched him more, and one major deliverable remains outstanding,
+      but that context is important: he’s balancing Division I football, leadership roles in finance clubs, and an
+      ambitious technical workload. From a partner lens, this is less a red flag and more a clear signal about where
+      an already talented prospect needs structure and support to fully match his ceiling.
     </p>
   </section>
 
-  <!-- ============================= -->
   <!-- STRENGTHS -->
-  <!-- ============================= -->
   <section class="prospect-section">
     <h2 class="section-title">Strengths</h2>
     <ul class="section-list">
-      <li><strong>Point Guard leadership:</strong> Team-first mindset, prioritizes relationships and composure in high-pressure situations.</li>
-      <li><strong>Elite academic profile:</strong> Econ + Math double major, 3.85 GPA, Statistics minor — strong analytical ceiling.</li>
-      <li><strong>Finance exposure:</strong> VC internship, Wharton finance clubs, and Diamond League C&amp;R valuation reps.</li>
-      <li><strong>Operational experience:</strong> Managed 17-person staff + 8,000 summer guests across Penn housing operations.</li>
-      <li><strong>Poised communicator:</strong> Uses multiple pause-plays, signaling maturity and intentional delivery.</li>
-      <li><strong>Leadership development:</strong> Multiple roles demonstrating initiative, outreach, and team coordination.</li>
+      <li><strong>Quantitative core:</strong> Economics &amp; Mathematics major with a Statistics minor, plus rigorous work in multivariable calculus and statistics.</li>
+      <li><strong>Real finance reps:</strong> Venture Capital Summer Analyst experience building 3-statement models, market sizing, and competitive landscape work on 100+ comps.</li>
+      <li><strong>Point Guard archetype:</strong> Relationship-oriented, optimistic, and steady — naturally slots into roles that coordinate people, information, and timelines.</li>
+      <li><strong>Democratic leadership style:</strong> “Pass the Baton” leader who brings others into the decision, builds buy-in, and keeps teams aligned with a collaborative approach.</li>
+      <li><strong>Operational leadership:</strong> Managed a team of 17 operations assistants and logistics for 8,000+ summer program guests — evidence of real responsibility and execution at scale.</li>
+      <li><strong>Professional polish:</strong> Active in Penn Undergraduate Economics Society and Wharton Undergraduate Finance Club, with experience pitching, fundraising, and running events with corporate partners.</li>
+      <li><strong>Division I athlete:</strong> 30+ hours a week of football on top of a demanding academic and professional schedule, reinforcing resilience, time management, and coachability.</li>
     </ul>
   </section>
 
-  <!-- ============================= -->
   <!-- AREAS FOR DEVELOPMENT -->
-  <!-- ============================= -->
   <section class="prospect-section">
     <h2 class="section-title">Areas for Development</h2>
     <ul class="section-list">
-      <li>Strengthen consistency with deadlines and deliverables during case competitions to match academic upside.</li>
-      <li>Sharpen IB-specific technical skills (three-statement modeling, valuation speed).</li>
-      <li>Lean more proactively into vocal leadership — taking Point Guard ownership earlier in group workflows.</li>
+      <li>Close the loop on the remaining Phase 2 case deliverable and continue building a track record of on-time completion in multi-week, team-based projects.</li>
+      <li>Translate strong quantitative analysis into sharper, more concise client-facing narratives that non-technical stakeholders can quickly digest.</li>
+      <li>Use his Point Guard wiring to proactively set internal deadlines, clarify roles, and pressure-test timelines so academic, athletic, and MAP responsibilities stay in sync.</li>
     </ul>
   </section>
 
-  <!-- ============================= -->
   <!-- PROJECTION -->
-  <!-- ============================= -->
   <section class="prospect-section">
     <h2 class="section-title">Projection</h2>
     <p class="section-body">
-      High-upside Round 2–3 MAP prospect for Summer 2027 IB recruiting. Cosmo’s analytical horsepower, 
-      leadership wiring, and diverse finance exposure give him a strong foundation for early analyst success. 
-      With improved reliability and technical reps, he can grow into a steady, composed presence who strengthens 
-      both process and culture on a deal team.
+      Cosmo grades out as a Round 3–4 MAP prospect with genuine upside for firms willing to invest in structure and
+      development. The ingredients are all there — rigorous academics, real finance and operations experience, and a
+      collaborative, team-first leadership style that fits well inside analyst classes. If he tightens follow-through
+      on longer-horizon projects and continues to build his client storytelling muscles, he has a realistic path to
+      performing above his current grade and moving into a stronger recommendation tier for Summer 2027 analyst roles.
     </p>
   </section>
 
 </div>
+</body>
+</html>
+
 
