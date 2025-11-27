@@ -1,6 +1,8 @@
-<!-- ============================= -->
-<!-- MAP BRAND STYLE (GLOBAL) -->
-<!-- ============================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hunter Po — MAP Scouting Report</title>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
@@ -12,9 +14,10 @@
     color: #1a1a1a;
   }
 
+  /* HERO */
   .prospect-hero {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     gap: 1.25rem;
     padding: 1.5rem 1.25rem;
@@ -22,6 +25,12 @@
     background: #2E5084;
     color: #ffffff;
     margin-bottom: 1.5rem;
+  }
+
+  .prospect-hero-main {
+    flex: 1 1 60%;
+    max-width: 70%;
+    min-width: 260px;
   }
 
   .prospect-name {
@@ -33,7 +42,7 @@
   }
 
   .prospect-tagline {
-    margin: 0 0 0.15rem;
+    margin: 0 0 0.18rem;
     font-size: 0.95rem;
     font-weight: 600;
   }
@@ -45,7 +54,8 @@
   }
 
   .prospect-grade-card {
-    min-width: 180px;
+    flex: 0 0 200px;
+    width: 200px;
     padding: 0.75rem 1rem;
     border-radius: 10px;
     background: rgba(255,255,255,0.15);
@@ -69,7 +79,6 @@
   .grade-tier {
     font-size: 0.8rem;
     font-weight: 600;
-    margin-bottom: 0.1rem;
   }
 
   .grade-note {
@@ -77,6 +86,7 @@
     opacity: 0.85;
   }
 
+  /* META */
   .prospect-meta {
     display: flex;
     flex-wrap: wrap;
@@ -120,6 +130,7 @@
     margin-left: 1rem;
   }
 
+  /* SECTIONS */
   .prospect-section {
     margin-bottom: 1.25rem;
     padding: 1rem 1.1rem;
@@ -143,33 +154,21 @@
 
   .section-list {
     padding-left: 1.1rem;
-    margin: 0;
     font-size: 0.88rem;
     line-height: 1.48;
+    margin: 0;
   }
 
   .section-list li {
     margin-bottom: 0.35rem;
   }
-
-  @media (max-width: 640px) {
-    .meta-list li {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .meta-value {
-      text-align: left;
-      margin-left: 0;
-      margin-top: 0.1rem;
-    }
-  }
 </style>
+</head>
 
+<body>
 <div class="prospect-page">
 
-  <!-- ============================= -->
   <!-- HERO -->
-  <!-- ============================= -->
   <section class="prospect-hero">
     <div class="prospect-hero-main">
       <h1 class="prospect-name">HUNTER PO</h1>
@@ -179,104 +178,109 @@
 
     <div class="prospect-grade-card">
       <div class="grade-label">MAP Prospect Grade</div>
-      <div class="grade-score">8.7</div>
+      <div class="grade-score">87</div>
       <div class="grade-tier">Round 5–6 Candidate</div>
       <div class="grade-note">Strong finance résumé · inconsistent MAP performance</div>
     </div>
   </section>
 
-  <!-- ============================= -->
   <!-- META -->
-  <!-- ============================= -->
   <section class="prospect-meta">
+
     <div class="meta-column">
       <h2 class="meta-title">Prospect Info</h2>
       <ul class="meta-list">
-        <li><span class="meta-key">School</span><span class="meta-value">Columbia University</span></li>
-        <li><span class="meta-key">Major</span><span class="meta-value">Financial Economics</span></li>
-        <li><span class="meta-key">Minor</span><span class="meta-value">N/A</span></li>
-        <li><span class="meta-key">Year</span><span class="meta-value">2028</span></li>
-        <li><span class="meta-key">Sport</span><span class="meta-value">Golf</span></li>
-        <li><span class="meta-key">Hometown</span><span class="meta-value">San Diego, CA</span></li>
+        <li><span>School</span><span class="meta-value">Columbia University</span></li>
+        <li><span>Major</span><span class="meta-value">Financial Economics</span></li>
+        <li><span>Minor</span><span class="meta-value">N/A</span></li>
+        <li><span>Year</span><span class="meta-value">2028</span></li>
+        <li><span>GPA</span><span class="meta-value">3.7</span></li>
+        <li><span>Sport</span><span class="meta-value">Golf ⛳</span></li>
+        <li><span>Hometown</span><span class="meta-value">San Diego, CA</span></li>
       </ul>
     </div>
 
     <div class="meta-column">
       <h2 class="meta-title">MAP Profile</h2>
       <ul class="meta-list">
-        <li><span class="meta-key">Fall Rank</span><span class="meta-value">26 / 63</span></li>
-        <li><span class="meta-key">GPA</span><span class="meta-value">3.7</span></li>
-        <li><span class="meta-key">Personality</span><span class="meta-value">6. Hustler</span></li>
-        <li><span class="meta-key">Performance</span>
+        <li><span>Official Points</span><span class="meta-value">1166.5</span></li>
+        <li><span>Cumulative Rank</span><span class="meta-value">20 / 63</span></li>
+        <li><span>Phase 1 Rank</span><span class="meta-value">28 / 63</span></li>
+        <li><span>Phase 2 Rank</span><span class="meta-value">20 / 30</span></li>
+        <li>
+          <span>Personality</span>
           <span class="meta-value">
-            Strong finance background · inconsistent MAP execution due to travel/seasonal conflicts
+            6. Hustler<br>
+            (Initiative-Driven Personality · Resourcefulness · Upward Trajectory)
+          </span>
+        </li>
+        <li>
+          <span>Leadership</span>
+          <span class="meta-value">
+            Democratic Leader<br>
+            (Collaborative Decision-Making · Shared Ownership · Team Buy-In)
           </span>
         </li>
       </ul>
     </div>
+
   </section>
 
-  <!-- ============================= -->
   <!-- OVERVIEW -->
-  <!-- ============================= -->
   <section class="prospect-section">
     <h2 class="section-title">Overview</h2>
     <p class="section-body">
-      Hunter brings one of the deepest finance résumés in the entire Diamond League class, with meaningful 
-      transaction experience across investment banking, real estate private equity, M&A sourcing, and equities 
-      research. He embodies the Hustler archetype — proactive, opportunity-seeking, and consistently pushing to 
-      expand his technical and professional skill set.
+      Hunter brings one of the strongest finance résumés in the Diamond League class — with real exposure across 
+      investment banking, real estate private equity, M&A sourcing, and equities research. He embodies the Hustler 
+      archetype: proactive, opportunistic, and consistently leveraging new environments to build technical and 
+      professional skill sets beyond what most first-years see.
       <br><br>
-      His MAP profile, however, reflects irregular performance. As a Division I golfer traveling in-season with 
-      national tournaments, Hunter frequently missed live touchpoints and struggled with consistency during MAP's 
-      Regular Season and Playoffs. The underlying intent and capability are present, but time management and 
-      reliability remain areas to monitor closely.
+      His MAP performance, however, reflects inconsistency. Competing in-season as a Division I golfer with heavy 
+      travel demands, Hunter missed touchpoints and struggled with reliability during multi-week deliverables. 
+      The capability and intent are clearly there — but the consistency gap is meaningful and something firms 
+      will evaluate closely.
       <br><br>
-      When fully locked in, Hunter performs at a high level — but his MAP résumé shows a notable gap between 
-      potential and consistent execution. Still, his professional experience is significantly ahead of most 
-      first-year candidates, giving him a meaningful upside path if he tightens his operational habits.
+      When fully dialed in, Hunter performs at a high level, demonstrating a mature grasp of finance concepts and 
+      strong professional polish. His résumé is genuinely differentiated; the question is execution rhythm and 
+      reliability in high-pressure, time-compressed environments like investment banking.
     </p>
   </section>
 
-  <!-- ============================= -->
   <!-- STRENGTHS -->
-  <!-- ============================= -->
   <section class="prospect-section">
     <h2 class="section-title">Strengths</h2>
     <ul class="section-list">
-      <li><strong>Deep finance experience:</strong> IB analyst experience, REPE underwriting, LMM sourcing, and equities research.</li>
-      <li><strong>Hustler personality:</strong> Proactively seeks opportunities; consistently builds résumé through initiative.</li>
-      <li><strong>Technical competence:</strong> DCFs, comps, precedent transactions, 3-statement modeling, sensitivity analyses.</li>
-      <li><strong>Strong academic foundation:</strong> 3.7 GPA in Financial Economics + rigorous quantitative coursework.</li>
-      <li><strong>Leadership &amp; community:</strong> VP of Asian &amp; Pacific Islander Student Athlete Club; wellness rep for golf team.</li>
-      <li><strong>Athletic discipline:</strong> Balances 30+ weekly hours of training/competition with academic and work experience.</li>
-      <li><strong>Professional polish:</strong> Pitchbook drafting, investment memos, IC materials across multiple asset classes.</li>
+      <li><strong>Deep deal & finance exposure:</strong> IB analyst work, REPE underwriting, M&A sourcing, and equities research.</li>
+      <li><strong>Hustler initiative:</strong> Proactively creates opportunities; strong upward trajectory; consistently self-driven.</li>
+      <li><strong>Technical foundation:</strong> Comfortable with DCFs, comps, precedents, financial modeling, and pitchbook work.</li>
+      <li><strong>Academic rigor:</strong> 3.7 GPA in Financial Economics with supporting quantitative coursework.</li>
+      <li><strong>Leadership & community impact:</strong> VP of Asian & Pacific Islander Student Athlete Club; wellness rep for golf.</li>
+      <li><strong>Athletic discipline:</strong> Balancing 30+ weekly hours of training with academics and professional commitments.</li>
+      <li><strong>Professional polish:</strong> Clear communicator; exposure to multiple asset classes and investment workflows.</li>
     </ul>
   </section>
 
-  <!-- ============================= -->
   <!-- AREAS FOR DEVELOPMENT -->
-  <!-- ============================= -->
   <section class="prospect-section">
     <h2 class="section-title">Areas for Development</h2>
     <ul class="section-list">
-      <li>Inconsistent MAP performance — closing the gap between capability and follow-through is essential.</li>
-      <li>Time management under travel/competition demands needs improvement for high-intensity banking environments.</li>
-      <li>Should sharpen narrative consistency in interviews to balance deep technical experience with reliability concerns.</li>
+      <li>Close reliability gaps on longer MAP deliverables — consistency is the key unlock for his trajectory.</li>
+      <li>Strengthen time-management systems during travel-heavy periods to match analyst-level expectations.</li>
+      <li>Sharpen narrative clarity in interviews to balance strong technical exposure with execution questions.</li>
     </ul>
   </section>
 
-  <!-- ============================= -->
   <!-- PROJECTION -->
-  <!-- ============================= -->
   <section class="prospect-section">
     <h2 class="section-title">Projection</h2>
     <p class="section-body">
-      A Round 5–6 MAP prospect with one of the strongest finance backgrounds in the class. Hunter's technical 
-      ability, deal exposure, and Hustler motor give him clear upside — but his inconsistent MAP performance and 
-      time-management risks place him below the program’s top tiers. With greater reliability and consistent 
-      execution, he can elevate into a serious contender for competitive 2027 investment banking pipelines.
+      Hunter grades as a Round 5–6 MAP prospect with one of the deepest finance backgrounds in the cohort. His 
+      technical ability, deal exposure, and Hustler wiring give him meaningful upside — but inconsistent MAP execution 
+      currently places him below the Fellowship’s top tiers. If reliability aligns with capability, he can realistically 
+      elevate into a competitive 2027 investment banking pipeline candidate.
     </p>
   </section>
 
 </div>
+</body>
+</html>
