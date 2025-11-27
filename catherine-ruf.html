@@ -14,7 +14,7 @@
     color: #1a1a1a;
   }
 
-  /* HERO */
+  /* HERO FIX */
   .prospect-hero {
     display: flex;
     justify-content: space-between;
@@ -32,6 +32,16 @@
     flex: 1 1 60%;
     max-width: 70%;
     min-width: 260px;
+  }
+
+  .prospect-grade-card {
+    flex: 0 0 200px;
+    width: 200px;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(4px);
   }
 
   .prospect-name {
@@ -52,16 +62,6 @@
     margin: 0;
     font-size: 0.85rem;
     opacity: 0.9;
-  }
-
-  .prospect-grade-card {
-    flex: 0 0 200px;
-    width: 200px;
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
-    backdrop-filter: blur(4px);
   }
 
   .grade-label {
@@ -155,18 +155,17 @@
     font-size: 0.88rem;
     line-height: 1.48;
   }
-
 </style>
 </head>
 
 <body>
 <div class="prospect-page">
 
-  <!-- ==================== HERO ==================== -->
+  <!-- HERO -->
   <section class="prospect-hero">
     <div class="prospect-hero-main">
       <h1 class="prospect-name">CATHERINE RUF</h1>
-      <p class="prospect-tagline">⭐️⭐️⭐️⭐️ Prospect · Player-Coach Personality · Democratic Leadership</p>
+      <p class="prospect-tagline">⭐️⭐️⭐️⭐️ Prospect · Player-Coach Leader · Investment Banking Track</p>
       <p class="prospect-subtitle">Columbia University · Rowing 🚣 · Class of 2028</p>
     </div>
 
@@ -174,13 +173,14 @@
       <div class="grade-label">MAP Prospect Grade</div>
       <div class="grade-score">9.3</div>
       <div class="grade-tier">Round 1–2 Candidate</div>
-      <div class="grade-note">Reliable, composed, and consistently client-ready</div>
+      <div class="grade-note">Reliable, consistent, and culture-steadying presence</div>
     </div>
   </section>
 
-  <!-- ==================== META ==================== -->
+  <!-- META -->
   <section class="prospect-meta">
 
+    <!-- LEFT: PROSPECT INFO -->
     <div class="meta-column">
       <h2 class="meta-title">Prospect Info</h2>
       <ul class="meta-list">
@@ -189,11 +189,12 @@
         <li><span>Minor</span><span class="meta-value">N/A</span></li>
         <li><span>Year</span><span class="meta-value">2028</span></li>
         <li><span>GPA</span><span class="meta-value">3.5</span></li>
-        <li><span>Sport</span><span class="meta-value">Rowing</span></li>
+        <li><span>Sport</span><span class="meta-value">Rowing 🚣</span></li>
         <li><span>Hometown</span><span class="meta-value">Greenwich, CT</span></li>
       </ul>
     </div>
 
+    <!-- RIGHT: MAP PROFILE -->
     <div class="meta-column">
       <h2 class="meta-title">MAP Profile</h2>
       <ul class="meta-list">
@@ -201,58 +202,60 @@
         <li><span>Cumulative Rank</span><span class="meta-value">9 / 63</span></li>
         <li><span>Phase 1 Rank</span><span class="meta-value">4 / 63</span></li>
         <li><span>Phase 2 Rank</span><span class="meta-value">9 / 30</span></li>
-        <li><span>Personality</span><span class="meta-value">9. Player-Coach<br>(Structured · Dependable · Principles-Driven)</span></li>
-        <li><span>Leadership</span><span class="meta-value">Democratic Leader<br>(Collaborative · Inclusive · Steady Decision-Maker)</span></li>
+        <li><span>Personality</span>
+          <span class="meta-value">9. Player-Coach <br>(Principled · Steady · Detail-Aligned)</span>
+        </li>
+        <li><span>Leadership</span>
+          <span class="meta-value">Servant Leader <br>(People-Centered · Supportive · Team-First)</span>
+        </li>
       </ul>
     </div>
 
   </section>
 
-  <!-- ==================== OVERVIEW ==================== -->
+  <!-- OVERVIEW -->
   <section class="prospect-section">
     <h2 class="section-title">Overview</h2>
     <p class="section-body">
-      Catherine is one of the most steady, composed, and reliable prospects in the Diamond League class. She brings a classic
-      Player-Coach wiring — structured, principled, and team-first — with a consistent ability to produce polished, client-ready
-      work on the first attempt.  
+      Catherine is one of the most reliable and steady contributors in the Diamond League class —
+      a quintessential <strong>Player-Coach</strong> who elevates culture, consistency, and preparation on every team she joins.
+      She produces clean, client-ready work, submits on time, and brings a composed maturity that firms love
+      in early-career talent.
       <br><br>
-      Her rowing résumé reflects years of elite discipline, accountability, and resilience, and those same traits transfer directly
-      into her MAP performance, where she rarely misses deadlines, communicates proactively, and elevates the teams she works on.
-      Catherine profiles as a high-floor, high-trust early-summer IB candidate who will integrate seamlessly into structured,
-      process-driven environments.
+      With a strong rowing background, private equity exposure, and relevant academic grounding,
+      Catherine has the foundation, attitude, and discipline of a future high-performing analyst.
     </p>
   </section>
 
-  <!-- ==================== STRENGTHS ==================== -->
+  <!-- STRENGTHS -->
   <section class="prospect-section">
     <h2 class="section-title">Strengths</h2>
     <ul class="section-list">
-      <li><strong>Elite consistency:</strong> Always submits on time, follows instructions, and produces clean, polished deliverables.</li>
-      <li><strong>Player-Coach leadership:</strong> Sets tone through reliability, preparation, and quiet steadiness that teammates gravitate toward.</li>
-      <li><strong>Execution under structure:</strong> Thrives in clear frameworks and delivers high-quality, investor-ready output.</li>
-      <li><strong>Strong analytical foundation:</strong> Financial Economics major with meaningful exposure to valuation + company analysis.</li>
-      <li><strong>Proven competitive discipline:</strong> Henley champion & Youth Nationals medalist — elite athletic background that signals resilience and drive.</li>
-      <li><strong>Professional maturity:</strong> Private Equity + IB externship experience plus tangible project leadership across school and community roles.</li>
+      <li><strong>Extremely consistent performer:</strong> Always submits high-quality, polished work on time.</li>
+      <li><strong>Player-Coach wiring:</strong> Principled, structured, dependable — the teammate everyone trusts.</li>
+      <li><strong>Strong academic + professional base:</strong> Financial Economics major with IB, PE, and valuation exposure.</li>
+      <li><strong>High character + poise:</strong> Brings calm confidence and professionalism to every environment.</li>
+      <li><strong>Detail-aligned communicator:</strong> Clear, organized, and composed under pressure.</li>
     </ul>
   </section>
 
-  <!-- ==================== AREAS FOR DEVELOPMENT ==================== -->
+  <!-- AREAS FOR DEVELOPMENT -->
   <section class="prospect-section">
     <h2 class="section-title">Areas for Development</h2>
     <ul class="section-list">
-      <li>Continue deepening technical valuation reps to accelerate ramp-up toward analyst-level fluency.</li>
-      <li>Opportunities to speak earlier in group settings to amplify her voice and leadership presence.</li>
-      <li>Further refine storytelling by converting rich rowing + leadership experiences into sharp, interview-ready narratives.</li>
+      <li>Continue sharpening valuation storytelling to complement technical fundamentals.</li>
+      <li>Look for early moments to speak up in group settings rather than defaulting to supporting role.</li>
+      <li>Keep building live-case assertiveness to match her strong preparation and work quality.</li>
     </ul>
   </section>
 
-  <!-- ==================== PROJECTION ==================== -->
+  <!-- PROJECTION -->
   <section class="prospect-section">
     <h2 class="section-title">Projection</h2>
     <p class="section-body">
-      A Round 1–2 MAP prospect with a strong leadership floor and analyst-ready professionalism. Catherine projects as a culture-driver,
-      a stabilizing presence on any deal team, and a reliable early contributor who will stand out for her discipline, polish, and
-      consistency.
+      Catherine projects as a <strong>Round 1–2 MAP prospect</strong> with one of the highest consistency floors
+      in the class. Her maturity, discipline, and Player-Coach leadership style make her a cultural asset,
+      and with continued reps she can grow into a highly dependable, steadying analyst on any banking team.
     </p>
   </section>
 
