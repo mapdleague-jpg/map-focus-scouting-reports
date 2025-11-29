@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAP Minor League — Full Program Details</title>
+
+  <!-- MAP Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fb;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem;
+    }
+
+    h1 {
+      font-family: 'Archivo Black', sans-serif;
+      color: #2E5084;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    details {
+      background: white;
+      border: 2px solid #2E5084;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      padding: 0.75rem 1rem;
+    }
+
+    summary {
+      font-weight: 600;
+      cursor: pointer;
+      color: #2E5084;
+      font-size: 1.05rem;
+      outline: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary:after {
+      content: "＋";
+      float: right;
+      font-weight: bold;
+      color: #2E5084;
+    }
+
+    details[open] summary:after {
+      content: "−";
+    }
+
+    .section-content {
+      padding: 0.75rem 0.25rem 0.25rem 0.25rem;
+      font-size: 0.95rem;
+    }
+
+    .subhead {
+      font-weight: 600;
+      color: #2E5084;
+      margin-top: 1rem;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>MAP Minor League — Full Program Details</h1>
+
+    <!-- OVERVIEW -->
+    <details>
+      <summary>Overview</summary>
+      <div class="section-content">
+        The MAP Minor League is the nation’s first dual-prep system for high school athletes, designed to prepare them for both college admissions and athletic recruiting. 
+        This page provides a full breakdown of everything included in the core training program and in the optional Parent Pass™ add-on.
+      </div>
+    </details>
+
+    <!-- TRAINING PROGRAM -->
+    <details>
+      <summary>What High School Athletes Receive (Tuition)</summary>
+      <div class="section-content">
+
+        <p class="subhead">8-Week Olympic Season</p>
+        <p>Five weeks of academic training followed by three weeks of competition, mirroring the cadence of elite athletic development.</p>
+
+        <p class="subhead">Weekly Film Study + Mentorship</p>
+        <p>Live sessions led by MAP alumni across four breakout levels—Rookie, Single-A, Double-A, and Medal Round.</p>
+
+        <p class="subhead">Academic Deliverables</p>
+        <ul>
+          <li>Résumé suitable for early college and scholarship applications</li>
+          <li>College essay draft & narrative development</li>
+          <li>Player Profile & Highlight Sheet</li>
+          <li>Completed College-Ready Portfolio</li>
+        </ul>
+
+        <p class="subhead">Athletic & Recruiting Deliverables</p>
+        <ul>
+          <li>Film-development guidance</li>
+          <li>Recruiting outreach templates</li>
+          <li>Coach communication framework</li>
+          <li>Recruiting progression roadmap</li>
+        </ul>
+
+        <p class="subhead">5 Rings of Dual Excellence</p>
+        <p>Every athlete develops across five academic and athletic Rings: STEM, Business, Social Sciences, Arts & Communications, and Health & Medicine.</p>
+
+      </div>
+    </details>
+
+    <!-- PARENT PASS -->
+    <details>
+      <summary>What Parents Receive with the Parent Pass™ (Add-On)</summary>
+      <div class="section-content">
+
+        <p class="subhead">Performance Intelligence Report™</p>
+        <p>A 10–15 page professional-grade evaluation modeled after the tools used by firms recruiting MAP’s top college athletes.</p>
+
+        <p class="subhead">MAP Benchmarking</p>
+        <p>Data-driven comparisons to MAP alumni who have earned admission to elite universities and competitive athletic programs.</p>
+
+        <p class="subhead">Competitive DNA & Leadership Profile</p>
+        <p>Includes MAP Personality Type Code, Leadership Style, academic tendencies, and high-performance attributes.</p>
+
+        <p class="subhead">Recruit-Ready Action Plan™</p>
+        <p>A detailed 12-month roadmap outlining academic habits, athletic milestones, and recruiting steps to stay ahead.</p>
+
+        <p class="subhead">Annual Re-Score Option</p>
+        <p>Parents may update the evaluation each year to track progress through Rookie → Single-A → Double-A → Medal Round → MAP Major League.</p>
+
+      </div>
+    </details>
+
+    <!-- PROGRESSION -->
+    <details>
+      <summary>Pathway Progression (Rookie → Medal Round → MAP Major League)</summary>
+      <div class="section-content">
+
+        <p class="subhead">9th Grade — Rookie League</p>
+        <p>Fundamentals, identity discovery, early academic posture, and first portfolio-building exercises.</p>
+
+        <p class="subhead">10th Grade — Single-A League</p>
+        <p>Applying the Rings across mini-projects, first outreach to coaches, updated academic résumé.</p>
+
+        <p class="subhead">11th Grade — Double-A League</p>
+        <p>Case challenges, strategy integration, campus alignment, and essay development.</p>
+
+        <p class="subhead">12th Grade — Medal Round</p>
+        <p>Capstone specialization, mock interviews, final essay polishing, and admissions readiness.</p>
+
+        <p class="subhead">College — MAP Major League</p>
+        <p>Upon admission to university, athletes may enter MAP’s college-level professional development leagues.</p>
+
+      </div>
+    </details>
+
+    <!-- FAQ -->
+    <details>
+      <summary>Parent FAQs</summary>
+      <div class="section-content">
+        <p class="subhead">Do we need to play a varsity sport?</p>
+        <p>No — the Minor League supports all competitive high school athletes, regardless of school team affiliation.</p>
+
+        <p class="subhead">Can we purchase the Parent Pass™ without enrolling?</p>
+        <p>Yes — many families use the evaluation and roadmap independently as they plan their child’s development.</p>
+
+        <p class="subhead">Is financial aid available?</p>
+        <p>MAP offers limited aid and scholarships based on need and potential impact.</p>
+
+        <p class="subhead">How selective is the program?</p>
+        <p>MAP evaluates interest, commitment, and development readiness holistically—not just athletic stats.</p>
+      </div>
+    </details>
+
+    <!-- CTA -->
+    <details>
+      <summary>Return to Enrollment Page</summary>
+      <div class="section-content">
+        <p><a href="https://makeaplayfoundation.com/high-school-league-pass" style="color:#2E5084; font-weight:600;">Click here to return to the High School League Pass page →</a></p>
+      </div>
+    </details>
+
+  </div>
+</body>
+</html>
