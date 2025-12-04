@@ -6,98 +6,130 @@
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
+  body { margin:0; background:#f5f7fb; font-family:'Montserrat', sans-serif;}
+  .prospect-page { max-width:960px; margin:0 auto 3rem auto; padding:1.5rem 1rem; color:#1a1a1a;}
+  .prospect-hero { display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.25rem; padding:1.75rem 1.25rem; border-radius:14px; background:#2E5084; color:#fff; margin-bottom:2rem;}
+  .prospect-name { font-family:'Archivo Black'; font-size:2rem; letter-spacing:.02em; margin:0 0 .25rem; text-transform:uppercase;}
+  .prospect-tagline { margin:0 0 .15rem; font-size:1rem; font-weight:600;}
+  .prospect-subtitle {margin:0; font-size:.9rem; opacity:.9;}
 
-  .prospect-page{max-width:960px;margin:0 auto 2.5rem;font-family:'Montserrat',sans-serif;color:#1a1a1a;}
-  .prospect-hero{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.25rem;padding:1.5rem 1.25rem;border-radius:12px;background:#2E5084;color:#fff;margin-bottom:1.5rem;}
-  .prospect-name{font-family:'Archivo Black',sans-serif;font-size:1.85rem;margin:0 0 .25rem;text-transform:uppercase;letter-spacing:.02em;}
-  .prospect-tagline{margin:0 0 .15rem;font-size:.95rem;font-weight:600;}
-  .prospect-subtitle{margin:0;font-size:.85rem;opacity:.9;}
-  .prospect-grade-card{min-width:180px;padding:.75rem 1rem;border-radius:10px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(4px);}
-  .grade-label{font-size:.7rem;text-transform:uppercase;opacity:.8;margin-bottom:.25rem;}
-  .grade-score{font-family:'Archivo Black',sans-serif;font-size:1.9rem;margin-bottom:.1rem;}
-  .grade-tier{font-size:.8rem;font-weight:600;}
-  .grade-pill{margin-top:.35rem;font-size:.75rem;padding:.25rem .55rem;border-radius:6px;background:#50b657;color:#fff;font-weight:600;display:inline-block;}
+  .prospect-grade-card { min-width:200px; padding:1rem 1.25rem; border-radius:12px; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.35); backdrop-filter:blur(4px);}
+  .grade-label{ font-size:.7rem; opacity:.8; text-transform:uppercase;}
+  .grade-score{ font-family:'Archivo Black'; font-size:2.2rem; margin:.15rem 0;}
+  .grade-tier{ font-size:.9rem; font-weight:600;}
+  .grade-note{ font-size:.75rem; opacity:.9;}
+  .recommendation-pill{ display:inline-flex; align-items:center; gap:5px; background:#fff; color:#2E5084; padding:4px 10px; border:1px solid #dce2ee; border-radius:30px; font-weight:600; font-size:.78rem; margin-top:.55rem; width:fit-content;}
+  .pill-box{width:12px;height:12px;border-radius:3px;}
+  .pill-green{background:#22c55e;}
 
-  .prospect-meta{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;}
-  .meta-column{flex:1 1 260px;background:#fff;border-radius:10px;padding:1rem 1.1rem;border:1px solid #dce2ee;}
-  .meta-title{font-family:'Archivo Black',sans-serif;font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:#2E5084;margin:0 0 .6rem;}
+  .prospect-meta{display:flex;flex-wrap:wrap;gap:1.25rem;margin-bottom:2rem;}
+  .meta-column{flex:1 1 280px;background:#fff;border-radius:12px;padding:1rem 1.25rem;border:1px solid #dce2ee;}
+  .meta-title{font-family:'Archivo Black';font-size:.9rem;color:#2E5084;text-transform:uppercase;margin:0 0 .7rem;}
   .meta-list{list-style:none;padding:0;margin:0;}
-  .meta-list li{display:flex;justify-content:space-between;padding:.2rem 0;border-bottom:1px dotted #e5e8f1;font-size:.85rem;}
+  .meta-list li{display:flex;justify-content:space-between;padding:.28rem 0;border-bottom:1px dotted #e7eaf3;font-size:.87rem;}
   .meta-value{text-align:right;margin-left:1rem;}
 
-  .prospect-section{margin-bottom:1.25rem;padding:1rem 1.1rem;border-radius:10px;border:1px solid #dce2ee;background:#fff;}
-  .section-title{font-family:'Archivo Black',sans-serif;font-size:.9rem;text-transform:uppercase;color:#2E5084;margin:0 0 .6rem;}
-  .section-body{font-size:.88rem;line-height:1.48;}
-  .section-list{padding-left:1.1rem;margin:0;font-size:.88rem;line-height:1.48;}
-  .section-list li{margin-bottom:.35rem;}
-
-  @media(max-width:640px){
-    .meta-list li{flex-direction:column;align-items:flex-start;}
-    .meta-value{text-align:left;margin-left:0;margin-top:.1rem;}
-  }
+  .prospect-section{background:#fff;border-radius:12px;padding:1.15rem 1.35rem;border:1px solid #dce2ee;margin-bottom:1.4rem;}
+  .section-title{font-family:'Archivo Black';font-size:.95rem;color:#2E5084;text-transform:uppercase;margin-bottom:.65rem;}
+  .section-body{font-size:.9rem;line-height:1.52;}
+  .section-list{font-size:.9rem;line-height:1.52;padding-left:1.2rem;} .section-list li{margin-bottom:.38rem;}
 </style>
 </head>
 
 <body>
 <div class="prospect-page">
 
-<!-- HERO -->
-<section class="prospect-hero">
-  <div>
-    <h1 class="prospect-name">MADELEINE COLE</h1>
-    <p class="prospect-tagline">⭐️⭐️⭐️⭐️⭐️ Prospect · Rowing · Investment Banking Track</p>
-    <p class="prospect-subtitle">Columbia University · Class of 2028</p>
-  </div>
+  <section class="prospect-hero">
+    <div>
+      <h1 class="prospect-name">MADELEINE COLE</h1>
+      <p class="prospect-tagline">⭐️⭐️⭐️⭐️⭐️ Prospect · Hustler Archetype · Investment Banking Track</p>
+      <p class="prospect-subtitle">Columbia University · Rowing 🚣 · Class of 2028</p>
+    </div>
 
-  <div class="prospect-grade-card">
-    <div class="grade-label">MAP Prospect Grade</div>
-    <div class="grade-score">95</div>
-    <div class="grade-tier">Round 1–2 Candidate</div>
-    <div class="grade-pill">🟩🟩🟩 Top Recommendation</div>
-  </div>
-</section>
+    <div class="prospect-grade-card">
+      <div class="grade-label">MAP Prospect Grade</div>
+      <div class="grade-score">95</div>
+      <div class="grade-tier">Round 1–2 Candidate</div>
+      <div class="grade-note">High-upside performer with elite work ethic</div>
 
-<!-- META -->
-<section class="prospect-meta">
+      <div class="recommendation-pill">
+        <div class="pill-box pill-green"></div>
+        <div class="pill-box pill-green"></div>
+        <div class="pill-box pill-green"></div>
+        <span>Top Recommendation</span>
+      </div>
+    </div>
+  </section>
 
-  <div class="meta-column">
-    <h2 class="meta-title">Prospect Info</h2>
-    <ul class="meta-list">
-      <li><span>School</span><span class="meta-value">Columbia University</span></li>
-      <li><span>Major</span><span class="meta-value">Financial Economics</span></li>
-      <li><span>Minor</span><span class="meta-value">Arabic</span></li>
-      <li><span>Year</span><span class="meta-value">2028</span></li>
-      <li><span>GGPA</span><span class="meta-value">3.94</span></li>
-      <li><span>Sport</span><span class="meta-value">Rowing</span></li>
-      <li><span>Hometown</span><span class="meta-value">Marblehead, MA</span></li>
+  <section class="prospect-meta">
+    <div class="meta-column">
+      <h2 class="meta-title">Prospect Info</h2>
+      <ul class="meta-list">
+        <li><span>School</span><span class="meta-value">Columbia University</span></li>
+        <li><span>Major</span><span class="meta-value">Financial Economics</span></li>
+        <li><span>Minor</span><span class="meta-value">Arabic</span></li>
+        <li><span>Year</span><span class="meta-value">2028</span></li>
+        <li><span>GPA</span><span class="meta-value">3.94</span></li>
+        <li><span>Sport</span><span class="meta-value">Rowing</span></li>
+        <li><span>Hometown</span><span class="meta-value">Marblehead, MA</span></li>
+      </ul>
+    </div>
+
+    <div class="meta-column">
+      <h2 class="meta-title">MAP Profile</h2>
+      <ul class="meta-list">
+        <li><span>Fellowship Rank</span><span class="meta-value">6 / 78</span></li>
+        <li><span>Interview #1</span><span class="meta-value">94.1%</span></li>
+        <li><span>Interview #2</span><span class="meta-value">98.1%</span></li>
+        <li><span>Interview #3</span><span class="meta-value">85.1%</span></li>
+        <li><span>Personality</span><span class="meta-value">Hustler (Driven, Initiative-Oriented)</span></li>
+        <li><span>Leadership</span><span class="meta-value">Bureaucratic (Process-Driven, Consistent)</span></li>
+        <li><span>Teamwork</span><span class="meta-value">Cooperative (Inclusive, Team-First)</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="prospect-section">
+    <h2 class="section-title">Overview</h2>
+    <p class="section-body">
+      Madeleine is a high-upside Hustler archetype with elite academic strength (3.94 GPA), strong communication instincts, and one of the most relentless improvement mindsets in the entire Diamond League class. She began rowing later than most Division I athletes, yet accelerated quickly through sheer discipline — early mornings, late nights, and a refusal to be outworked. That same mentality has defined her MAP performance.
+      <br><br>
+      She consistently reached out to Student Support with thoughtful, high-quality questions — not for hand-holding, but for precision. She submitted nearly every Extra Rep assignment, demonstrates strong curiosity, and showed maturity in seeking clarification before executing.
+      <br><br>
+      As a Diamond League Captain, she handled the responsibility well, though she occasionally struggled more than typical captains to keep pace with team-level bandwidth demands. Even so, she delivered clean valuation work, led high-quality analyses in the Point72 competition, and earned rare “hire within 24 hours” ratings across superday-style mock interviews — a genuine sign of front-office readiness.
+      <br><br>
+      Madeleine’s combination of GPA, communication, resilience, and work rate creates a compelling Round 1–2 prospect with clear potential to rise deeper into top-tier consideration as her team-based efficiency sharpens.
+    </p>
+  </section>
+
+  <section class="prospect-section">
+    <h2 class="section-title">Strengths</h2>
+    <ul class="section-list">
+      <li>Hustler engine: Late-start athlete who outworked peers to catch up — carries same motor into MAP.</li>
+      <li>Elite communication: Thoughtful questions, proactive clarification, strong rapport with Student Support.</li>
+      <li>Academic excellence: 3.94 GPA in Financial Economics + quantitative rigor.</li>
+      <li>Valuation-ready: Strong DCF/comps fundamentals, clean modeling package.</li>
+      <li>Leadership exposure: Diamond League Captain + Point72 competition leadership.</li>
+      <li>High-volume performer: Frequently completes Extra Reps with initiative.</li>
+      <li>Cross-functional experience: Data/analysis + marketing strategy hybrid.</li>
     </ul>
-  </div>
+  </section>
 
-  <div class="meta-column">
-    <h2 class="meta-title">MAP Profile</h2>
-    <ul class="meta-list">
-      <li><span>Fellowship Rank</span><span class="meta-value">6 / 63</span></li>
-      <li><span>Interview #1</span><span class="meta-value">94.1%</span></li>
-      <li><span>Interview #2</span><span class="meta-value">98.1%</span></li>
-      <li><span>Interview #3</span><span class="meta-value">85.1%</span></li>
-      <li><span>Personality</span><span class="meta-value">Hustler (Driven · Proactive)</span></li>
-      <li><span>Leadership</span><span class="meta-value">Bureaucratic Leader (By-the-Book · Structured)</span></li>
-      <li><span>Teamwork</span><span class="meta-value">Idea-Oriented (Versatile · Adaptive)</span></li>
+  <section class="prospect-section">
+    <h2 class="section-title">Areas for Development</h2>
+    <ul class="section-list">
+      <li>Sharpen pace and bandwidth efficiency under IB-style workload.</li>
+      <li>Build confidence in leading synthesis and final packaging.</li>
+      <li>Increase fast-turnaround modeling reps for speed without quality drop.</li>
     </ul>
-  </div>
+  </section>
 
-</section>
-
-<!-- OVERVIEW -->
-<section class="prospect-section">
-  <h2 class="section-title">Overview</h2>
-  <p class="section-body">
-    Madeleine is a high-upside Hustler archetype with elite academic strength (3.94 GPA), strong communication instincts, 
-    and one of the most relentless improvement mindsets in the entire Diamond League class...
-  </p>
-</section>
-
-<!-- STRENGTHS + AFD + Projection unchanged (truncated for space, but in your repo keep full text) -->
+  <section class="prospect-section">
+    <h2 class="section-title">Projection</h2>
+    <p class="section-body">
+      A strong Round 1–2 MAP prospect with the discipline, intellect, and communication foundation to succeed in competitive IB recruiting. Madeleine's academic strength, fast-learning Hustler profile, and proactive approach to clarification create a high-upside trajectory — and as her team-based execution speed sharpens, she is well-positioned to rise into top-tier pipelines. With continued reps in fast-cycle environments, she projects as a future front-office contributor capable of outperforming peers through consistency, work ethic, and resilience.
+    </p>
+  </section>
 
 </div>
 </body>
