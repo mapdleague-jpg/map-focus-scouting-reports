@@ -1,193 +1,66 @@
-<!-- ============================= -->
-<!-- MAP BRAND STYLE (GLOBAL) -->
-<!-- ============================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vincent Yang — MAP Scouting Report</title>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
+  body { margin:0; background:#f5f7fb; font-family:'Montserrat', sans-serif;}
+  .prospect-page { max-width:960px; margin:0 auto 3rem auto; padding:1.5rem 1rem; color:#1a1a1a;}
+  .prospect-hero { display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.25rem; padding:1.75rem 1.25rem; border-radius:14px; background:#2E5084; color:#fff; margin-bottom:2rem;}
+  .prospect-name { font-family:'Archivo Black'; font-size:2rem; letter-spacing:.02em; margin:0 0 .25rem; text-transform:uppercase;}
+  .prospect-tagline { margin:0 0 .15rem; font-size:1rem; font-weight:600;}
+  .prospect-subtitle {margin:0; font-size:.9rem; opacity:.9;}
 
-  .prospect-page {
-    max-width: 960px;
-    margin: 0 auto 2.5rem auto;
-    font-family: 'Montserrat', sans-serif;
-    color: #1a1a1a;
-  }
+  .prospect-grade-card { min-width:200px; padding:1rem 1.25rem; border-radius:12px; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.35); backdrop-filter:blur(4px);}
+  .grade-label{ font-size:.7rem; opacity:.8; text-transform:uppercase;}
+  .grade-score{ font-family:'Archivo Black'; font-size:2.2rem; margin:.15rem 0;}
+  .grade-tier{ font-size:.9rem; font-weight:600;}
+  .grade-note{ font-size:.75rem; opacity:.9;}
+  .recommendation-pill{ display:inline-flex; align-items:center; gap:5px; background:#fff; color:#2E5084; padding:4px 10px; border:1px solid #dce2ee; border-radius:30px; font-weight:600; font-size:.78rem; margin-top:.55rem; width:fit-content;}
+  .pill-box{width:12px;height:12px;border-radius:3px;}
+  .pill-green{background:#22c55e;}
 
-  .prospect-hero {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1.25rem;
-    padding: 1.5rem 1.25rem;
-    border-radius: 12px;
-    background: #2E5084;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-  }
+  .prospect-meta{display:flex;flex-wrap:wrap;gap:1.25rem;margin-bottom:2rem;}
+  .meta-column{flex:1 1 280px;background:#fff;border-radius:12px;padding:1rem 1.25rem;border:1px solid #dce2ee;}
+  .meta-title{font-family:'Archivo Black';font-size:.9rem;color:#2E5084;text-transform:uppercase;margin:0 0 .7rem;}
+  .meta-list{list-style:none;padding:0;margin:0;}
+  .meta-list li{display:flex;justify-content:space-between;padding:.28rem 0;border-bottom:1px dotted #e7eaf3;font-size:.87rem;}
+  .meta-value{text-align:right;margin-left:1rem;}
 
-  .prospect-name {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.85rem;
-    margin: 0 0 0.25rem;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-  }
-
-  .prospect-tagline {
-    margin: 0 0 0.15rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-  }
-
-  .prospect-subtitle {
-    margin: 0;
-    font-size: 0.85rem;
-    opacity: 0.9;
-  }
-
-  .prospect-grade-card {
-    min-width: 180px;
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
-    backdrop-filter: blur(4px);
-  }
-
-  .grade-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    opacity: 0.8;
-    margin-bottom: 0.25rem;
-  }
-
-  .grade-score {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.9rem;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-tier {
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-note {
-    font-size: 0.75rem;
-    opacity: 0.85;
-  }
-
-  .prospect-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .meta-column {
-    flex: 1 1 260px;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 1rem 1.1rem;
-    border: 1px solid #dce2ee;
-  }
-
-  .meta-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .meta-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .meta-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.2rem 0;
-    border-bottom: 1px dotted #e5e8f1;
-    font-size: 0.85rem;
-  }
-
-  .meta-value {
-    text-align: right;
-    margin-left: 1rem;
-  }
-
-  .prospect-section {
-    margin-bottom: 1.25rem;
-    padding: 1rem 1.1rem;
-    border-radius: 10px;
-    border: 1px solid #dce2ee;
-    background: #ffffff;
-  }
-
-  .section-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .section-body {
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list {
-    padding-left: 1.1rem;
-    margin: 0;
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list li {
-    margin-bottom: 0.35rem;
-  }
-
-  @media (max-width: 640px) {
-    .meta-list li {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .meta-value {
-      text-align: left;
-      margin-left: 0;
-      margin-top: 0.1rem;
-    }
-  }
+  .prospect-section{background:#fff;border-radius:12px;padding:1.15rem 1.35rem;border:1px solid #dce2ee;margin-bottom:1.4rem;}
+  .section-title{font-family:'Archivo Black';font-size:.95rem;color:#2E5084;text-transform:uppercase;margin-bottom:.65rem;}
+  .section-body{font-size:.9rem;line-height:1.52;}
+  .section-list{font-size:.9rem;line-height:1.52;padding-left:1.2rem;} .section-list li{margin-bottom:.38rem;}
 </style>
+</head>
 
+<body>
 <div class="prospect-page">
 
-  <!-- ============================= -->
-  <!-- HERO -->
-  <!-- ============================= -->
   <section class="prospect-hero">
-    <div class="prospect-hero-main">
+    <div>
       <h1 class="prospect-name">VINCENT YANG</h1>
-      <p class="prospect-tagline">⭐️⭐️⭐️⭐️⭐️ Prospect · Vocal Leader Archetype · Investment Banking Track</p>
+      <p class="prospect-tagline">⭐️⭐️⭐️⭐️⭐️ Prospect · Vocal Leader · Investment Banking Track</p>
       <p class="prospect-subtitle">Northwestern University · Tennis 🎾 · Class of 2028</p>
     </div>
 
     <div class="prospect-grade-card">
       <div class="grade-label">MAP Prospect Grade</div>
-      <div class="grade-score">9.9</div>
+      <div class="grade-score">99</div>
       <div class="grade-tier">Round 1 Candidate</div>
-      <div class="grade-note">Blue-chip, franchise-level prospect with elite leadership</div>
+      <div class="grade-note">Blue-chip leader with elite academic + execution ability</div>
+
+      <div class="recommendation-pill">
+        <div class="pill-box pill-green"></div>
+        <div class="pill-box pill-green"></div>
+        <div class="pill-box pill-green"></div>
+        <span>Top Recommendation</span>
+      </div>
     </div>
   </section>
 
-  <!-- ============================= -->
-  <!-- META -->
-  <!-- ============================= -->
   <section class="prospect-meta">
     <div class="meta-column">
       <h2 class="meta-title">Prospect Info</h2>
@@ -196,6 +69,7 @@
         <li><span>Major</span><span class="meta-value">Economics & Mathematics</span></li>
         <li><span>Minor</span><span class="meta-value">Artificial Intelligence</span></li>
         <li><span>Year</span><span class="meta-value">2028</span></li>
+        <li><span>GPA</span><span class="meta-value">4.00</span></li>
         <li><span>Sport</span><span class="meta-value">Tennis</span></li>
         <li><span>Hometown</span><span class="meta-value">Kirkland, WA</span></li>
       </ul>
@@ -204,62 +78,39 @@
     <div class="meta-column">
       <h2 class="meta-title">MAP Profile</h2>
       <ul class="meta-list">
-        <li><span>Fall Rank</span><span class="meta-value">1 / 63</span></li>
-        <li><span>GPA</span><span class="meta-value">4.0</span></li>
-        <li><span>Personality</span><span class="meta-value">16. Vocal Leader</span></li>
-        <li><span>Leadership</span>
-          <span class="meta-value">
-            Captain · Top 1% performer · Assertive communicator · Sets direction under pressure
-          </span>
-        </li>
-        <li><span>Performance</span>
-          <span class="meta-value">
-            Submits all assignments early · Exceptional quality · Elite bandwidth and discipline
-          </span>
-        </li>
+        <li><span>Fellowship Rank</span><span class="meta-value">1 / 78</span></li>
+        <li><span>Interview #1</span><span class="meta-value">97.6%</span></li>
+        <li><span>Interview #2</span><span class="meta-value">96.6%</span></li>
+        <li><span>Interview #3</span><span class="meta-value">94.3%</span></li>
+        <li><span>Personality</span><span class="meta-value">Vocal Leader (Assertive, Communicative)</span></li>
+        <li><span>Leadership</span><span class="meta-value">Autocratic Leader (Decisive, High Accountability)</span></li>
+        <li><span>Teamwork</span><span class="meta-value">Cooperative (Inclusive, Team-First)</span></li>
       </ul>
     </div>
   </section>
 
-  <!-- ============================= -->
-  <!-- OVERVIEW -->
-  <!-- ============================= -->
   <section class="prospect-section">
     <h2 class="section-title">Overview</h2>
     <p class="section-body">
-      The undisputed top prospect in this year’s Diamond League — and by a wide margin. Vincent is the rare blue-chip 
-      MAP athlete who checks every single professional box: elite academic horsepower (4.00 GPA in Economics, Math, 
-      and AI), high-bandwidth execution, early submission on all assignments, and exceptional leadership presence that 
-      elevates any team environment. His work quality lands consistently in the “client-ready” tier, and his ability to manage 
-      responsibilities under pressure separates him from even the strongest peers.
+      The undisputed top prospect in this year’s Diamond League — and by a wide margin. Vincent is the rare blue-chip MAP athlete who checks every single professional box: elite academic horsepower (4.00 GPA in Economics, Math, and AI), high-bandwidth execution, early submission on all assignments, and exceptional leadership presence that elevates any team environment. His work quality lands consistently in the “client-ready” tier, and his ability to manage responsibilities under pressure separates him from even the strongest peers.
       <br><br>
-      As the only Vocal Leader personality in the fellowship class, Vincent brings clarity, direction, and 
-      decisive communication — especially in fast-moving or ambiguous situations. His autocratic-leaning leadership 
-      style is unusually refined for a sophomore: he sets expectations, assigns roles, and drives alignment quickly, enabling 
-      high-performance team execution without inertia. With authentic presence, maturity, and a rare blend of technical and 
-      interpersonal ability, Vincent stands as a franchise-level MAP prospect with long-term star potential across IB, PE, or VC.
+      As the only Vocal Leader personality in the fellowship class, Vincent brings clarity, direction, and decisive communication — especially in fast-moving or ambiguous situations. His autocratic-leaning leadership style is unusually refined for a sophomore: he sets expectations, assigns roles, and drives alignment quickly, enabling high-performance team execution without inertia. With authentic presence, maturity, and a rare blend of technical and interpersonal ability, Vincent stands as a franchise-level MAP prospect with long-term star potential across IB, PE, or VC.
     </p>
   </section>
 
-  <!-- ============================= -->
-  <!-- STRENGTHS -->
-  <!-- ============================= -->
   <section class="prospect-section">
     <h2 class="section-title">Strengths</h2>
     <ul class="section-list">
-      <li><strong>Elite academic rigor:</strong> 4.00 GPA across Economics, Mathematics, and AI programming.</li>
-      <li><strong>Blue-chip leadership:</strong> Vocal Leader who asserts direction, organizes workflows, and drives alignment.</li>
-      <li><strong>High-bandwidth operator:</strong> Manages workstreams effortlessly while producing client-ready quality.</li>
-      <li><strong>Technical versatility:</strong> IB, PE, and VC experience — highly skilled in modeling, comps, LBOs, and predictive analytics.</li>
-      <li><strong>Clutch decision-maker:</strong> Makes fast, confident calls in high-pressure or ambiguous moments.</li>
-      <li><strong>True captain presence:</strong> Clear expectations, role assignment, and accountability structures.</li>
-      <li><strong>Exceptional consistency:</strong> Submits early · Zero misses · Maintains elite standard across all deliverables.</li>
+      <li>Elite academic rigor: 4.00 GPA across Economics, Mathematics, and AI programming.</li>
+      <li>Blue-chip leadership: Vocal Leader who asserts direction, organizes workflows, and drives alignment.</li>
+      <li>High-bandwidth operator: Manages workstreams effortlessly while producing client-ready quality.</li>
+      <li>Technical versatility: IB, PE, and VC experience — highly skilled in modeling, comps, LBOs, and predictive analytics.</li>
+      <li>Clutch decision-maker: Makes fast, confident calls in high-pressure or ambiguous moments.</li>
+      <li>True captain presence: Clear expectations, role assignment, and accountability structures.</li>
+      <li>Exceptional consistency: Submits early · Zero misses · Maintains elite standard across all deliverables.</li>
     </ul>
   </section>
 
-  <!-- ============================= -->
-  <!-- AREAS FOR DEVELOPMENT -->
-  <!-- ============================= -->
   <section class="prospect-section">
     <h2 class="section-title">Areas for Development</h2>
     <ul class="section-list">
@@ -269,18 +120,13 @@
     </ul>
   </section>
 
-  <!-- ============================= -->
-  <!-- PROJECTION -->
-  <!-- ============================= -->
   <section class="prospect-section">
     <h2 class="section-title">Projection</h2>
     <p class="section-body">
-      A no-doubt Round 1 MAP prospect — arguably one of the strongest in recent fellowship cycles. Vincent brings a 
-      franchise-level blend of intellect, leadership, technical depth, communication, and competitive intensity rarely seen 
-      at the sophomore level. With continued reps in pitch delivery and collaborative balance, he projects as a future 
-      top-bucket analyst who will quickly grow into a deal team quarterback. A true blue-chip prospect with long-term 
-      star potential across the finance ecosystem.
+      A no-doubt Round 1 MAP prospect — arguably one of the strongest in recent fellowship cycles. Vincent brings a franchise-level blend of intellect, leadership, technical depth, communication, and competitive intensity rarely seen at the sophomore level. With continued reps in pitch delivery and collaborative balance, he projects as a future top-bucket analyst who will quickly grow into a deal team quarterback. A true blue-chip prospect with long-term star potential across the finance ecosystem.
     </p>
   </section>
 
 </div>
+</body>
+</html>
