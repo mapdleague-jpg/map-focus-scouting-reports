@@ -1,287 +1,140 @@
-<!-- ============================= -->
-<!-- MAP BRAND STYLE (GLOBAL) -->
-<!-- ============================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Olivia Weston — MAP Scouting Report</title>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-  .prospect-page {
-    max-width: 960px;
-    margin: 0 auto 2.5rem auto;
-    font-family: 'Montserrat', sans-serif;
-    color: #1a1a1a;
-  }
+  .prospect-page{max-width:960px;margin:0 auto 2.5rem;font-family:'Montserrat',sans-serif;color:#1a1a1a;}
+  .prospect-hero{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.25rem;padding:1.5rem 1.25rem;border-radius:12px;background:#2E5084;color:#fff;margin-bottom:1.5rem;}
+  .prospect-name{font-family:'Archivo Black',sans-serif;font-size:1.85rem;margin:0 0 .25rem;text-transform:uppercase;letter-spacing:.02em;}
+  .prospect-tagline{margin:0 0 .15rem;font-size:.95rem;font-weight:600;}
+  .prospect-subtitle{margin:0;font-size:.85rem;opacity:.9;}
+  .prospect-grade-card{min-width:180px;padding:.75rem 1rem;border-radius:10px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(4px);}
+  .grade-label{font-size:.7rem;text-transform:uppercase;opacity:.8;margin-bottom:.25rem;}
+  .grade-score{font-family:'Archivo Black',sans-serif;font-size:1.9rem;margin-bottom:.1rem;}
+  .grade-tier{font-size:.8rem;font-weight:600;}
+  .grade-pill{margin-top:.35rem;font-size:.75rem;padding:.25rem .55rem;border-radius:6px;background:#F8C93B;color:#000;font-weight:600;display:inline-block;}
 
-  .prospect-hero {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1.25rem;
-    padding: 1.5rem 1.25rem;
-    border-radius: 12px;
-    background: #2E5084;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-  }
+  .prospect-meta{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;}
+  .meta-column{flex:1 1 260px;background:#fff;border-radius:10px;padding:1rem 1.1rem;border:1px solid #dce2ee;}
+  .meta-title{font-family:'Archivo Black',sans-serif;font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:#2E5084;margin:0 0 .6rem;}
+  .meta-list{list-style:none;padding:0;margin:0;}
+  .meta-list li{display:flex;justify-content:space-between;padding:.2rem 0;border-bottom:1px dotted #e5e8f1;font-size:.85rem;}
+  .meta-value{text-align:right;margin-left:1rem;}
 
-  .prospect-name {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.85rem;
-    margin: 0 0 0.25rem;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-  }
+  .prospect-section{margin-bottom:1.25rem;padding:1rem 1.1rem;border-radius:10px;border:1px solid #dce2ee;background:#fff;}
+  .section-title{font-family:'Archivo Black',sans-serif;font-size:.9rem;text-transform:uppercase;color:#2E5084;margin:0 0 .6rem;}
+  .section-body{font-size:.88rem;line-height:1.48;}
+  .section-list{padding-left:1.1rem;margin:0;font-size:.88rem;line-height:1.48;}
+  .section-list li{margin-bottom:.35rem;}
 
-  .prospect-tagline {
-    margin: 0 0 0.15rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-  }
-
-  .prospect-subtitle {
-    margin: 0;
-    font-size: 0.85rem;
-    opacity: 0.9;
-  }
-
-  .prospect-grade-card {
-    min-width: 180px;
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
-    backdrop-filter: blur(4px);
-  }
-
-  .grade-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    opacity: 0.8;
-    margin-bottom: 0.25rem;
-  }
-
-  .grade-score {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.9rem;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-tier {
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-note {
-    font-size: 0.75rem;
-    opacity: 0.85;
-  }
-
-  .prospect-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .meta-column {
-    flex: 1 1 260px;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 1rem 1.1rem;
-    border: 1px solid #dce2ee;
-  }
-
-  .meta-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .meta-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .meta-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.2rem 0;
-    border-bottom: 1px dotted #e5e8f1;
-    font-size: 0.85rem;
-  }
-
-  .meta-value {
-    text-align: right;
-    margin-left: 1rem;
-  }
-
-  .prospect-section {
-    margin-bottom: 1.25rem;
-    padding: 1rem 1.1rem;
-    border-radius: 10px;
-    border: 1px solid #dce2ee;
-    background: #ffffff;
-  }
-
-  .section-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .section-body {
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list {
-    padding-left: 1.1rem;
-    margin: 0;
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list li {
-    margin-bottom: 0.35rem;
-  }
-
-  @media (max-width: 640px) {
-    .meta-list li {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .meta-value {
-      text-align: left;
-      margin-left: 0;
-      margin-top: 0.1rem;
-    }
+  @media(max-width:640px){
+    .meta-list li{flex-direction:column;align-items:flex-start;}
+    .meta-value{text-align:left;margin-left:0;margin-top:.1rem;}
   }
 </style>
+</head>
 
+<body>
 <div class="prospect-page">
 
-  <!-- ============================= -->
-  <!-- HERO -->
-  <!-- ============================= -->
-  <section class="prospect-hero">
-    <div class="prospect-hero-main">
-      <h1 class="prospect-name">OLIVIA WESTON</h1>
-      <p class="prospect-tagline">⭐️⭐️⭐️⭐️ Prospect · Hustler Archetype · Investment Banking Track</p>
-      <p class="prospect-subtitle">Yale University · Lacrosse 🥍 · Class of 2028</p>
-    </div>
+<!-- HERO -->
+<section class="prospect-hero">
+  <div>
+    <h1 class="prospect-name">OLIVIA WESTON</h1>
+    <p class="prospect-tagline">⭐️⭐️⭐️⭐️⭐️ Prospect · Lacrosse · Investment Banking Track</p>
+    <p class="prospect-subtitle">Yale University · Class of 2028</p>
+  </div>
 
-    <div class="prospect-grade-card">
-      <div class="grade-label">MAP Prospect Grade</div>
-      <div class="grade-score">8.9</div>
-      <div class="grade-tier">Round 3–4 Candidate</div>
-      <div class="grade-note">High-ceiling worker with strong consistency & quiet professionalism</div>
-    </div>
-  </section>
+  <div class="prospect-grade-card">
+    <div class="grade-label">MAP Prospect Grade</div>
+    <div class="grade-score">93</div>
+    <div class="grade-tier">Round 1–2 Candidate</div>
+    <div class="grade-pill">🟨🟨🟨 Strong Recommendation</div>
+  </div>
+</section>
 
-  <!-- ============================= -->
-  <!-- META -->
-  <!-- ============================= -->
-  <section class="prospect-meta">
-    <div class="meta-column">
-      <h2 class="meta-title">Prospect Info</h2>
-      <ul class="meta-list">
-        <li><span>School</span><span class="meta-value">Yale University</span></li>
-        <li><span>Major</span><span class="meta-value">Science, Tech & Society</span></li>
-        <li><span>Minor</span><span class="meta-value">Innovation & Organization</span></li>
-        <li><span>Year</span><span class="meta-value">2028</span></li>
-        <li><span>Sport</span><span class="meta-value">Lacrosse</span></li>
-        <li><span>Hometown</span><span class="meta-value">Gaithersburg, MD</span></li>
-      </ul>
-    </div>
+<!-- META -->
+<section class="prospect-meta">
 
-    <div class="meta-column">
-      <h2 class="meta-title">MAP Profile</h2>
-      <ul class="meta-list">
-        <li><span>Fall Rank</span><span class="meta-value">24 / 63</span></li>
-        <li><span>GPA</span><span class="meta-value">3.4</span></li>
-        <li><span>Personality</span><span class="meta-value">6. Hustler</span></li>
-        <li><span>Leadership</span>
-          <span class="meta-value">
-            Democratic-style leader · values team input · steady organizer
-          </span>
-        </li>
-        <li><span>Performance</span>
-          <span class="meta-value">
-            Consistent, reliable, early submissions · strong communicator when traveling for lacrosse
-          </span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============================= -->
-  <!-- OVERVIEW -->
-  <!-- ============================= -->
-  <section class="prospect-section">
-    <h2 class="section-title">Overview</h2>
-    <p class="section-body">
-      Olivia is one of the most consistent and dependable performers in this year’s Diamond League — the type of
-      prospect who quietly raises the standard for everyone around her. She submits work early, asks thoughtful
-      clarifying questions, communicates proactively (especially during travel-heavy periods), and maintains a calm,
-      professional presence. 
-      <br><br>
-      She’s a classic Hustler archetype: disciplined, resilient, and driven by internal standards rather than external
-      recognition. While nothing “jumps off the page” in a flashy way, the substance is undeniable — she does the work
-      with care, depth, and accountability. 
-      <br><br>
-      As a Black woman pursuing finance at Yale, she’s also paving a meaningful pathway in an industry where representation
-      still lags. She brings humility, composure, and grit — qualities that make her easy to root for and even easier to
-      trust. Her biggest unlock will come from letting more of her personality shine in interviews. The foundation is there;
-      now it’s about elevating presence and voice.
-    </p>
-  </section>
-
-  <!-- ============================= -->
-  <!-- STRENGTHS -->
-  <!-- ============================= -->
-  <section class="prospect-section">
-    <h2 class="section-title">Strengths</h2>
-    <ul class="section-list">
-      <li><strong>Ultra-consistent performer:</strong> Reliable, organized, always early to submit work.</li>
-      <li><strong>Hustler mentality:</strong> Takes initiative, solves problems independently, embraces adversity.</li>
-      <li><strong>Strong leadership instinct:</strong> Democratic “Pass the Baton” style keeps teams aligned and accountable.</li>
-      <li><strong>High community engagement:</strong> 200+ volunteer hours and meaningful nonprofit involvement.</li>
-      <li><strong>Entrepreneurial drive:</strong> Built a full lacrosse training program with strong participation.</li>
-      <li><strong>Great communicator:</strong> Professional, clear, proactive with schedule management.</li>
-      <li><strong>Resilient competitor:</strong> D1 lacrosse athlete with strong habits and time-management discipline.</li>
+  <div class="meta-column">
+    <h2 class="meta-title">Prospect Info</h2>
+    <ul class="meta-list">
+      <li><span>School</span><span class="meta-value">Yale University</span></li>
+      <li><span>Year</span><span class="meta-value">2028</span></li>
+      <li><span>GPA</span><span class="meta-value">3.4</span></li>
+      <li><span>Sport</span><span class="meta-value">Lacrosse</span></li>
+      <li><span>Hometown</span><span class="meta-value">Gaithersburg, MD</span></li>
     </ul>
-  </section>
+  </div>
 
-  <!-- ============================= -->
-  <!-- AREAS FOR DEVELOPMENT -->
-  <!-- ============================= -->
-  <section class="prospect-section">
-    <h2 class="section-title">Areas for Development</h2>
-    <ul class="section-list">
-      <li>Let more personality, warmth, and confidence come through in interviews.</li>
-      <li>Continue sharpening technical precision to keep pace with heavier-finance peers.</li>
-      <li>Lean further into identity and lived experience — unique differentiator in recruiting.</li>
+  <div class="meta-column">
+    <h2 class="meta-title">MAP Profile</h2>
+    <ul class="meta-list">
+      <li><span>Fellowship Rank</span><span class="meta-value">8 / 63</span></li>
+      <li><span>Interview #1</span><span class="meta-value">87.1%</span></li>
+      <li><span>Interview #2</span><span class="meta-value">88.5%</span></li>
+      <li><span>Interview #3</span><span class="meta-value">85.8%</span></li>
+      <li><span>Personality</span><span class="meta-value">Hustler (Driven · Proactive)</span></li>
+      <li><span>Leadership</span><span class="meta-value">Democratic (Team Input · Shared Decisions)</span></li>
+      <li><span>Teamwork</span><span class="meta-value">Detail-Oriented (Structured · Methodical)</span></li>
     </ul>
-  </section>
+  </div>
 
-  <!-- ============================= -->
-  <!-- PROJECTION -->
-  <!-- ============================= -->
-  <section class="prospect-section">
-    <h2 class="section-title">Projection</h2>
-    <p class="section-body">
-      A 4-star, Round 3–4 MAP prospect with clear room to rise as interview presence improves. Olivia’s consistency,
-      humility, disciplined habits, and community-minded leadership give her a high floor — and with continued technical
-      development and confidence-building, she could exceed expectations and emerge as a quietly strong performer in the
-      Summer 2027 recruiting class.
-    </p>
-  </section>
+</section>
+
+<!-- OVERVIEW -->
+<section class="prospect-section">
+  <h2 class="section-title">Overview</h2>
+  <p class="section-body">
+    Olivia is one of the most consistent and dependable performers in this year’s Diamond League — 
+    the type of prospect who quietly raises the standard for everyone around her. She submits work early, 
+    asks thoughtful clarifying questions, communicates proactively (even during travel-heavy periods), 
+    and maintains a calm, professional presence.
+    <br><br>
+    She’s a classic Hustler archetype: disciplined, resilient, and driven by internal standards 
+    rather than external recognition. While nothing “flashy” jumps off the page, the substance is undeniable — 
+    she does the work with care, depth, and accountability. As a Black woman pursuing finance at Yale, 
+    she represents meaningful representation in an industry still short on it.
+  </p>
+</section>
+
+<!-- STRENGTHS -->
+<section class="prospect-section">
+  <h2 class="section-title">Strengths</h2>
+  <ul class="section-list">
+    <li>Ultra-consistent performer — reliable, organized, early submissions.</li>
+    <li>Hustler mentality — proactive, self-driven, disciplined.</li>
+    <li>Democratic leadership — aligns teammates, encourages collaboration.</li>
+    <li>200+ volunteer hours & strong community engagement profile.</li>
+    <li>Entrepreneurial — founded lacrosse training program with high participation.</li>
+    <li>Professional communicator — scheduling, clarity, accountability.</li>
+  </ul>
+</section>
+
+<!-- AFD -->
+<section class="prospect-section">
+  <h2 class="section-title">Areas for Development</h2>
+  <ul class="section-list">
+    <li>Bring more personality + confidence into interviews.</li>
+    <li>Sharpen technical valuation + comps fluency.</li>
+    <li>Use identity and lived experiences as narrative differentiators.</li>
+  </ul>
+</section>
+
+<!-- PROJECTION -->
+<section class="prospect-section">
+  <h2 class="section-title">Projection</h2>
+  <p class="section-body">
+    A strong Round 1–2 MAP prospect with a high floor built on discipline, reliability, 
+    and mature communication habits. As technical fundamentals deepen and her presence strengthens, 
+    Olivia has real potential to outperform expectations and develop into a quietly impactful Summer 2027 analyst.
+  </p>
+</section>
 
 </div>
+</body>
+</html>
