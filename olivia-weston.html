@@ -7,33 +7,51 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-  .prospect-page{max-width:960px;margin:0 auto 2.5rem;font-family:'Montserrat',sans-serif;color:#1a1a1a;}
-  .prospect-hero{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.25rem;padding:1.5rem 1.25rem;border-radius:12px;background:#2E5084;color:#fff;margin-bottom:1.5rem;}
-  .prospect-name{font-family:'Archivo Black',sans-serif;font-size:1.85rem;margin:0 0 .25rem;text-transform:uppercase;letter-spacing:.02em;}
-  .prospect-tagline{margin:0 0 .15rem;font-size:.95rem;font-weight:600;}
-  .prospect-subtitle{margin:0;font-size:.85rem;opacity:.9;}
-  .prospect-grade-card{min-width:180px;padding:.75rem 1rem;border-radius:10px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(4px);}
-  .grade-label{font-size:.7rem;text-transform:uppercase;opacity:.8;margin-bottom:.25rem;}
-  .grade-score{font-family:'Archivo Black',sans-serif;font-size:1.9rem;margin-bottom:.1rem;}
-  .grade-tier{font-size:.8rem;font-weight:600;}
-  .grade-pill{margin-top:.35rem;font-size:.75rem;padding:.25rem .55rem;border-radius:6px;background:#F8C93B;color:#000;font-weight:600;display:inline-block;}
+  body { margin:0; background:#f5f7fb; font-family:'Montserrat', sans-serif;}
+  .prospect-page { max-width:960px; margin:0 auto 3rem auto; padding:1.5rem 1rem; color:#1a1a1a;}
 
-  .prospect-meta{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;}
-  .meta-column{flex:1 1 260px;background:#fff;border-radius:10px;padding:1rem 1.1rem;border:1px solid #dce2ee;}
-  .meta-title{font-family:'Archivo Black',sans-serif;font-size:.85rem;text-transform:uppercase;letter-spacing:.07em;color:#2E5084;margin:0 0 .6rem;}
+  /* ---------------- HERO ---------------- */
+  .prospect-hero {
+    display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.25rem;
+    padding:1.75rem 1.25rem; border-radius:14px; background:#2E5084; color:#fff; margin-bottom:2rem;
+  }
+  .prospect-name { font-family:'Archivo Black'; font-size:2rem; margin:0 0 .25rem; text-transform:uppercase;}
+  .prospect-tagline { margin:0 0 .15rem; font-size:1rem; font-weight:600;}
+  .prospect-subtitle {margin:0;font-size:.9rem;opacity:.9;}
+
+  .prospect-grade-card {min-width:200px;padding:1rem 1.25rem;border-radius:12px;background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.35); backdrop-filter:blur(4px);}
+  .grade-label{font-size:.7rem;opacity:.8;text-transform:uppercase;}
+  .grade-score{font-family:'Archivo Black';font-size:2.2rem;margin:.15rem 0;}
+  .grade-tier{font-size:.9rem;font-weight:600;}
+
+  /* RECOMMENDATION PILL */
+  .recommendation-pill{
+    display:flex;align-items:center;gap:6px;background:#fff;color:#2E5084;
+    padding:6px 12px;border-radius:30px;font-weight:600;font-size:.78rem;margin-top:.55rem;width:fit-content;
+  }
+  .pill-box{width:12px;height:12px;border-radius:3px;}
+  .pill-green{background:#22c55e;}
+  .pill-yellow{background:#eab308;}
+  .pill-red{background:#ef4444;}
+
+  /* ---------------- META ---------------- */
+  .prospect-meta{display:flex;flex-wrap:wrap;gap:1.25rem;margin-bottom:2rem;}
+  .meta-column{flex:1 1 280px;background:#fff;border-radius:12px;padding:1rem 1.25rem;border:1px solid #dce2ee;}
+  .meta-title{font-family:'Archivo Black';font-size:.9rem;color:#2E5084;text-transform:uppercase;margin-bottom:.7rem;}
   .meta-list{list-style:none;padding:0;margin:0;}
-  .meta-list li{display:flex;justify-content:space-between;padding:.2rem 0;border-bottom:1px dotted #e5e8f1;font-size:.85rem;}
+  .meta-list li{display:flex;justify-content:space-between;padding:.28rem 0;border-bottom:1px dotted #e7eaf3;font-size:.87rem;}
   .meta-value{text-align:right;margin-left:1rem;}
 
-  .prospect-section{margin-bottom:1.25rem;padding:1rem 1.1rem;border-radius:10px;border:1px solid #dce2ee;background:#fff;}
-  .section-title{font-family:'Archivo Black',sans-serif;font-size:.9rem;text-transform:uppercase;color:#2E5084;margin:0 0 .6rem;}
-  .section-body{font-size:.88rem;line-height:1.48;}
-  .section-list{padding-left:1.1rem;margin:0;font-size:.88rem;line-height:1.48;}
-  .section-list li{margin-bottom:.35rem;}
+  /* ---------------- CONTENT ---------------- */
+  .prospect-section{background:#fff;border-radius:12px;padding:1.15rem 1.35rem;border:1px solid #dce2ee;margin-bottom:1.4rem;}
+  .section-title{font-family:'Archivo Black';font-size:.95rem;color:#2E5084;text-transform:uppercase;margin-bottom:.65rem;}
+  .section-body{font-size:.9rem;line-height:1.52;}
+  .section-list li{font-size:.9rem;line-height:1.52;margin-bottom:.38rem;}
 
-  @media(max-width:640px){
+  @media(max-width:650px){
     .meta-list li{flex-direction:column;align-items:flex-start;}
-    .meta-value{text-align:left;margin-left:0;margin-top:.1rem;}
+    .meta-value{margin-left:0;margin-top:2px;text-align:left;}
   }
 </style>
 </head>
@@ -41,100 +59,104 @@
 <body>
 <div class="prospect-page">
 
-<!-- HERO -->
-<section class="prospect-hero">
-  <div>
-    <h1 class="prospect-name">OLIVIA WESTON</h1>
-    <p class="prospect-tagline">⭐️⭐️⭐️⭐️⭐️ Prospect · Lacrosse · Investment Banking Track</p>
-    <p class="prospect-subtitle">Yale University · Class of 2028</p>
-  </div>
+  <!-- ================= HERO ================= -->
+  <section class="prospect-hero">
+    <div>
+      <h1 class="prospect-name">Olivia Weston</h1>
+      <p class="prospect-tagline">⭐️⭐️⭐️⭐️ Investment Banking Prospect</p>
+      <p class="prospect-subtitle">Yale University · Lacrosse · Class of 2028</p>
+    </div>
 
-  <div class="prospect-grade-card">
-    <div class="grade-label">MAP Prospect Grade</div>
-    <div class="grade-score">93</div>
-    <div class="grade-tier">Round 1–2 Candidate</div>
-    <div class="grade-pill">🟨🟨🟨 Strong Recommendation</div>
-  </div>
-</section>
+    <div class="prospect-grade-card">
+      <div class="grade-label">MAP Prospect Grade</div>
+      <div class="grade-score">93</div>
+      <div class="grade-tier">Round 1-2</div>
 
-<!-- META -->
-<section class="prospect-meta">
+      <div class="recommendation-pill">
+        <div class="pill-box pill-yellow"></div>
+        <div class="pill-box pill-yellow"></div>
+        <div class="pill-box pill-yellow"></div>
+        <span>Strong Recommendation</span>
+      </div>
+    </div>
+  </section>
 
-  <div class="meta-column">
-    <h2 class="meta-title">Prospect Info</h2>
-    <ul class="meta-list">
-      <li><span>School</span><span class="meta-value">Yale University</span></li>
-      <li><span>Year</span><span class="meta-value">2028</span></li>
-      <li><span>GPA</span><span class="meta-value">3.4</span></li>
-      <li><span>Sport</span><span class="meta-value">Lacrosse</span></li>
-      <li><span>Hometown</span><span class="meta-value">Gaithersburg, MD</span></li>
+
+  <!-- ================= META ================= -->
+  <section class="prospect-meta">
+    <div class="meta-column">
+      <h2 class="meta-title">Prospect Info</h2>
+      <ul class="meta-list">
+        <li><span>School</span><span class="meta-value">Yale University</span></li>
+        <li><span>Major</span><span class="meta-value">Economics</span></li>
+        <li><span>Minor</span><span class="meta-value">N/A</span></li>
+        <li><span>Year</span><span class="meta-value">2028</span></li>
+        <li><span>GPA</span><span class="meta-value">3.4</span></li>
+        <li><span>Sport</span><span class="meta-value">Lacrosse</span></li>
+        <li><span>Hometown</span><span class="meta-value">Gaithersburg, MD</span></li>
+      </ul>
+    </div>
+
+    <div class="meta-column">
+      <h2 class="meta-title">MAP Profile</h2>
+      <ul class="meta-list">
+        <li><span>Fellowship Rank</span><span class="meta-value">8 / 29</span></li>
+        <li><span>Interview #1</span><span class="meta-value">87.1%</span></li>
+        <li><span>Interview #2</span><span class="meta-value">88.5%</span></li>
+        <li><span>Interview #3</span><span class="meta-value">85.8%</span></li>
+        <li><span>Personality</span><span class="meta-value">Hustler (Driven, Creative Problem-Solver)</span></li>
+        <li><span>Leadership</span><span class="meta-value">Democratic Leader (Collaborative, Shared Decision-Making)</span></li>
+        <li><span>Teamwork</span><span class="meta-value">Detail-Oriented (Precise, Quality-Focused)</span></li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ================= CONTENT ================= -->
+  <section class="prospect-section">
+    <h2 class="section-title">Overview</h2>
+    <p class="section-body">
+      Olivia is one of the most consistent and dependable performers in this year’s Diamond League — the type of prospect who 
+      quietly raises the standard for everyone around her. She submits work early, asks thoughtful clarifying questions, 
+      communicates proactively (even during travel-heavy periods), and maintains a calm, professional presence.<br><br>
+      She’s a classic Hustler archetype: disciplined, resilient, and driven by internal standards rather than external 
+      recognition. While nothing “flashy” jumps off the page, the substance is undeniable — she does the work with care, depth, 
+      and accountability. As a Black woman pursuing finance at Yale, she represents meaningful representation in an industry 
+      still short on it.
+    </p>
+  </section>
+
+  <section class="prospect-section">
+    <h2 class="section-title">Strengths</h2>
+    <ul class="section-list">
+      <li>Ultra-consistent performer — reliable, organized, early submissions.</li>
+      <li>Hustler mentality — proactive, self-driven, disciplined.</li>
+      <li>Democratic leadership — aligns teammates, encourages collaboration.</li>
+      <li>200+ volunteer hours & strong community engagement profile.</li>
+      <li>Entrepreneurial — founded lacrosse training program with high participation.</li>
+      <li>Professional communicator — scheduling, clarity, accountability.</li>
     </ul>
-  </div>
+  </section>
 
-  <div class="meta-column">
-    <h2 class="meta-title">MAP Profile</h2>
-    <ul class="meta-list">
-      <li><span>Fellowship Rank</span><span class="meta-value">8 / 63</span></li>
-      <li><span>Interview #1</span><span class="meta-value">87.1%</span></li>
-      <li><span>Interview #2</span><span class="meta-value">88.5%</span></li>
-      <li><span>Interview #3</span><span class="meta-value">85.8%</span></li>
-      <li><span>Personality</span><span class="meta-value">Hustler (Driven · Proactive)</span></li>
-      <li><span>Leadership</span><span class="meta-value">Democratic (Team Input · Shared Decisions)</span></li>
-      <li><span>Teamwork</span><span class="meta-value">Detail-Oriented (Structured · Methodical)</span></li>
+  <section class="prospect-section">
+    <h2 class="section-title">Areas for Development</h2>
+    <ul class="section-list">
+      <li>Bring more personality + confidence into interviews.</li>
+      <li>Sharpen technical valuation + comps fluency.</li>
+      <li>Use identity and lived experiences as narrative differentiators.</li>
     </ul>
-  </div>
+  </section>
 
-</section>
-
-<!-- OVERVIEW -->
-<section class="prospect-section">
-  <h2 class="section-title">Overview</h2>
-  <p class="section-body">
-    Olivia is one of the most consistent and dependable performers in this year’s Diamond League — 
-    the type of prospect who quietly raises the standard for everyone around her. She submits work early, 
-    asks thoughtful clarifying questions, communicates proactively (even during travel-heavy periods), 
-    and maintains a calm, professional presence.
-    <br><br>
-    She’s a classic Hustler archetype: disciplined, resilient, and driven by internal standards 
-    rather than external recognition. While nothing “flashy” jumps off the page, the substance is undeniable — 
-    she does the work with care, depth, and accountability. As a Black woman pursuing finance at Yale, 
-    she represents meaningful representation in an industry still short on it.
-  </p>
-</section>
-
-<!-- STRENGTHS -->
-<section class="prospect-section">
-  <h2 class="section-title">Strengths</h2>
-  <ul class="section-list">
-    <li>Ultra-consistent performer — reliable, organized, early submissions.</li>
-    <li>Hustler mentality — proactive, self-driven, disciplined.</li>
-    <li>Democratic leadership — aligns teammates, encourages collaboration.</li>
-    <li>200+ volunteer hours & strong community engagement profile.</li>
-    <li>Entrepreneurial — founded lacrosse training program with high participation.</li>
-    <li>Professional communicator — scheduling, clarity, accountability.</li>
-  </ul>
-</section>
-
-<!-- AFD -->
-<section class="prospect-section">
-  <h2 class="section-title">Areas for Development</h2>
-  <ul class="section-list">
-    <li>Bring more personality + confidence into interviews.</li>
-    <li>Sharpen technical valuation + comps fluency.</li>
-    <li>Use identity and lived experiences as narrative differentiators.</li>
-  </ul>
-</section>
-
-<!-- PROJECTION -->
-<section class="prospect-section">
-  <h2 class="section-title">Projection</h2>
-  <p class="section-body">
-    A strong Round 1–2 MAP prospect with a high floor built on discipline, reliability, 
-    and mature communication habits. As technical fundamentals deepen and her presence strengthens, 
-    Olivia has real potential to outperform expectations and develop into a quietly impactful Summer 2027 analyst.
-  </p>
-</section>
+  <section class="prospect-section">
+    <h2 class="section-title">Projection</h2>
+    <p class="section-body">
+      A strong Round 1–2 MAP prospect with a high floor built on discipline, reliability, and mature communication habits. As 
+      technical fundamentals deepen and her presence strengthens, Olivia has real potential to outperform expectations and 
+      develop into a quietly impactful Summer 2027 analyst.
+    </p>
+  </section>
 
 </div>
 </body>
 </html>
+
