@@ -1,201 +1,86 @@
-<!-- ============================= -->
-<!-- MAP BRAND STYLE (GLOBAL) -->
-<!-- ============================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Olivia Ty — MAP Scouting Report</title>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-  .prospect-page {
-    max-width: 960px;
-    margin: 0 auto 2.5rem auto;
-    font-family: 'Montserrat', sans-serif;
-    color: #1a1a1a;
-  }
+  body { margin:0; background:#f5f7fb; font-family:'Montserrat', sans-serif;}
+  .prospect-page { max-width:960px; margin:0 auto 3rem auto; padding:1.5rem 1rem; color:#1a1a1a;}
 
-  .prospect-hero {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1.25rem;
-    padding: 1.5rem 1.25rem;
-    border-radius: 12px;
-    background: #2E5084;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-  }
+  /* HERO */
+  .prospect-hero {display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.25rem;
+    padding:1.75rem 1.25rem;border-radius:14px;background:#2E5084;color:#fff;margin-bottom:2rem;}
+  .prospect-name{font-family:'Archivo Black';font-size:2rem;margin:0 0 .25rem;text-transform:uppercase;}
+  .prospect-tagline{margin:0 0 .15rem;font-size:1rem;font-weight:600;}
+  .prospect-subtitle{margin:0;font-size:.9rem;opacity:.9;}
 
-  .prospect-name {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.85rem;
-    margin: 0 0 0.25rem;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-  }
+  .prospect-grade-card{min-width:200px;padding:1rem 1.25rem;border-radius:12px;background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(4px);}
+  .grade-label{font-size:.7rem;opacity:.8;text-transform:uppercase;}
+  .grade-score{font-family:'Archivo Black';font-size:2.2rem;margin:.15rem 0;}
+  .grade-tier{font-size:.9rem;font-weight:600;}
 
-  .prospect-tagline {
-    margin: 0 0 0.15rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-  }
+  /* Recommendations */
+  .recommendation-pill{display:flex;align-items:center;gap:6px;background:#fff;color:#2E5084;
+    padding:6px 12px;border-radius:30px;font-weight:600;font-size:.78rem;margin-top:.55rem;width:fit-content;}
+  .pill-box{width:12px;height:12px;border-radius:3px;}
+  .pill-yellow{background:#eab308;} /* Strong Rec */
 
-  .prospect-subtitle {
-    margin: 0;
-    font-size: 0.85rem;
-    opacity: 0.9;
-  }
+  /* META */
+  .prospect-meta{display:flex;flex-wrap:wrap;gap:1.25rem;margin-bottom:2rem;}
+  .meta-column{flex:1 1 280px;background:#fff;border-radius:12px;padding:1rem 1.25rem;border:1px solid #dce2ee;}
+  .meta-title{font-family:'Archivo Black';font-size:.9rem;color:#2E5084;margin-bottom:.7rem;text-transform:uppercase;}
+  .meta-list{list-style:none;padding:0;margin:0;}
+  .meta-list li{display:flex;justify-content:space-between;padding:.28rem 0;border-bottom:1px dotted #e7eaf3;font-size:.87rem;}
+  .meta-value{text-align:right;margin-left:1rem;}
 
-  .prospect-grade-card {
-    min-width: 180px;
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
-    backdrop-filter: blur(4px);
-  }
-
-  .grade-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    opacity: 0.8;
-    margin-bottom: 0.25rem;
-  }
-
-  .grade-score {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.9rem;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-tier {
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-note {
-    font-size: 0.75rem;
-    opacity: 0.85;
-  }
-
-  .prospect-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .meta-column {
-    flex: 1 1 260px;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 1rem 1.1rem;
-    border: 1px solid #dce2ee;
-  }
-
-  .meta-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .meta-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .meta-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.2rem 0;
-    border-bottom: 1px dotted #e5e8f1;
-    font-size: 0.85rem;
-  }
-
-  .meta-value {
-    text-align: right;
-    margin-left: 1rem;
-  }
-
-  .prospect-section {
-    margin-bottom: 1.25rem;
-    padding: 1rem 1.1rem;
-    border-radius: 10px;
-    border: 1px solid #dce2ee;
-    background: #ffffff;
-  }
-
-  .section-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .section-body {
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list {
-    padding-left: 1.1rem;
-    margin: 0;
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list li {
-    margin-bottom: 0.35rem;
-  }
-
-  @media (max-width: 640px) {
-    .meta-list li {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .meta-value {
-      text-align: left;
-      margin-left: 0;
-      margin-top: 0.1rem;
-    }
-  }
+  /* SECTIONS */
+  .prospect-section{background:#fff;border-radius:12px;padding:1.15rem 1.35rem;border:1px solid #dce2ee;margin-bottom:1.4rem;}
+  .section-title{font-family:'Archivo Black';font-size:.95rem;color:#2E5084;text-transform:uppercase;margin-bottom:.65rem;}
+  .section-body{font-size:.9rem;line-height:1.52;}
+  .section-list li{font-size:.9rem;line-height:1.52;margin-bottom:.38rem;}
 </style>
+</head>
 
+<body>
 <div class="prospect-page">
 
-  <!-- ============================= -->
   <!-- HERO -->
-  <!-- ============================= -->
   <section class="prospect-hero">
-    <div class="prospect-hero-main">
-      <h1 class="prospect-name">OLIVIA TY</h1>
-      <p class="prospect-tagline">⭐️⭐️⭐️⭐️⭐️ Prospect · Goal Keeper Archetype · Investment Banking Track</p>
-      <p class="prospect-subtitle">Georgetown University · Women’s Golf ⛳ · Class of 2028</p>
+    <div>
+      <h1 class="prospect-name">Olivia Ty</h1>
+      <p class="prospect-tagline">⭐️⭐️⭐️⭐️ Investment Banking Prospect</p>
+      <p class="prospect-subtitle">Georgetown University · Golf · Class of 2028</p>
     </div>
 
     <div class="prospect-grade-card">
       <div class="grade-label">MAP Prospect Grade</div>
-      <div class="grade-score">9.8</div>
-      <div class="grade-tier">Round 1 Candidate</div>
-      <div class="grade-note">Elite profile — ceiling as high as any prospect in the class</div>
+      <div class="grade-score">93</div>
+      <div class="grade-tier">Round 1–2</div>
+
+      <div class="recommendation-pill">
+        <div class="pill-box pill-yellow"></div>
+        <div class="pill-box pill-yellow"></div>
+        <div class="pill-box pill-yellow"></div>
+        <span>Strong Recommendation</span>
+      </div>
     </div>
   </section>
 
-  <!-- ============================= -->
+
   <!-- META -->
-  <!-- ============================= -->
   <section class="prospect-meta">
     <div class="meta-column">
       <h2 class="meta-title">Prospect Info</h2>
       <ul class="meta-list">
         <li><span>School</span><span class="meta-value">Georgetown University</span></li>
-        <li><span>Major</span><span class="meta-value">Business Administration</span></li>
-        <li><span>Minor</span><span class="meta-value">Business Management</span></li>
+        <li><span>Major</span><span class="meta-value">Finance & OPAN</span></li>
+        <li><span>Minor</span><span class="meta-value">Psychology</span></li>
         <li><span>Year</span><span class="meta-value">2028</span></li>
+        <li><span>GPA</span><span class="meta-value">3.6</span></li>
         <li><span>Sport</span><span class="meta-value">Golf</span></li>
         <li><span>Hometown</span><span class="meta-value">San Diego, CA</span></li>
       </ul>
@@ -204,83 +89,67 @@
     <div class="meta-column">
       <h2 class="meta-title">MAP Profile</h2>
       <ul class="meta-list">
-        <li><span>Fall Rank</span><span class="meta-value">7 / 63</span></li>
-        <li><span>GPA</span><span class="meta-value">3.6</span></li>
-        <li><span>Personality</span><span class="meta-value">5. Goal Keeper</span></li>
-        <li><span>Leadership</span>
-          <span class="meta-value">
-            Proactive communicator · always early · volunteers to mentor younger MAP athletes
-          </span>
-        </li>
-        <li><span>Performance</span>
-          <span class="meta-value">
-            One of the most reliable + technically polished candidates in the entire cohort
-          </span>
-        </li>
+        <li><span>Fellowship Rank</span><span class="meta-value">10 / 78</span></li>
+        <li><span>Interview #1</span><span class="meta-value">90.0%</span></li>
+        <li><span>Interview #2</span><span class="meta-value">97.6%</span></li>
+        <li><span>Interview #3</span><span class="meta-value">92.6%</span></li>
+        <li><span>Personality</span><span class="meta-value">Goal Keeper (Disciplined, Structured Execution)</span></li>
+        <li><span>Leadership</span><span class="meta-value">Democratic Leader (Team Input, Shared Direction)</span></li>
+        <li><span>Teamwork</span><span class="meta-value">Detail-Oriented (Precise, Quality-Focused)</span></li>
       </ul>
     </div>
   </section>
 
-  <!-- ============================= -->
-  <!-- OVERVIEW -->
-  <!-- ============================= -->
+
+  <!-- CONTENT -->
   <section class="prospect-section">
     <h2 class="section-title">Overview</h2>
     <p class="section-body">
-      If MAP held a captain re-draft, Olivia would be at the very top of the board. She embodies the rare blend of technical polish, maturity, 
-      reliability, and leadership presence that defines our highest-end Diamond League alumni. She submits every assignment early, communicates 
-      proactively (especially during travel-heavy periods), and consistently models the professional habits we want to scale across MAP’s ecosystem.
-      <br><br>
-      Her work is so strong that we routinely use her submissions as “model responses” for younger cohorts — a distinction reserved only for the 
-      most exceptional MAP prospects. Coaches, teammates, and MAP leadership all highlight the same qualities: calm professionalism, 
-      self-awareness, intellectual rigor, and a genuine team-first mindset.
-      <br><br>
-      She has one of the highest ceilings of any fellow in the class. It would not be surprising if she ultimately becomes one of the top 2–3 performers 
-      from this entire Diamond League cohort.
+      If MAP held a captain re-draft, Olivia would be at the very top of the board. She embodies the rare blend of technical 
+      polish, maturity, reliability, and leadership presence that defines our highest-end Diamond League alumni. She submits 
+      every assignment early, communicates proactively — even during demanding periods — and consistently models the 
+      professional habits we want to scale across MAP’s ecosystem.<br><br>
+      Her work is so strong that we routinely use her submissions as “model responses” for younger cohorts — a distinction 
+      reserved only for the most exceptional MAP prospects. Coaches, teammates, and MAP leadership all highlight the same 
+      qualities: calm professionalism, intellectual rigor, high accountability, and a genuine team-first mindset. She has one 
+      of the highest ceilings in the class and is trending toward early analyst readiness with continued reps.
     </p>
   </section>
 
-  <!-- ============================= -->
-  <!-- STRENGTHS -->
-  <!-- ============================= -->
   <section class="prospect-section">
     <h2 class="section-title">Strengths</h2>
     <ul class="section-list">
-      <li><strong>Five-star professional maturity:</strong> communicates early, clearly, and consistently.</li>
-      <li><strong>High-ceiling talent:</strong> strong technicals, strong behavioral presence, strong leadership instincts.</li>
-      <li><strong>Assignment excellence:</strong> work routinely used as MAP “model responses” for future classes.</li>
-      <li><strong>Goal Keeper discipline:</strong> thrives on structure, preparation, routines, and clear execution thresholds.</li>
-      <li><strong>Leadership in action:</strong> volunteers to interview incoming MAP candidates; mentors younger athletes.</li>
-      <li><strong>High adaptability:</strong> traveled extensively during Phase 1 but never compromised quality or deadlines.</li>
-      <li><strong>Technical curiosity:</strong> early exposure to modeling, analytics, and product-building through Evo Golf.</li>
+      <li>Five-star maturity: early submissions, clarity, proactive communication.</li>
+      <li>High-ceiling analyst potential with balanced technical + behavioral strengths.</li>
+      <li>Model response quality — sets the standard for younger MAP cohorts.</li>
+      <li>Disciplined Goal Keeper wiring — structure, preparation, execution repeatability.</li>
+      <li>Leadership in action — interviews candidates, mentors younger athletes.</li>
+      <li>Adaptable under volume — maintained quality through travel-heavy periods.</li>
+      <li>Technical curiosity through Evo Golf + analytics exposure.</li>
     </ul>
   </section>
 
-  <!-- ============================= -->
-  <!-- AREAS FOR DEVELOPMENT -->
-  <!-- ============================= -->
   <section class="prospect-section">
     <h2 class="section-title">Areas for Development</h2>
     <ul class="section-list">
-      <li>Continue building confidence in steering group decisions — she has the instincts to lead more assertively.</li>
-      <li>Push to showcase more of her technical range in live case discussions to match the quality of her written work.</li>
-      <li>Expand beyond core strengths into more complex valuation frameworks as she enters Summer 2027 prep.</li>
+      <li>Continue building confidence steering group decisions — instincts are strong.</li>
+      <li>Showcase technical thinking more live to match written work strength.</li>
+      <li>Sharpen accounting + valuation fundamentals during technical prep.</li>
     </ul>
   </section>
 
-  <!-- ============================= -->
-  <!-- PROJECTION -->
-  <!-- ============================= -->
   <section class="prospect-section">
     <h2 class="section-title">Projection</h2>
     <p class="section-body">
-      Olivia is a true five-star MAP prospect with franchise-level upside. She combines elite consistency, strong technical foundations, 
-      behavioral excellence, and a team-first mindset that firms immediately gravitate toward. With continued development, she has the potential 
-      to emerge as one of the defining success stories of the Summer 2027 analyst class — a polished, reliable, high-ceiling performer 
-      who makes every team she joins better. 
-      <br><br>
-      A near-elite 9.8 grade — one of the highest in the entire Diamond League.
+      Olivia is a near-elite Round 1–2 MAP prospect with franchise-level upside. She pairs consistent execution with strong 
+      communication, leadership maturity, and model-ready work quality — the profile firms gravitate toward early. With focused 
+      technical acceleration (especially accounting + valuation fluency), she has a realistic pathway into Round 1 territory and 
+      potential to become one of the defining success stories of the Summer 2027 analyst class — a polished, high-ceiling 
+      performer who elevates every team she joins.
     </p>
   </section>
 
 </div>
+</body>
+</html>
+
