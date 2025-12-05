@@ -1,296 +1,155 @@
-<!-- ============================= -->
-<!-- MAP BRAND STYLE (GLOBAL) -->
-<!-- ============================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lauren Yu — MAP Scouting Report</title>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-  .prospect-page {
-    max-width: 960px;
-    margin: 0 auto 2.5rem auto;
-    font-family: 'Montserrat', sans-serif;
-    color: #1a1a1a;
-  }
+  body { margin:0; background:#f5f7fb; font-family:'Montserrat', sans-serif;}
+  .prospect-page { max-width:960px; margin:0 auto 3rem auto; padding:1.5rem 1rem; color:#1a1a1a;}
 
-  .prospect-hero {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1.25rem;
-    padding: 1.5rem 1.25rem;
-    border-radius: 12px;
-    background: #2E5084;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-  }
+  /* HERO */
+  .prospect-hero {display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.25rem;
+    padding:1.75rem 1.25rem;border-radius:14px;background:#2E5084;color:#fff;margin-bottom:2rem;}
+  .prospect-name {font-family:'Archivo Black';font-size:2rem;margin:0 0 .25rem;text-transform:uppercase;}
+  .prospect-tagline {margin:0 0 .15rem;font-size:1rem;font-weight:600;}
+  .prospect-subtitle {margin:0;font-size:.9rem;opacity:.9;}
 
-  .prospect-name {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.85rem;
-    margin: 0 0 0.25rem;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-  }
+  .prospect-grade-card {min-width:200px;padding:1rem 1.25rem;border-radius:12px;background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(4px);}
+  .grade-label {font-size:.7rem;opacity:.8;text-transform:uppercase;}
+  .grade-score {font-family:'Archivo Black';font-size:2.2rem;margin:.15rem 0;}
+  .grade-tier {font-size:.9rem;font-weight:600;}
 
-  .prospect-tagline {
-    margin: 0 0 0.15rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-  }
+  /* Recommendation Pill */
+  .recommendation-pill {display:flex;align-items:center;gap:6px;background:#fff;color:#2E5084;
+    padding:6px 12px;border-radius:30px;font-weight:600;font-size:.78rem;margin-top:.55rem;width:fit-content;}
+  .pill-box {width:12px;height:12px;border-radius:3px;}
+  .pill-yellow {background:#eab308;} /* Strong Recommendation */
 
-  .prospect-subtitle {
-    margin: 0;
-    font-size: 0.85rem;
-    opacity: 0.9;
-  }
+  /* META */
+  .prospect-meta {display:flex;flex-wrap:wrap;gap:1.25rem;margin-bottom:2rem;}
+  .meta-column {flex:1 1 280px;background:#fff;border-radius:12px;padding:1rem 1.25rem;border:1px solid #dce2ee;}
+  .meta-title {font-family:'Archivo Black';font-size:.9rem;color:#2E5084;margin-bottom:.7rem;text-transform:uppercase;}
+  .meta-list {list-style:none;padding:0;margin:0;}
+  .meta-list li {display:flex;justify-content:space-between;padding:.28rem 0;border-bottom:1px dotted #e7eaf3;font-size:.87rem;}
+  .meta-value {text-align:right;margin-left:1rem;}
 
-  .prospect-grade-card {
-    min-width: 180px;
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
-    backdrop-filter: blur(4px);
-  }
-
-  .grade-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    opacity: 0.8;
-    margin-bottom: 0.25rem;
-  }
-
-  .grade-score {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.9rem;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-tier {
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-note {
-    font-size: 0.75rem;
-    opacity: 0.85;
-  }
-
-  .prospect-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .meta-column {
-    flex: 1 1 260px;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 1rem 1.1rem;
-    border: 1px solid #dce2ee;
-  }
-
-  .meta-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .meta-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .meta-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.2rem 0;
-    border-bottom: 1px dotted #e5e8f1;
-    font-size: 0.85rem;
-  }
-
-  .meta-value {
-    text-align: right;
-    margin-left: 1rem;
-  }
-
-  .prospect-section {
-    margin-bottom: 1.25rem;
-    padding: 1rem 1.1rem;
-    border-radius: 10px;
-    border: 1px solid #dce2ee;
-    background: #ffffff;
-  }
-
-  .section-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .section-body {
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list {
-    padding-left: 1.1rem;
-    margin: 0;
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list li {
-    margin-bottom: 0.35rem;
-  }
-
-  @media (max-width: 640px) {
-    .meta-list li {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .meta-value {
-      text-align: left;
-      margin-left: 0;
-      margin-top: 0.1rem;
-    }
-  }
+  /* CONTENT */
+  .prospect-section {background:#fff;border-radius:12px;padding:1.15rem 1.35rem;border:1px solid #dce2ee;margin-bottom:1.4rem;}
+  .section-title {font-family:'Archivo Black';font-size:.95rem;color:#2E5084;text-transform:uppercase;margin-bottom:.65rem;}
+  .section-body {font-size:.9rem;line-height:1.52;}
+  .section-list li {font-size:.9rem;line-height:1.52;margin-bottom:.38rem;}
 </style>
+</head>
 
+<body>
 <div class="prospect-page">
 
-  <!-- ============================= -->
-  <!-- HERO -->
-  <!-- ============================= -->
+  <!-- ================= HERO ================= -->
   <section class="prospect-hero">
-    <div class="prospect-hero-main">
-      <h1 class="prospect-name">LAUREN YU</h1>
-      <p class="prospect-tagline">⭐️⭐️⭐️⭐️⭐️ Prospect · Two-Way Player Archetype · Investment Banking Track</p>
-      <p class="prospect-subtitle">UNC Chapel Hill · Fencing 🤺 · Class of 2028</p>
+    <div>
+      <h1 class="prospect-name">Lauren Yu</h1>
+      <p class="prospect-tagline">⭐️⭐️⭐️⭐️ Investment Banking Prospect</p>
+      <p class="prospect-subtitle">University of North Carolina at Chapel Hill · Fencing · Class of 2028</p>
     </div>
 
     <div class="prospect-grade-card">
       <div class="grade-label">MAP Prospect Grade</div>
       <div class="grade-score">91</div>
-      <div class="grade-tier">Round 1–2 Candidate</div>
-      <div class="grade-note">Elite résumé · consistent execution · strong interpersonal upside</div>
+      <div class="grade-tier">Round 1–2</div>
+
+      <div class="recommendation-pill">
+        <div class="pill-box pill-yellow"></div>
+        <div class="pill-box pill-yellow"></div>
+        <div class="pill-box pill-yellow"></div>
+        <span>Strong Recommendation</span>
+      </div>
     </div>
   </section>
 
-  <!-- ============================= -->
-  <!-- META -->
-  <!-- ============================= -->
+
+  <!-- ================= META ================= -->
   <section class="prospect-meta">
-    <!-- PROSPECT INFO -->
     <div class="meta-column">
       <h2 class="meta-title">Prospect Info</h2>
       <ul class="meta-list">
         <li><span>School</span><span class="meta-value">UNC Chapel Hill</span></li>
         <li><span>Major</span><span class="meta-value">Business Administration</span></li>
-        <li><span>Minor</span><span class="meta-value">Statistics &amp; Analytics</span></li>
+        <li><span>Minor</span><span class="meta-value">Statistics & Analytics</span></li>
         <li><span>Year</span><span class="meta-value">2028</span></li>
         <li><span>GPA</span><span class="meta-value">3.9</span></li>
-        <li><span>Sport</span><span class="meta-value">Fencing 🤺</span></li>
+        <li><span>Sport</span><span class="meta-value">Fencing</span></li>
         <li><span>Hometown</span><span class="meta-value">Cresskill, NJ</span></li>
       </ul>
     </div>
 
-    <!-- MAP PROFILE -->
     <div class="meta-column">
       <h2 class="meta-title">MAP Profile</h2>
       <ul class="meta-list">
-        <li><span>Official Points</span><span class="meta-value">1317.5</span></li>
-        <li><span>Cumulative Rank</span><span class="meta-value">14 / 63</span></li>
-        <li><span>Phase 1 Rank</span><span class="meta-value">5 / 63</span></li>
-        <li><span>Phase 2 Rank</span><span class="meta-value">14 / 30</span></li>
-        <li>
-          <span>Personality</span>
-          <span class="meta-value">
-            14. Two-Way Player<br>
-            (Balanced Communicator · Team Connector · Adaptable Contributor)
-          </span>
-        </li>
-        <li>
-          <span>Leadership</span>
-          <span class="meta-value">
-            Democratic Leader<br>
-            (Collaborative · Inclusive · Voice-Amplifying)
-          </span>
-        </li>
+        <li><span>Fellowship Rank</span><span class="meta-value">14 / 78</span></li>
+        <li><span>Interview #1</span><span class="meta-value">75.9%</span></li>
+        <li><span>Interview #2</span><span class="meta-value">100%</span></li>
+        <li><span>Interview #3</span><span class="meta-value">94.6%</span></li>
+        <li><span>Personality</span><span class="meta-value">Two-Way Player (Adaptive, Relationship-Fluent)</span></li>
+        <li><span>Leadership</span><span class="meta-value">Democratic Leader (Shared Input, Collaboration)</span></li>
+        <li><span>Teamwork</span><span class="meta-value">Idea-Oriented (Strategic, Solution-Creative)</span></li>
       </ul>
     </div>
   </section>
 
-  <!-- ============================= -->
-  <!-- OVERVIEW -->
-  <!-- ============================= -->
+
+  <!-- ================= CONTENT ================= -->
   <section class="prospect-section">
     <h2 class="section-title">Overview</h2>
     <p class="section-body">
-      Lauren is one of the most consistently elite Fellows in the Diamond League — a high-achieving 
-      academic performer, nationally recognized Division I fencer, and one of the most polished interpersonal 
-      profiles in the entire class. While her résumé is already among the strongest, what truly separates her is 
-      her <strong>Two-Way Player capacity</strong>: she is equally comfortable driving high-level analytical work 
-      and building strong rapport with any personality type.
-      <br><br>
-      People naturally open up to her. She leads with warmth, humor, and empathy — which has made her an anchor 
-      on the UNC fencing team, across nonprofits, and now within MAP’s case environments. Her ability to connect 
-      with strangers, teammates, and executives alike is rare for a first-year business candidate, and it elevates 
-      the cohesion and morale of every team she touches.
-      <br><br>
-      Combine that with flawless consistency (always early, zero lapses), a 3.9 GPA, and competitive experience in 
-      one of the toughest athletic and academic environments in the ACC, and Lauren projects as a premium 
-      Round 1–2 candidate with both technical readiness and outstanding emotional intelligence.
+      Lauren is one of the most consistently elite Fellows in the Diamond League — a high-achieving academic performer,
+      nationally recognized Division I fencer, and one of the strongest interpersonal operators in the fellowship. Her
+      Two-Way Player wiring allows her to contribute meaningfully in both analytical and collaborative environments, making
+      her a culture elevator on any team she joins.<br><br>
+      She leads with warmth, clarity, and genuine connection — teammates trust her quickly, and younger Fellows naturally
+      gravitate toward her for guidance. With elite consistency, a 3.9 GPA, and one of the most complete profiles in the
+      class, she projects as a premium Round 1–2 candidate with immediate analyst readiness and long-term upside.
     </p>
   </section>
 
-  <!-- ============================= -->
-  <!-- STRENGTHS -->
-  <!-- ============================= -->
+
   <section class="prospect-section">
     <h2 class="section-title">Strengths</h2>
     <ul class="section-list">
-      <li><strong>Two-Way interpersonal excellence:</strong> People naturally trust her; blends empathy, clarity, and humor.</li>
-      <li><strong>Elite consistency:</strong> Submits early, high-quality work every week, with no dips across the season.</li>
-      <li><strong>Résumé strength:</strong> Deep analytical experience in UNC M&amp;A Group, investment analysis, and valuation roles.</li>
-      <li><strong>Academic firepower:</strong> 3.9 GPA in Kenan-Flagler Business School with a Statistics &amp; Analytics minor.</li>
-      <li><strong>High-level athletic pedigree:</strong> NCAA competitor, nationally ranked, All-American honors in fencing.</li>
-      <li><strong>Cultural leader:</strong> Elevates team cohesion; strong mentor and reliable presence in group environments.</li>
-      <li><strong>Creative edge:</strong> Award-winning artist with a strong technical toolkit (Tableau, R, MATLAB, Adobe Suite).</li>
+      <li>Two-Way interpersonal excellence — trusted, empathetic, engaging.</li>
+      <li>Elite consistency — early submissions, zero drops, high quality.</li>
+      <li>Résumé strength — UNC M&A Group + valuation work.</li>
+      <li>Academic rigor — 3.9 GPA in top business school.</li>
+      <li>NCAA pedigree — nationally ranked, All-American contender.</li>
+      <li>Cultural leader — improves cohesion and morale.</li>
+      <li>Creative + technical capability (Tableau, R, MATLAB, Adobe Suite).</li>
     </ul>
   </section>
 
-  <!-- ============================= -->
-  <!-- AREAS FOR DEVELOPMENT -->
-  <!-- ============================= -->
+
   <section class="prospect-section">
     <h2 class="section-title">Areas for Development</h2>
     <ul class="section-list">
-      <li>As she grows, can lean into more vocal leadership in high-stakes group settings.</li>
-      <li>Continue sharpening timed behavioral responses to fully showcase her multidimensional background.</li>
-      <li>Next step is stepping confidently into front-of-room roles — presentations, client-style communication, etc.</li>
+      <li>Lean into more vocal presence during rigorous discussions.</li>
+      <li>Refine compressed, timed behavioral responses.</li>
+      <li>Step confidently into front-of-room presentation leadership.</li>
     </ul>
   </section>
 
-  <!-- ============================= -->
-  <!-- PROJECTION -->
-  <!-- ============================= -->
+
   <section class="prospect-section">
     <h2 class="section-title">Projection</h2>
     <p class="section-body">
-      A premier Round 1–2 MAP prospect whose consistency, technical readiness, and exceptional interpersonal 
-      intelligence make her one of the most complete candidates in the class. Lauren is a plug-and-play analyst 
-      with the emotional range, discipline, and business preparation to succeed immediately in competitive 
-      2027 front-office pipelines.
+      A premier Round 1–2 MAP prospect with analyst-ready polish, technical preparation, and outstanding interpersonal range.
+      Lauren is a plug-and-play front-office candidate poised to succeed immediately in competitive 2027 recruiting — a true
+      culture raiser with both performance floor and long-term ceiling.
     </p>
   </section>
 
 </div>
+</body>
+</html>
+
