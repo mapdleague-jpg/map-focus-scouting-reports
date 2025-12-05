@@ -1,278 +1,153 @@
-<!-- ============================= -->
-<!-- MAP BRAND STYLE (GLOBAL) -->
-<!-- ============================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sophia Levering — MAP Scouting Report</title>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-  .prospect-page {
-    max-width: 960px;
-    margin: 0 auto 2.5rem auto;
-    font-family: 'Montserrat', sans-serif;
-    color: #1a1a1a;
-  }
+  body {margin:0;background:#f5f7fb;font-family:'Montserrat',sans-serif;}
+  .prospect-page {max-width:960px;margin:0 auto 3rem;padding:1.5rem;color:#1a1a1a;}
 
-  .prospect-hero {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1.25rem;
-    padding: 1.5rem 1.25rem;
-    border-radius: 12px;
-    background: #2E5084;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-  }
+  /* HERO */
+  .prospect-hero {display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.25rem;
+    padding:1.75rem;border-radius:14px;background:#2E5084;color:#fff;margin-bottom:2rem;}
+  .prospect-name {font-family:'Archivo Black';font-size:2rem;margin-bottom:.25rem;text-transform:uppercase;}
+  .prospect-tagline {font-size:1rem;font-weight:600;margin-bottom:.15rem;}
+  .prospect-subtitle {font-size:.9rem;opacity:.9;margin:0;}
 
-  .prospect-name {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.85rem;
-    margin: 0 0 0.25rem;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-  }
+  .prospect-grade-card {min-width:200px;padding:1rem 1.25rem;border-radius:12px;
+    background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(4px);}
+  .grade-label {font-size:.7rem;opacity:.8;text-transform:uppercase;}
+  .grade-score {font-family:'Archivo Black';font-size:2.2rem;margin:.2rem 0;}
+  .grade-tier {font-size:.9rem;font-weight:600;}
 
-  .prospect-tagline {
-    margin: 0 0 0.15rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-  }
+  /* Pill */
+  .recommendation-pill {display:flex;align-items:center;gap:6px;background:#fff;color:#2E5084;
+    padding:6px 12px;border-radius:30px;font-weight:600;font-size:.78rem;margin-top:.55rem;width:fit-content;}
+  .pill-box {width:12px;height:12px;border-radius:3px;}
+  .pill-red {background:#ef4444;}
 
-  .prospect-subtitle {
-    margin: 0;
-    font-size: 0.85rem;
-    opacity: 0.9;
-  }
+  /* META */
+  .prospect-meta {display:flex;flex-wrap:wrap;gap:1.25rem;margin-bottom:2rem;}
+  .meta-column {flex:1 1 280px;background:#fff;border-radius:12px;padding:1rem 1.25rem;border:1px solid #dce2ee;}
+  .meta-title {font-family:'Archivo Black';font-size:.9rem;color:#2E5084;margin-bottom:.7rem;text-transform:uppercase;}
+  .meta-list {list-style:none;margin:0;padding:0;}
+  .meta-list li {display:flex;justify-content:space-between;padding:.28rem 0;
+    border-bottom:1px dotted #e7eaf3;font-size:.87rem;}
+  .meta-value {text-align:right;margin-left:1rem;}
 
-  .prospect-grade-card {
-    min-width: 180px;
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
-    backdrop-filter: blur(4px);
-  }
-
-  .grade-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    opacity: 0.8;
-    margin-bottom: 0.25rem;
-  }
-
-  .grade-score {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.9rem;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-tier {
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-note {
-    font-size: 0.75rem;
-    opacity: 0.85;
-  }
-
-  .prospect-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .meta-column {
-    flex: 1 1 260px;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 1rem 1.1rem;
-    border: 1px solid #dce2ee;
-  }
-
-  .meta-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .meta-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .meta-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.2rem 0;
-    border-bottom: 1px dotted #e5e8f1;
-    font-size: 0.85rem;
-  }
-
-  .meta-value {
-    text-align: right;
-    margin-left: 1rem;
-  }
-
-  .prospect-section {
-    margin-bottom: 1.25rem;
-    padding: 1rem 1.1rem;
-    border-radius: 10px;
-    border: 1px solid #dce2ee;
-    background: #ffffff;
-  }
-
-  .section-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .section-body {
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list {
-    padding-left: 1.1rem;
-    margin: 0;
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list li {
-    margin-bottom: 0.35rem;
-  }
-
-  @media (max-width: 640px) {
-    .meta-list li {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .meta-value {
-      text-align: left;
-      margin-left: 0;
-      margin-top: 0.1rem;
-    }
-  }
+  /* CONTENT */
+  .prospect-section {background:#fff;border-radius:12px;padding:1.15rem 1.35rem;border:1px solid #dce2ee;margin-bottom:1.4rem;}
+  .section-title {font-family:'Archivo Black';font-size:.95rem;color:#2E5084;text-transform:uppercase;margin-bottom:.65rem;}
+  .section-body {font-size:.9rem;line-height:1.52;}
+  .section-list li {font-size:.9rem;line-height:1.52;margin-bottom:.38rem;}
 </style>
+</head>
 
+<body>
 <div class="prospect-page">
 
-  <!-- ============================= -->
-  <!-- HERO -->
-  <!-- ============================= -->
+  <!-- ================= HERO ================= -->
   <section class="prospect-hero">
-    <div class="prospect-hero-main">
-      <h1 class="prospect-name">SOPHIA LEVERING</h1>
-      <p class="prospect-tagline">⭐️⭐️⭐️⭐️ Prospect · Behind-the-Scenes Archetype · Investment Banking Track</p>
-      <p class="prospect-subtitle">Yale University · Ice Hockey 🏒 · Class of 2028</p>
+    <div>
+      <h1 class="prospect-name">Sophia Levering</h1>
+      <p class="prospect-tagline">⭐️⭐️⭐️ Investment Banking Prospect</p>
+      <p class="prospect-subtitle">Yale University · Ice Hockey · Class of 2028</p>
     </div>
 
     <div class="prospect-grade-card">
       <div class="grade-label">MAP Prospect Grade</div>
-      <div class="grade-score">8.8</div>
-      <div class="grade-tier">Round 4–5 Candidate</div>
-      <div class="grade-note">High flashes; needs consistency + more presence in interviews</div>
+      <div class="grade-score">83</div>
+      <div class="grade-tier">Round 3–4</div>
+
+      <div class="recommendation-pill">
+        <div class="pill-box pill-red"></div>
+        <div class="pill-box pill-red"></div>
+        <div class="pill-box pill-red"></div>
+        <span>Watchlist Recommendation</span>
+      </div>
     </div>
   </section>
 
-  <!-- ============================= -->
-  <!-- META -->
-  <!-- ============================= -->
+
+  <!-- ================= META ================= -->
   <section class="prospect-meta">
+
     <div class="meta-column">
       <h2 class="meta-title">Prospect Info</h2>
       <ul class="meta-list">
         <li><span>School</span><span class="meta-value">Yale University</span></li>
         <li><span>Major</span><span class="meta-value">Economics</span></li>
+        <li><span>Minor</span><span class="meta-value">N/A</span></li>
         <li><span>Year</span><span class="meta-value">2028</span></li>
+        <li><span>GPA</span><span class="meta-value">3.76</span></li>
         <li><span>Sport</span><span class="meta-value">Ice Hockey</span></li>
         <li><span>Hometown</span><span class="meta-value">Westwood, MA</span></li>
-        <li><span>GPA</span><span class="meta-value">3.76</span></li>
       </ul>
     </div>
 
     <div class="meta-column">
       <h2 class="meta-title">MAP Profile</h2>
       <ul class="meta-list">
-        <li><span>Fall Rank</span><span class="meta-value">17 / 63</span></li>
-        <li><span>Personality</span><span class="meta-value">1. Behind the Scenes</span></li>
-        <li><span>Leadership</span>
-          <span class="meta-value">Servant Leader · values team buy-in · clear communicator</span>
-        </li>
-        <li><span>Performance</span>
-          <span class="meta-value">High flashes; inconsistent execution; coachable + receptive</span>
-        </li>
+        <li><span>Fellowship Rank</span><span class="meta-value">25 / 78</span></li>
+        <li><span>Interview #1</span><span class="meta-value">94.1%</span></li>
+        <li><span>Interview #2</span><span class="meta-value">97.1%</span></li>
+        <li><span>Interview #3</span><span class="meta-value">85.5%</span></li>
+        <li><span>Personality</span><span class="meta-value">Behind the Scenes (Reserved, Detail-Oriented)</span></li>
+        <li><span>Leadership</span><span class="meta-value">Servant Leader (People-First, Supportive)</span></li>
+        <li><span>Teamwork</span><span class="meta-value">Supportive (Steady, Reliable)</span></li>
       </ul>
     </div>
+
   </section>
 
-  <!-- ============================= -->
-  <!-- OVERVIEW -->
-  <!-- ============================= -->
+
+
+  <!-- ================= CONTENT ================= -->
   <section class="prospect-section">
     <h2 class="section-title">Overview</h2>
     <p class="section-body">
-      Sophia is a classic Behind-the-Scenes contributor: thoughtful, analytical, composed, and team-first. When she’s on, she shows 
-      real potential — strong writing, clear structuring, and a grounded, disciplined approach to her work. She had several high-level 
-      flashes throughout the fellowship, and when she locks in, the quality is absolutely there. 
+      Sophia is a classic Behind-the-Scenes contributor: thoughtful, analytical, composed, and team-first. When she’s on, she shows real potential — strong writing, clear structuring, and a grounded, disciplined approach to her work. She had several high-level flashes throughout the fellowship, and when she locks in, the quality is absolutely there.
       <br><br>
-      The main challenge this season was consistency. She occasionally struggled with following assignment instructions and submitted 
-      1–2 deliverables late. But she remained very coachable, communicated well with Student Support, and showed strong self-awareness 
-      — even acknowledging that her personality type leans quieter and that interviews are an area where she wants to grow.
+      The main challenge this season was consistency. She occasionally struggled with following assignment instructions and submitted 1–2 deliverables late. But she remained very coachable, communicated well with Student Support, and showed strong self-awareness — even acknowledging that her personality type leans quieter and that interviews are an area where she wants to grow.
       <br><br>
-      This is exactly the type of candidate who often surprises people in later rounds: disciplined, introspective, and quietly competitive, 
-      with the ability to sharpen quickly once expectations are clearer.
+      This is exactly the type of candidate who often surprises people in later rounds: disciplined, introspective, and quietly competitive, with the ability to sharpen quickly once expectations are clearer.
     </p>
   </section>
 
-  <!-- ============================= -->
-  <!-- STRENGTHS -->
-  <!-- ============================= -->
+
   <section class="prospect-section">
     <h2 class="section-title">Strengths</h2>
     <ul class="section-list">
-      <li><strong>Authentic Behind-the-Scenes operator:</strong> thoughtful, team-first, grounded energy.</li>
-      <li><strong>High flashes of very strong work:</strong> when she hits, she hits at a high level.</li>
-      <li><strong>Disciplined athlete:</strong> D1 ECAC hockey — elite resilience, toughness, competitive maturity.</li>
-      <li><strong>Strong communicator:</strong> respectful tone, clear updates, steady presence.</li>
-      <li><strong>Coachability:</strong> responds well to structure and feedback.</li>
-      <li><strong>Servant leader mindset:</strong> prioritizes team cohesion and individualized communication.</li>
+      <li>Authentic Behind-the-Scenes operator — thoughtful, team-first, grounded energy.</li>
+      <li>High flashes of strong work when locked in.</li>
+      <li>Division I ECAC hockey — resilience, toughness, composure.</li>
+      <li>Strong communicator — respectful tone + steady presence.</li>
+      <li>Coachable — responds well to structure + feedback.</li>
+      <li>Servant leader mindset — prioritizes team cohesion + communication.</li>
     </ul>
   </section>
 
-  <!-- ============================= -->
-  <!-- AREAS FOR DEVELOPMENT -->
-  <!-- ============================= -->
+
   <section class="prospect-section">
     <h2 class="section-title">Areas for Development</h2>
     <ul class="section-list">
-      <li>Increase consistency — follow instructions precisely and avoid late submissions.</li>
-      <li>Let her personality shine more in live interviews (she has more presence than she shows).</li>
-      <li>Push confidence + assertiveness in group settings and deal discussions.</li>
+      <li>Increase consistency + follow instructions precisely.</li>
+      <li>Let personality and voice come through more in interviews.</li>
+      <li>Practice speaking with confidence in group + live deal settings.</li>
     </ul>
   </section>
 
-  <!-- ============================= -->
-  <!-- PROJECTION -->
-  <!-- ============================= -->
+
   <section class="prospect-section">
     <h2 class="section-title">Projection</h2>
     <p class="section-body">
-      Sophia is a **4-Star, Round 4–5** MAP prospect with meaningful long-term upside. She has the academic strength, athletic discipline, 
-      and personal maturity to grow into a strong analyst — especially if she continues working on consistency and develops a clearer voice 
-      in interviews. With her coachability and work ethic, she’s the type of candidate who can absolutely outperform expectations once she 
-      sharpens the details and grows more vocal in high-stakes environments.
+      Sophia is a 4-Star, Round 4–5 MAP prospect with meaningful long-term upside. She has the academic strength, athletic discipline, and personal maturity to grow into a strong analyst — especially if she continues sharpening consistency and develops a clearer voice in live conversations. With structure and coaching, she is the type who can quietly outperform expectations over time.
     </p>
   </section>
 
 </div>
+</body>
+</html>
