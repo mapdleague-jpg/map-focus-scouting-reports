@@ -1,281 +1,152 @@
-<!-- ============================= -->
-<!-- MAP BRAND STYLE (GLOBAL) -->
-<!-- ============================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Luke Liming — MAP Scouting Report</title>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-  .prospect-page {
-    max-width: 960px;
-    margin: 0 auto 2.5rem auto;
-    font-family: 'Montserrat', sans-serif;
-    color: #1a1a1a;
-  }
+  body {margin:0;background:#f5f7fb;font-family:'Montserrat',sans-serif;}
+  .prospect-page {max-width:960px;margin:0 auto 3rem;padding:1.5rem;color:#1a1a1a;}
 
-  .prospect-hero {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1.25rem;
-    padding: 1.5rem 1.25rem;
-    border-radius: 12px;
-    background: #2E5084;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-  }
+  /* HERO */
+  .prospect-hero {display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.25rem;
+    padding:1.75rem;border-radius:14px;background:#2E5084;color:#fff;margin-bottom:2rem;}
+  .prospect-name {font-family:'Archivo Black';font-size:2rem;margin-bottom:.25rem;text-transform:uppercase;}
+  .prospect-tagline {font-size:1rem;font-weight:600;margin-bottom:.15rem;}
+  .prospect-subtitle {font-size:.9rem;opacity:.9;margin:0;}
 
-  .prospect-name {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.85rem;
-    margin: 0 0 0.25rem;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-  }
+  .prospect-grade-card {min-width:200px;padding:1rem 1.25rem;border-radius:12px;
+    background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(4px);}
+  .grade-label {font-size:.7rem;opacity:.8;text-transform:uppercase;}
+  .grade-score {font-family:'Archivo Black';font-size:2.2rem;margin:.2rem 0;}
+  .grade-tier {font-size:.9rem;font-weight:600;}
 
-  .prospect-tagline {
-    margin: 0 0 0.15rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-  }
+  /* Recommendation Pill */
+  .recommendation-pill {display:flex;align-items:center;gap:6px;background:#fff;color:#2E5084;
+    padding:6px 12px;border-radius:30px;font-weight:600;font-size:.78rem;margin-top:.55rem;width:fit-content;}
+  .pill-box {width:12px;height:12px;border-radius:3px;}
+  .pill-yellow{background:#eab308;} /* Strong Rec */
 
-  .prospect-subtitle {
-    margin: 0;
-    font-size: 0.85rem;
-    opacity: 0.9;
-  }
+  /* META */
+  .prospect-meta{display:flex;flex-wrap:wrap;gap:1.25rem;margin-bottom:2rem;}
+  .meta-column{flex:1 1 280px;background:#fff;border-radius:12px;padding:1rem 1.25rem;border:1px solid #dce2ee;}
+  .meta-title{font-family:'Archivo Black';font-size:.9rem;color:#2E5084;margin-bottom:.7rem;text-transform:uppercase;}
+  .meta-list{list-style:none;margin:0;padding:0;}
+  .meta-list li{display:flex;justify-content:space-between;padding:.28rem 0;
+    border-bottom:1px dotted #e7eaf3;font-size:.87rem;}
+  .meta-value{text-align:right;margin-left:1rem;}
 
-  .prospect-grade-card {
-    min-width: 180px;
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
-    backdrop-filter: blur(4px);
-  }
-
-  .grade-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    opacity: 0.8;
-    margin-bottom: 0.25rem;
-  }
-
-  .grade-score {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.9rem;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-tier {
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-note {
-    font-size: 0.75rem;
-    opacity: 0.85;
-  }
-
-  .prospect-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .meta-column {
-    flex: 1 1 260px;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 1rem 1.1rem;
-    border: 1px solid #dce2ee;
-  }
-
-  .meta-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .meta-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .meta-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.2rem 0;
-    border-bottom: 1px dotted #e5e8f1;
-    font-size: 0.85rem;
-  }
-
-  .meta-value {
-    text-align: right;
-    margin-left: 1rem;
-  }
-
-  .prospect-section {
-    margin-bottom: 1.25rem;
-    padding: 1rem 1.1rem;
-    border-radius: 10px;
-    border: 1px solid #dce2ee;
-    background: #ffffff;
-  }
-
-  .section-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .section-body {
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list {
-    padding-left: 1.1rem;
-    margin: 0;
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list li {
-    margin-bottom: 0.35rem;
-  }
-
-  @media (max-width: 640px) {
-    .meta-list li {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .meta-value {
-      text-align: left;
-      margin-left: 0;
-      margin-top: 0.1rem;
-    }
-  }
+  /* CONTENT SECTIONS */
+  .prospect-section{background:#fff;border-radius:12px;padding:1.15rem 1.35rem;
+    border:1px solid #dce2ee;margin-bottom:1.4rem;}
+  .section-title{font-family:'Archivo Black';font-size:.95rem;color:#2E5084;text-transform:uppercase;margin-bottom:.65rem;}
+  .section-body{font-size:.9rem;line-height:1.52;}
+  .section-list li{font-size:.9rem;line-height:1.52;margin-bottom:.38rem;}
 </style>
+</head>
 
+<body>
 <div class="prospect-page">
 
-  <!-- ============================= -->
-  <!-- HERO -->
-  <!-- ============================= -->
-  <section class="prospect-hero">
-    <div class="prospect-hero-main">
-      <h1 class="prospect-name">LUKE LIMING</h1>
-      <p class="prospect-tagline">⭐️⭐️⭐️⭐️ Prospect · Podium Sweep Archetype · Investment Banking Track</p>
-      <p class="prospect-subtitle">UNC Chapel Hill · Track &amp; Field 🏃‍ · Class of 2028</p>
+<!-- ================= HERO ================= -->
+<section class="prospect-hero">
+  <div>
+    <h1 class="prospect-name">Luke Liming</h1>
+    <p class="prospect-tagline">⭐️⭐️⭐️⭐️ Investment Banking Prospect</p>
+    <p class="prospect-subtitle">UNC Chapel Hill · Track & Field · Class of 2028</p>
+  </div>
+
+  <div class="prospect-grade-card">
+    <div class="grade-label">MAP Prospect Grade</div>
+    <div class="grade-score">91</div>
+    <div class="grade-tier">Round 1–2</div>
+
+    <div class="recommendation-pill">
+      <div class="pill-box pill-yellow"></div>
+      <div class="pill-box pill-yellow"></div>
+      <div class="pill-box pill-yellow"></div>
+      <span>Strong Recommendation</span>
     </div>
+  </div>
+</section>
 
-    <div class="prospect-grade-card">
-      <div class="grade-label">MAP Prospect Grade</div>
-      <div class="grade-score">9.1</div>
-      <div class="grade-tier">Round 2–3 Candidate</div>
-      <div class="grade-note">Competitive DNA · consistent performer · technical reliability</div>
-    </div>
-  </section>
 
-  <!-- ============================= -->
-  <!-- META -->
-  <!-- ============================= -->
-  <section class="prospect-meta">
-    <div class="meta-column">
-      <h2 class="meta-title">Prospect Info</h2>
-      <ul class="meta-list">
-        <li><span class="meta-key">School</span><span class="meta-value">UNC Chapel Hill</span></li>
-        <li><span class="meta-key">Major</span><span class="meta-value">Economics</span></li>
-        <li><span class="meta-key">Minor</span><span class="meta-value">Mathematics</span></li>
-        <li><span class="meta-key">Year</span><span class="meta-value">2028</span></li>
-        <li><span class="meta-key">Sport</span><span class="meta-value">Track &amp; Field</span></li>
-        <li><span class="meta-key">Hometown</span><span class="meta-value">Cary, NC</span></li>
-      </ul>
-    </div>
-
-    <div class="meta-column">
-      <h2 class="meta-title">MAP Profile</h2>
-      <ul class="meta-list">
-        <li><span class="meta-key">Fall Rank</span><span class="meta-value">13 / 63</span></li>
-        <li><span class="meta-key">GPA</span><span class="meta-value">3.4</span></li>
-        <li><span class="meta-key">Personality</span><span class="meta-value">10. Podium Sweep</span></li>
-        <li><span class="meta-key">Performance</span>
-          <span class="meta-value">
-            Steady weekly execution · consistent MAP performer · competitive mindset
-          </span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============================= -->
-  <!-- OVERVIEW -->
-  <!-- ============================= -->
-  <section class="prospect-section">
-    <h2 class="section-title">Overview</h2>
-    <p class="section-body">
-      Luke embodies the core of a Podium Sweep archetype — intensely competitive, internally driven, and wired 
-      to chase the top spot in whatever arena he’s placed in. His background in Division I Track & Field shows up 
-      clearly in his approach to MAP: disciplined, consistent, and committed to improving week over week.
-      <br><br>
-      While his GPA trails some of the class’s top academic profiles, his performance throughout the Diamond League 
-      tells a different story: Luke is **technically sound**, highly coachable, and one of the more reliable 
-      contributors in team-based assignments. He doesn’t rely on highlight-reel “wow plays,” but rather a steady 
-      drumbeat of correct, clean, and correctly structured work — the kind of foundation actual analysts build careers on.
-      <br><br>
-      Add in entrepreneurship experience (running a clothing brand), BD experience with Terelley, and real traction in 
-      valuation-focused assignments, and Luke profiles as a competitive, bankable 2027 summer candidate with clear 
-      upward mobility if his technical ceiling continues to rise.
-    </p>
-  </section>
-
-  <!-- ============================= -->
-  <!-- STRENGTHS -->
-  <!-- ============================= -->
-  <section class="prospect-section">
-    <h2 class="section-title">Strengths</h2>
-    <ul class="section-list">
-      <li><strong>Podium Sweep mentality:</strong> Fiercely competitive and improvement-oriented; thrives on pursuing top outcomes.</li>
-      <li><strong>Consistent weekly execution:</strong> Never too high or too low — steady delivery across all MAP phases.</li>
-      <li><strong>Technically reliable:</strong> Produces clean, well-structured, accurate work even without standout flash.</li>
-      <li><strong>Entrepreneurial initiative:</strong> Co-founded and managed apparel venture with full financial responsibility.</li>
-      <li><strong>Strong BD and messaging skills:</strong> Outreach campaigns and reporting work show strong commercial instincts.</li>
-      <li><strong>Leadership upside:</strong> Coaching experience + leadership academy involvement + early recognition at UNC.</li>
-      <li><strong>High athletic discipline:</strong> Track & Field background builds routine, accountability, and competitive tempo.</li>
+<!-- ================= META ================= -->
+<section class="prospect-meta">
+  <div class="meta-column">
+    <h2 class="meta-title">Prospect Info</h2>
+    <ul class="meta-list">
+      <li><span>School</span><span class="meta-value">UNC Chapel Hill</span></li>
+      <li><span>Major</span><span class="meta-value">Pre-Business</span></li>
+      <li><span>Minor</span><span class="meta-value">Data Science</span></li>
+      <li><span>Year</span><span class="meta-value">2028</span></li>
+      <li><span>GPA</span><span class="meta-value">3.4</span></li>
+      <li><span>Sport</span><span class="meta-value">Track & Field</span></li>
+      <li><span>Hometown</span><span class="meta-value">Cary, NC</span></li>
     </ul>
-  </section>
+  </div>
 
-  <!-- ============================= -->
-  <!-- AREAS FOR DEVELOPMENT -->
-  <!-- ============================= -->
-  <section class="prospect-section">
-    <h2 class="section-title">Areas for Development</h2>
-    <ul class="section-list">
-      <li>GPA improvement would meaningfully elevate his competitiveness at top-tier firms.</li>
-      <li>Can lean into producing occasional “step-up” plays or differentiated insights on team assignments.</li>
-      <li>Continue sharpening technical precision (DCF nuance, comps commentary, IC-style synthesis).</li>
+  <div class="meta-column">
+    <h2 class="meta-title">MAP Profile</h2>
+    <ul class="meta-list">
+      <li><span>Fellowship Rank</span><span class="meta-value">15 / 78</span></li>
+      <li><span>Interview #1</span><span class="meta-value">77.6%</span></li>
+      <li><span>Interview #2</span><span class="meta-value">100%</span></li>
+      <li><span>Interview #3</span><span class="meta-value">89.7%</span></li>
+      <li><span>Personality</span><span class="meta-value">Podium Sweep (Competitive, High Discipline)</span></li>
+      <li><span>Leadership</span><span class="meta-value">Democratic Leader (Shared Decision Input)</span></li>
+      <li><span>Teamwork</span><span class="meta-value">Idea-Oriented (Strategic, Solution-Creative)</span></li>
     </ul>
-  </section>
+  </div>
+</section>
 
-  <!-- ============================= -->
-  <!-- PROJECTION -->
-  <!-- ============================= -->
-  <section class="prospect-section">
-    <h2 class="section-title">Projection</h2>
-    <p class="section-body">
-      A Round 2–3 MAP prospect with strong competitive DNA, steady execution, and meaningful upside. Luke’s 
-      mentality aligns directly with what investment banking teams value — discipline, pace, and an internal 
-      drive to outperform benchmarks. With continued technical growth, he projects as a high-upside analyst 
-      capable of thriving in fast-paced deal environments.
-    </p>
-  </section>
+
+<!-- ================= WRITE-UPS ================= -->
+<section class="prospect-section">
+  <h2 class="section-title">Overview</h2>
+  <p class="section-body">
+    Luke embodies the core of a Podium Sweep archetype — intensely competitive, internally driven, and wired to chase top outcomes.
+    His background in Division I Track & Field shows up clearly in his approach to MAP: disciplined, consistent, and committed to
+    improving every week. While GPA trails some top academic profiles, his MAP performance tells a different story — he is technically
+    sound, coachable, and one of the steadier execution profiles in team settings.
+    <br><br>
+    With entrepreneurship experience, BD exposure, and real traction in valuation work, Luke profiles as a competitive summer 2027
+    candidate with meaningful upside if his technical ceiling continues climbing.
+  </p>
+</section>
+
+<section class="prospect-section">
+  <h2 class="section-title">Strengths</h2>
+  <ul class="section-list">
+    <li>Podium Sweep mentality — competitive, self-driven, high-standard.</li>
+    <li>Consistent week-to-week execution.</li>
+    <li>Technically reliable — clean, structured outputs.</li>
+    <li>Entrepreneurial — apparel brand founder with ownership of finances.</li>
+    <li>Commercial instincts — BD outreach, client-style communication.</li>
+    <li>Leadership upside — coaching experience, academy leadership.</li>
+    <li>Track & Field discipline — high accountability tempo.</li>
+  </ul>
+</section>
+
+<section class="prospect-section">
+  <h2 class="section-title">Areas for Development</h2>
+  <ul class="section-list">
+    <li>GPA lift would materially improve competitiveness.</li>
+    <li>Opportunity to create more standout “step-up” plays.</li>
+    <li>Continue deepening valuation/DCF nuance + comps synthesis.</li>
+  </ul>
+</section>
+
+<section class="prospect-section">
+  <h2 class="section-title">Projection</h2>
+  <p class="section-body">
+    A Round 1–2 MAP prospect with strong competitive DNA, steady execution, and real upside. With continued technical growth
+    and story-driven interview reps, Luke projects as a high-output analyst capable of thriving inside fast-paced deal teams.
+  </p>
+</section>
 
 </div>
+</body>
+</html>
