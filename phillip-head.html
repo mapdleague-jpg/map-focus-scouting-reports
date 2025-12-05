@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phillip Head — MAP Scouting Report</title>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
+  body { margin:0; background:#f5f7fb; font-family:'Montserrat', sans-serif;}
+  .prospect-page { max-width:960px; margin:0 auto 3rem auto; padding:1.5rem 1rem; color:#1a1a1a;}
+
+  .prospect-hero{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.25rem;
+    padding:1.75rem 1.25rem;border-radius:14px;background:#2E5084;color:#fff;margin-bottom:2rem;}
+
+  .prospect-name{font-family:'Archivo Black';font-size:2rem;margin:0 0 .25rem;text-transform:uppercase;}
+  .prospect-tagline{margin:0 0 .15rem;font-size:1rem;font-weight:600;}
+  .prospect-subtitle{margin:0;font-size:.9rem;opacity:.9;}
+
+  .prospect-grade-card{min-width:200px;padding:1rem 1.25rem;border-radius:12px;background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(4px);}
+  .grade-label{font-size:.7rem;opacity:.8;text-transform:uppercase;}
+  .grade-score{font-family:'Archivo Black';font-size:2.2rem;margin:.15rem 0;}
+  .grade-tier{font-size:.9rem;font-weight:600;}
+  .grade-note{font-size:.75rem;opacity:.9;}
+
+  .recommendation-pill{display:inline-flex;align-items:center;gap:5px;background:#fff;color:#2E5084;
+    padding:4px 10px;border:1px solid #dce2ee;border-radius:30px;font-weight:600;font-size:.78rem;margin-top:.55rem;width:fit-content;}
+  .pill-box{width:12px;height:12px;border-radius:3px;}
+  .pill-yellow{background:#eab308;}
+
+  .prospect-meta{display:flex;flex-wrap:wrap;gap:1.25rem;margin-bottom:2rem;}
+  .meta-column{flex:1 1 280px;background:#fff;border-radius:12px;padding:1rem 1.25rem;border:1px solid #dce2ee;}
+  .meta-title{font-family:'Archivo Black';font-size:.9rem;color:#2E5084;text-transform:uppercase;margin:0 0 .7rem;}
+  .meta-list{list-style:none;padding:0;margin:0;}
+  .meta-list li{display:flex;justify-content:space-between;padding:.28rem 0;border-bottom:1px dotted #e7eaf3;font-size:.87rem;}
+  .meta-value{text-align:right;margin-left:1rem;}
+
+  .prospect-section{background:#fff;border-radius:12px;padding:1.15rem 1.35rem;border:1px solid #dce2ee;margin-bottom:1.4rem;}
+  .section-title{font-family:'Archivo Black';font-size:.95rem;color:#2E5084;text-transform:uppercase;margin-bottom:.65rem;}
+  .section-body{font-size:.9rem;line-height:1.52;}
+  .section-list{font-size:.9rem;line-height:1.52;padding-left:1.2rem;}
+  .section-list li{margin-bottom:.38rem;}
+</style>
+</head>
+
+<body>
+<div class="prospect-page">
+
+  <!-- HERO -->
+  <section class="prospect-hero">
+    <div>
+      <h1 class="prospect-name">Phillip Head</h1>
+      <p class="prospect-tagline">⭐️⭐️⭐️ — Wealth Management Prospect</p>
+      <p class="prospect-subtitle">Emory University · Soccer · Class of 2028</p>
+    </div>
+
+    <div class="prospect-grade-card">
+      <div class="grade-label">MAP Prospect Grade</div>
+      <div class="grade-score">85</div>
+      <div class="grade-tier">Round 2-3</div>
+      <div class="grade-note">Strong Recommendation</div>
+
+      <div class="recommendation-pill">
+        <div class="pill-box pill-yellow"></div>
+        <div class="pill-box pill-yellow"></div>
+        <div class="pill-box pill-yellow"></div>
+        <span>Strong Recommendation</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- META BLOCK -->
+  <section class="prospect-meta">
+
+    <div class="meta-column">
+      <h2 class="meta-title">Prospect Info</h2>
+      <ul class="meta-list">
+        <li><span>School</span><span class="meta-value">Emory University</span></li>
+        <li><span>Major</span><span class="meta-value">Finance & Economics</span></li>
+        <li><span>Minor</span><span class="meta-value">N/A</span></li>
+        <li><span>Year</span><span class="meta-value">2028</span></li>
+        <li><span>GPA</span><span class="meta-value">3.85</span></li>
+        <li><span>Sport</span><span class="meta-value">Soccer</span></li>
+        <li><span>Hometown</span><span class="meta-value">Suwanee, GA</span></li>
+      </ul>
+    </div>
+
+    <div class="meta-column">
+      <h2 class="meta-title">MAP Profile</h2>
+      <ul class="meta-list">
+        <li><span>Fellowship Rank</span><span class="meta-value">11 / 65</span></li>
+        <li><span>Interview #1 Grade</span><span class="meta-value">91.20%</span></li>
+        <li><span>Interview #2 Grade</span><span class="meta-value">94.20%</span></li>
+        <li><span>Interview #3 Grade</span><span class="meta-value">87.60%</span></li>
+        <li><span>Personality</span><span class="meta-value">Pick-Up Game (Coachable, Relationship-Oriented)</span></li>
+        <li><span>Leadership</span><span class="meta-value">Democratic Leader (Collaborative, Shared Decision-Making)</span></li>
+        <li><span>Teamwork</span><span class="meta-value">Logical (Analytical, Evidence-Based)</span></li>
+      </ul>
+    </div>
+  </section>
+
+
+
+  <!-- OVERVIEW -->
+  <section class="prospect-section">
+    <h2 class="section-title">Overview</h2>
+    <p class="section-body">
+      Phillip (Phil) is one of the most polished and finance-forward candidates in the cohort — combining technical ambition, strong career intent, 
+      and entrepreneurial execution. With a 3.85 GPA in Finance and AI for Business at Emory, incoming roles at Blackstone and SignatureFD, and 
+      deep involvement in finance organizations, he enters with maturity beyond typical sophomore experience. His Phase 2 case competition performance 
+      showed clear acceleration, signaling steep growth trajectory and high long-term upside. Phil blends industry exposure with startup initiative through 
+      Phil’s Financials, where he is building an AI-driven financial literacy platform — demonstrating ownership mindset and product thinking. A strong communicator 
+      with client-facing presence and analytical foundation, he profiles as a prime WM candidate with potential crossover into IB or investing pathways.
+    </p>
+  </section>
+
+
+
+  <!-- STRENGTHS -->
+  <section class="prospect-section">
+    <h2 class="section-title">Strengths</h2>
+    <ul class="section-list">
+      <li>One of the strongest resumes in the group — deep finance alignment early.</li>
+      <li>Incoming Blackstone intern + SignatureFD incoming analyst — high pedigree.</li>
+      <li>Founder of Phil’s Financials → initiative, ownership, AI/edtech build experience.</li>
+      <li>Clear performance jump in Phase 2 case work — upward trajectory.</li>
+      <li>Strong communication + coachability; polished interview presence.</li>
+      <li>CRM automation + product development → systems/process leverage mindset.</li>
+      <li>BLK Capital exposure → valuation & deal execution concepts already underway.</li>
+    </ul>
+  </section>
+
+
+
+  <!-- DEVELOPMENT -->
+  <section class="prospect-section">
+    <h2 class="section-title">Areas for Development</h2>
+    <ul class="section-list">
+      <li>Continue deepening financial modeling and valuation execution.</li>
+      <li>Expand investment vocabulary for PWM + IB client conversations.</li>
+      <li>Balance entrepreneurial workstream with institutional finance rigor.</li>
+    </ul>
+  </section>
+
+
+
+  <!-- PROJECTION -->
+  <section class="prospect-section">
+    <h2 class="section-title">Projection</h2>
+    <p class="section-body">
+      Round 2-3 projection with real potential to trend toward Round 1 consideration as technical skills compound. With strong 
+      resume foundation, interview ability, and demonstrable growth through case work, Phil projects as a long-term Wealth Management 
+      contributor capable of evolving into advisory, client strategy, or early investment roles with continued modeling reps and 
+      structured deal exposure.
+    </p>
+  </section>
+
+</div>
+</body>
+</html>
