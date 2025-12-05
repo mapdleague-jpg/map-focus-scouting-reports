@@ -7,62 +7,49 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-  body { margin:0; background:#f5f7fb; font-family:'Montserrat', sans-serif;}
+  body {margin:0;background:#f5f7fb;font-family:'Montserrat',sans-serif;}
+  .prospect-page {max-width:960px;margin:0 auto 3rem;padding:1.5rem;color:#1a1a1a;}
 
-  .prospect-page { max-width:960px; margin:0 auto 3rem auto; padding:1.5rem 1rem; color:#1a1a1a;}
+  /* HERO */
+  .prospect-hero {display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.25rem;
+    padding:1.75rem;border-radius:14px;background:#2E5084;color:#fff;margin-bottom:2rem;}
+  .prospect-name {font-family:'Archivo Black';font-size:2rem;margin-bottom:.25rem;text-transform:uppercase;}
+  .prospect-tagline {font-size:1rem;font-weight:600;margin-bottom:.15rem;}
+  .prospect-subtitle {font-size:.9rem;opacity:.9;margin:0;}
 
-  /* ---------------- HERO ---------------- */
-  .prospect-hero {
-    display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.25rem;
-    padding:1.75rem 1.25rem; border-radius:14px; background:#2E5084; color:#fff; margin-bottom:2rem;
-  }
+  .prospect-grade-card {min-width:200px;padding:1rem 1.25rem;border-radius:12px;
+    background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(4px);}
+  .grade-label {font-size:.7rem;opacity:.8;text-transform:uppercase;}
+  .grade-score {font-family:'Archivo Black';font-size:2.2rem;margin:.2rem 0;}
+  .grade-tier {font-size:.9rem;font-weight:600;}
 
-  .prospect-name { font-family:'Archivo Black'; font-size:2rem; letter-spacing:.02em; margin:0 0 .25rem; text-transform:uppercase;}
-  .prospect-tagline { margin:0 0 .15rem; font-size:1rem; font-weight:600;}
-  .prospect-subtitle {margin:0; font-size:.9rem; opacity:.9;}
+  /* Recommendation Pill */
+  .recommendation-pill {display:flex;align-items:center;gap:6px;background:#fff;color:#2E5084;
+    padding:6px 12px;border-radius:30px;font-weight:600;font-size:.78rem;margin-top:.55rem;width:fit-content;}
+  .pill-box {width:12px;height:12px;border-radius:3px;}
+  .pill-green {background:#22c55e;} /* Top Recommendation */
 
-  /* Grade Card */
-  .prospect-grade-card {
-    min-width:200px; padding:1rem 1.25rem;
-    border-radius:12px; background:rgba(255,255,255,.15);
-    border:1px solid rgba(255,255,255,.35); backdrop-filter:blur(4px);
-  }
+  /* META */
+  .prospect-meta {display:flex;flex-wrap:wrap;gap:1.25rem;margin-bottom:2rem;}
+  .meta-column {flex:1 1 280px;background:#fff;border-radius:12px;padding:1rem 1.25rem;border:1px solid #dce2ee;}
+  .meta-title {font-family:'Archivo Black';font-size:.9rem;color:#2E5084;margin-bottom:.7rem;text-transform:uppercase;}
+  .meta-list {list-style:none;margin:0;padding:0;}
+  .meta-list li {display:flex;justify-content:space-between;padding:.28rem 0;border-bottom:1px dotted #e7eaf3;font-size:.87rem;}
+  .meta-value {text-align:right;margin-left:1rem;}
 
-  .grade-label{ font-size:.7rem; opacity:.8; text-transform:uppercase;}
-  .grade-score{ font-family:'Archivo Black'; font-size:2.2rem; margin:.15rem 0;}
-  .grade-tier{ font-size:.9rem; font-weight:600;}
-  .grade-note{ font-size:.75rem; opacity:.9;}
-
-  .recommendation-pill{
-    display:inline-flex; align-items:center; gap:5px; background:#fff; color:#2E5084;
-    padding:4px 10px; border:1px solid #dce2ee; border-radius:30px; font-weight:600;
-    font-size:.78rem; margin-top:.55rem; width:fit-content;
-  }
-  .pill-box{width:12px;height:12px;border-radius:3px;}
-  .pill-green{background:#22c55e;} .pill-yellow{background:#eab308;} .pill-red{background:#ef4444;}
-
-  .prospect-meta{display:flex;flex-wrap:wrap;gap:1.25rem;margin-bottom:2rem;}
-  .meta-column{flex:1 1 280px;background:#fff;border-radius:12px;padding:1rem 1.25rem;border:1px solid #dce2ee;}
-  .meta-title{font-family:'Archivo Black';font-size:.9rem;color:#2E5084;text-transform:uppercase;margin:0 0 .7rem;}
-  .meta-list{list-style:none;padding:0;margin:0;}
-  .meta-list li{display:flex;justify-content:space-between;padding:.28rem 0;border-bottom:1px dotted #e7eaf3;font-size:.87rem;}
-  .meta-value{text-align:right;margin-left:1rem;}
-
-  .prospect-section{background:#fff;border-radius:12px;padding:1.15rem 1.35rem;border:1px solid #dce2ee;margin-bottom:1.4rem;}
-  .section-title{font-family:'Archivo Black';font-size:.95rem;color:#2E5084;text-transform:uppercase;margin-bottom:.65rem;}
-  .section-body{font-size:.9rem;line-height:1.52;}
-  .section-list{font-size:.9rem;line-height:1.52;padding-left:1.2rem;} .section-list li{margin-bottom:.38rem;}
-
-  @media(max-width:650px){
-    .meta-list li{flex-direction:column;align-items:flex-start;}
-    .meta-value{margin-left:0;margin-top:2px;text-align:left;}
-  }
+  /* CONTENT SECTIONS */
+  .prospect-section {background:#fff;border-radius:12px;padding:1.15rem 1.35rem;
+    border:1px solid #dce2ee;margin-bottom:1.4rem;}
+  .section-title {font-family:'Archivo Black';font-size:.95rem;color:#2E5084;text-transform:uppercase;margin-bottom:.65rem;}
+  .section-body {font-size:.9rem;line-height:1.52;}
+  .section-list li {font-size:.9rem;line-height:1.52;margin-bottom:.38rem;}
 </style>
 </head>
 
 <body>
 <div class="prospect-page">
 
+  <!-- ================= HERO ================= -->
   <section class="prospect-hero">
     <div>
       <h1 class="prospect-name">Alexa Conner</h1>
@@ -73,9 +60,7 @@
     <div class="prospect-grade-card">
       <div class="grade-label">MAP Prospect Grade</div>
       <div class="grade-score">91</div>
-      <div class="grade-tier">Round 1-2</div>
-      <div class="grade-note">Top Recommendation</div>
-
+      <div class="grade-tier">Round 1–2</div>
       <div class="recommendation-pill">
         <div class="pill-box pill-green"></div>
         <div class="pill-box pill-green"></div>
@@ -85,8 +70,9 @@
     </div>
   </section>
 
-  <section class="prospect-meta">
 
+  <!-- ================= META ================= -->
+  <section class="prospect-meta">
     <div class="meta-column">
       <h2 class="meta-title">Prospect Info</h2>
       <ul class="meta-list">
@@ -107,59 +93,61 @@
         <li><span>Interview #1</span><span class="meta-value">89.40%</span></li>
         <li><span>Interview #2</span><span class="meta-value">99.50%</span></li>
         <li><span>Interview #3</span><span class="meta-value">93.30%</span></li>
-        <li><span>Personality</span><span class="meta-value">Game of Inches</span></li>
-        <li><span>Leadership</span><span class="meta-value">Democratic Leader</span></li>
+        <li><span>Personality</span><span class="meta-value">Game of Inches (Precise, Risk-Aware)</span></li>
+        <li><span>Leadership</span><span class="meta-value">Democratic Leader (Collaborative, Shared Decision-Making)</span></li>
         <li><span>Teamwork</span><span class="meta-value" id="teamworkField"></span></li>
       </ul>
     </div>
   </section>
 
+
+  <!-- ================= CONTENT ================= -->
   <section class="prospect-section">
     <h2 class="section-title">Overview</h2>
     <p class="section-body">
-      Alexa Conner is a driven Psychology major at Duke with a minor in Economics, a 2024 Olympic Trials Qualifier,
-      and a Division I swimmer who brings discipline, composure, and a team-first mindset to high-stakes environments.
-      She rose into the top 1% of MAP athletes, earning a Captain role after excelling across three superday-style interviews —
-      signaling maturity, professionalism, and real upside in client-facing settings. Alexa blends analytical curiosity with
-      people-oriented leadership, and in the Legacy Bowl she led a 5-member team through Morgan Stanley’s Parametric thesis,
-      demonstrating strong synthesis, structured thinking, and reliable execution across multiple deliverables.
+      Alexa is a polished, high-floor performer who brings poise, clarity, and structured thinking to professional environments. Across 
+      MAP interview cycles, she demonstrated strong analytical reasoning, crisp communication, and a calm presence under evaluative pressure — 
+      qualities that contributed to her top-tier ranking and Round 1–2 projection. Her Psychology + Economics combination equips her to assess 
+      behavior, incentive structures, and client motivations — a valuable perspective in relationship-driven wealth advisory work.
+      <br><br>
+      As a student-athlete balancing ACC training demands, Alexa consistently met deadlines and approached work with maturity. Her Game of 
+      Inches personality means she is detail-attentive, intentional with decisions, and risk-aware in execution — strengths that translate 
+      directly into trust-based client advisory settings.
     </p>
   </section>
 
   <section class="prospect-section">
     <h2 class="section-title">Strengths</h2>
     <ul class="section-list">
-      <li>Captain-level leadership presence and strong communication instincts</li>
-      <li>Reliable execution — 5/5 deliverables on-time & client-ready</li>
-      <li>Olympic Trials qualifier → disciplined, competitive, resilient</li>
-      <li>Mentorship & coaching experience — Athlete to Athlete</li>
-      <li>Clear upside in client-facing relationship development</li>
-      <li>Social/brand marketing exposure (Celsius Ambassador)</li>
+      <li>Clear communicator with structured answers and composed delivery.</li>
+      <li>High interview performance signals preparation, situational awareness, and poise.</li>
+      <li>Strong analytical reasoning through a Psychology + Economics foundation.</li>
+      <li>Mature, reliable, and consistent in workload management.</li>
+      <li>Team-oriented decision maker — seeks input, collaborates well with peers.</li>
     </ul>
   </section>
 
   <section class="prospect-section">
     <h2 class="section-title">Areas for Development</h2>
     <ul class="section-list">
-      <li>Further development of technical finance fluency</li>
-      <li>Increase familiarity with portfolio construction & allocation</li>
-      <li>Grow confidence in high-velocity strategic discussions</li>
-      <li>Expand analytical rigor beyond behavioral strengths</li>
+      <li>Continue building technical depth in markets, macro, and portfolio concepts.</li>
+      <li>Increase assertiveness in pitch settings — capability is strong enough to lead more voice-share.</li>
+      <li>Push creativity in idea generation, not just structured response execution.</li>
     </ul>
   </section>
 
   <section class="prospect-section">
     <h2 class="section-title">Projection</h2>
     <p class="section-body">
-      Alexa profiles as a Round 1–2 wealth management prospect with strong interpersonal instincts, coachability,
-      and long-term upside as technical skills compound. With continued exposure to investment rationale and client
-      segmentation, she projects into a high-trust client-facing teammate who communicates clearly and delivers consistently.
-      Over time, she has potential to develop into a relationship-centered advisor firms lean on for culture, clarity, and execution.
+      Alexa projects as a Round 1–2 talent with strong communication polish, reliability, and relationship management upside. With continued 
+      technical investment and more vocal leadership in collaborative work, she has the profile to excel as a future client advisor and 
+      high-trust analyst in wealth management environments.
     </p>
   </section>
 
 </div>
 
+<!-- TEAMWORK AUTO-MAP -->
 <script>
   const PHASE = "Initiation";
   const teamworkByPhase = {
@@ -167,7 +155,7 @@
     "Planning": ["Detail-Oriented", "Precise, Quality-Focused"],
     "Execution": ["Idea-Oriented", "Creative, Strategic"],
     "Control": ["Logical", "Analytical, Evidence-Based"],
-    "Monitoring": ["Supportive", "Steady, Reliable"],
+    "Monitoring": ["Supportive", "Steady, Reliable"]
   };
   document.getElementById("teamworkField").innerText =
     `${teamworkByPhase[PHASE][0]} (${teamworkByPhase[PHASE][1]})`;
@@ -175,3 +163,4 @@
 
 </body>
 </html>
+
