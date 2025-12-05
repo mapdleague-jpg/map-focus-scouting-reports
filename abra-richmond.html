@@ -1,261 +1,158 @@
-<!-- ============================= -->
-<!-- MAP BRAND STYLE (GLOBAL) -->
-<!-- ============================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Abra Richmond — MAP Scouting Report</title>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-  .prospect-page {
-    max-width: 960px;
-    margin: 0 auto 2.5rem auto;
-    font-family: 'Montserrat', sans-serif;
-    color: #1a1a1a;
-  }
+  body {margin:0;background:#f5f7fb;font-family:'Montserrat',sans-serif;}
+  .prospect-page {max-width:960px;margin:0 auto 3rem;padding:1.5rem;color:#1a1a1a;}
 
-  .prospect-hero {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1.25rem;
-    padding: 1.5rem 1.25rem;
-    border-radius: 12px;
-    background: #2E5084;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-  }
+  /* HERO */
+  .prospect-hero {display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.25rem;
+    padding:1.75rem;border-radius:14px;background:#2E5084;color:#fff;margin-bottom:2rem;}
+  .prospect-name {font-family:'Archivo Black';font-size:2rem;margin-bottom:.25rem;text-transform:uppercase;}
+  .prospect-tagline {font-size:1rem;font-weight:600;margin-bottom:.15rem;}
+  .prospect-subtitle {font-size:.9rem;opacity:.9;margin:0;}
 
-  .prospect-name {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.85rem;
-    margin: 0 0 0.25rem;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-  }
+  .prospect-grade-card {min-width:200px;padding:1rem 1.25rem;border-radius:12px;
+    background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(4px);}
+  .grade-label {font-size:.7rem;opacity:.8;text-transform:uppercase;}
+  .grade-score {font-family:'Archivo Black';font-size:2.2rem;margin:.2rem 0;}
+  .grade-tier {font-size:.9rem;font-weight:600;}
 
-  .prospect-tagline {
-    margin: 0 0 0.15rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-  }
+  /* Recommendation Pill */
+  .recommendation-pill {display:flex;align-items:center;gap:6px;background:#fff;color:#2E5084;
+    padding:6px 12px;border-radius:30px;font-weight:600;font-size:.78rem;margin-top:.55rem;width:fit-content;}
+  .pill-box {width:12px;height:12px;border-radius:3px;}
+  .pill-yellow {background:#eab308;} /* Strong Recommendation */
 
-  .prospect-subtitle {
-    margin: 0;
-    font-size: 0.85rem;
-    opacity: 0.9;
-  }
+  /* META */
+  .prospect-meta {display:flex;flex-wrap:wrap;gap:1.25rem;margin-bottom:2rem;}
+  .meta-column {flex:1 1 280px;background:#fff;border-radius:12px;padding:1rem 1.25rem;border:1px solid #dce2ee;}
+  .meta-title {font-family:'Archivo Black';font-size:.9rem;color:#2E5084;margin-bottom:.7rem;text-transform:uppercase;}
+  .meta-list {list-style:none;margin:0;padding:0;}
+  .meta-list li {display:flex;justify-content:space-between;padding:.28rem 0;
+    border-bottom:1px dotted #e7eaf3;font-size:.87rem;}
+  .meta-value {text-align:right;margin-left:1rem;}
 
-  .prospect-grade-card {
-    min-width: 180px;
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
-    backdrop-filter: blur(4px);
-  }
-
-  .grade-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    opacity: 0.8;
-    margin-bottom: 0.25rem;
-  }
-
-  .grade-score {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.9rem;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-tier {
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-note {
-    font-size: 0.75rem;
-    opacity: 0.85;
-  }
-
-  .prospect-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .meta-column {
-    flex: 1 1 260px;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 1rem 1.1rem;
-    border: 1px solid #dce2ee;
-  }
-
-  .meta-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .meta-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .meta-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.2rem 0;
-    border-bottom: 1px dotted #e5e8f1;
-    font-size: 0.85rem;
-  }
-
-  .meta-value {
-    text-align: right;
-    margin-left: 1rem;
-  }
-
-  .prospect-section {
-    margin-bottom: 1.25rem;
-    padding: 1rem 1.1rem;
-    border-radius: 10px;
-    border: 1px solid #dce2ee;
-    background: #ffffff;
-  }
-
-  .section-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .section-body {
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list {
-    padding-left: 1.1rem;
-    margin: 0;
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list li {
-    margin-bottom: 0.35rem;
-  }
-
-  @media (max-width: 640px) {
-    .meta-list li {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .meta-value {
-      text-align: left;
-      margin-left: 0;
-      margin-top: 0.1rem;
-    }
-  }
+  /* CONTENT SECTIONS */
+  .prospect-section {background:#fff;border-radius:12px;padding:1.15rem 1.35rem;
+    border:1px solid #dce2ee;margin-bottom:1.4rem;}
+  .section-title {font-family:'Archivo Black';font-size:.95rem;color:#2E5084;text-transform:uppercase;margin-bottom:.65rem;}
+  .section-body {font-size:.9rem;line-height:1.52;}
+  .section-list li {font-size:.9rem;line-height:1.52;margin-bottom:.38rem;}
 </style>
+</head>
 
+<body>
 <div class="prospect-page">
 
-  <!-- HERO -->
+  <!-- ================= HERO ================= -->
   <section class="prospect-hero">
-    <div class="prospect-hero-main">
-      <h1 class="prospect-name">ABRA RICHMOND</h1>
-      <p class="prospect-tagline">⭐️⭐️⭐️⭐️ Prospect · Behind-the-Scenes Archetype · Investment Banking Track</p>
-      <p class="prospect-subtitle">Princeton University · Golf ⛳ · Class of 2028</p>
+    <div>
+      <h1 class="prospect-name">Abra Richmond</h1>
+      <p class="prospect-tagline">⭐️⭐️⭐️⭐️ Investment Banking Prospect</p>
+      <p class="prospect-subtitle">Princeton University · Golf · Class of 2028</p>
     </div>
 
     <div class="prospect-grade-card">
       <div class="grade-label">MAP Prospect Grade</div>
       <div class="grade-score">90</div>
-      <div class="grade-tier">Round 2–3 Candidate</div>
-      <div class="grade-note">Dependable, disciplined contributor with high learning agility</div>
+      <div class="grade-tier">Round 2–3</div>
+
+      <div class="recommendation-pill">
+        <div class="pill-box pill-yellow"></div>
+        <div class="pill-box pill-yellow"></div>
+        <div class="pill-box pill-yellow"></div>
+        <span>Strong Recommendation</span>
+      </div>
     </div>
   </section>
 
-  <!-- META -->
-  <section class="prospect-meta">
 
+  <!-- ================= META ================= -->
+  <section class="prospect-meta">
     <div class="meta-column">
       <h2 class="meta-title">Prospect Info</h2>
       <ul class="meta-list">
-        <li><span>College</span><span class="meta-value">Princeton University</span></li>
+        <li><span>School</span><span class="meta-value">Princeton University</span></li>
         <li><span>Major</span><span class="meta-value">Economics</span></li>
         <li><span>Minor</span><span class="meta-value">Finance & French</span></li>
         <li><span>Year</span><span class="meta-value">2028</span></li>
-        <li><span>GPA</span><span class="meta-value">3.32</span></li>
+        <li><span>GPA</span><span class="meta-value">3.3</span></li>
         <li><span>Sport</span><span class="meta-value">Golf</span></li>
-        <li><span>Hometown</span><span class="meta-value">Glendale, CA</span></li>
+        <li><span>Hometown</span><span class="meta-value">Roslyn Heights, NY</span></li>
       </ul>
     </div>
 
     <div class="meta-column">
       <h2 class="meta-title">MAP Profile</h2>
       <ul class="meta-list">
-        <li><span>Official Points</span><span class="meta-value">1191.5</span></li>
-        <li><span>Cumulative Rank</span><span class="meta-value">19 / 63</span></li>
-        <li><span>Phase 1 Rank</span><span class="meta-value">19 / 63</span></li>
-        <li><span>Phase 2 Rank</span><span class="meta-value">19 / 30</span></li>
-        <li><span>Personality</span><span class="meta-value">1. Behind the Scenes<br>(Reserved Personality · Self-Assuredness · Attention to Detail)</span></li>
-        <li><span>Leadership</span><span class="meta-value">Democratic Leader<br>(Collaborative Leader · Team Input · Shared Ownership)</span></li>
+        <li><span>Fellowship Rank</span><span class="meta-value">19 / 78</span></li>
+        <li><span>Interview #1</span><span class="meta-value">95.3%</span></li>
+        <li><span>Interview #2</span><span class="meta-value">98.6%</span></li>
+        <li><span>Interview #3</span><span class="meta-value">91.8%</span></li>
+        <li><span>Personality</span><span class="meta-value">Behind the Scenes (Reserved, Detail-Oriented)</span></li>
+        <li><span>Leadership</span><span class="meta-value">Democratic Leader (Team Input, Shared Direction)</span></li>
+        <li><span>Teamwork</span><span class="meta-value">Logical (Analytical, Evidence-Based)</span></li>
       </ul>
     </div>
-
   </section>
 
-  <!-- OVERVIEW -->
+
+  <!-- ================= CONTENT ================= -->
   <section class="prospect-section">
     <h2 class="section-title">Overview</h2>
     <p class="section-body">
-      Abra is a steady, grounded operator whose work ethic and consistency made her one of the most reliable members of the Fall Diamond League cohort. She embodies the classic Behind-the-Scenes archetype — thoughtful, observant, and deliberate — paired with a collaborative leadership style that makes her an easy teammate to trust.
+      Abra is a steady, grounded operator whose work ethic and consistency made her one of the most reliable members of the Fall Diamond
+      League cohort. She embodies the classic Behind-the-Scenes archetype — thoughtful, observant, and deliberate — paired with a
+      collaborative leadership style that makes her an easy teammate to trust.
       <br><br>
-      Her athletic résumé speaks for itself: Ivy League Champion, Second Team All-Ivy, and a full-time starter in every tournament during the 2024–2025 season. Academically and professionally, she blends economics, finance, and data literacy with hands-on project work at Descanso Gardens and direct mentorship through Athlete to Athlete.
+      Her athletic résumé speaks for itself: Ivy League Champion, Second Team All-Ivy, and a full-time starter in every tournament during
+      the 2024–2025 season. Academically and professionally, she blends economics, finance, and data literacy with hands-on project work at
+      Descanso Gardens and direct mentorship through Athlete to Athlete.
       <br><br>
-      Student Support consistently highlighted her kindness, effort, and growth mindset. While she sometimes overthinks or overlooks instructions, these are minor coaching points within an otherwise disciplined and motivated profile. Her trajectory points upward — and with more reps, she could outperform her current ranking.
+      Student Support consistently highlighted her kindness, effort, and growth mindset. While she sometimes overthinks or overlooks
+      instructions, these are minor coaching points within an otherwise disciplined and motivated profile. Her trajectory points upward —
+      and with more reps, she has a real chance to outperform her current ranking.
     </p>
   </section>
 
-  <!-- STRENGTHS -->
   <section class="prospect-section">
     <h2 class="section-title">Strengths</h2>
     <ul class="section-list">
-      <li><strong>Composed, reliable presence:</strong> Brings steadiness, maturity, and strong follow-through to every team environment.</li>
-      <li><strong>Division I competitive pedigree:</strong> Ivy League Champion & Second Team All-Ivy — consistent, high-pressure performer.</li>
-      <li><strong>Cross-functional experience:</strong> Worked across finance, communications, education, and horticulture teams during her civic internship.</li>
-      <li><strong>Strong communication instincts:</strong> Naturally supportive teammate; excellent with younger students and mentees.</li>
-      <li><strong>Data-driven mindset:</strong> Managed and organized 100k+ data files; comfortable with Excel, VBA, and analytical workflows.</li>
-      <li><strong>Global fluency:</strong> Fluent in French; poised communicator with a strong cultural foundation.</li>
+      <li>Composed, reliable presence — steadiness, maturity, and strong follow-through in team environments.</li>
+      <li>Division I competitive pedigree — Ivy League Champion & Second Team All-Ivy.</li>
+      <li>Cross-functional experience across finance, communications, education, and horticulture.</li>
+      <li>Strong communication instincts — excellent with younger students and mentees.</li>
+      <li>Data-driven mindset — comfort with large data sets, Excel, VBA, and structured analysis.</li>
+      <li>Global fluency — fluent in French with a strong cultural foundation.</li>
     </ul>
   </section>
 
-  <!-- AREAS FOR DEVELOPMENT -->
   <section class="prospect-section">
     <h2 class="section-title">Areas for Development</h2>
     <ul class="section-list">
-      <li>Continue sharpening IB fundamentals (modeling reps, valuation mechanics) to match her work ethic and discipline.</li>
-      <li>Double-check assignment instructions to avoid easy misses — her underlying capability is far higher than the few errors she made.</li>
-      <li>Trust her instincts more — she sometimes second-guesses work that is already strong.</li>
+      <li>Continue sharpening IB fundamentals (valuation and modeling reps) to match her discipline.</li>
+      <li>Double-check assignment instructions to avoid avoidable slips — her underlying capability is higher than any small errors.</li>
+      <li>Trust her instincts more and reduce overthinking when her initial work is already strong.</li>
     </ul>
   </section>
 
-  <!-- PROJECTION -->
   <section class="prospect-section">
     <h2 class="section-title">Projection</h2>
     <p class="section-body">
-      A high-upside Round 2–3 MAP prospect with a strong competitive résumé, a grounded personality, and a collaborative leadership style. Abra’s reliability, emotional intelligence, and steady growth curve position her to thrive in team-based analyst environments. With continued technical reps and confidence in her own abilities, she has the tools to grow into a culture-driver and long-term asset on any deal team.
+      A high-upside Round 2–3 MAP prospect with a strong competitive résumé, grounded personality, and collaborative leadership style.
+      Abra’s reliability, emotional intelligence, and steady growth curve position her to thrive in team-based analyst environments.
+      With continued technical reps and confidence in her own abilities, she has the tools to grow into a culture-driver and long-term
+      asset on any deal team.
     </p>
   </section>
 
 </div>
-
+</body>
+</html>
 
