@@ -1,252 +1,149 @@
-<!-- ============================= -->
-<!-- MAP BRAND STYLE (GLOBAL) -->
-<!-- ============================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nicole Granovsky — MAP Scouting Report</title>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-  .prospect-page {
-    max-width: 960px;
-    margin: 0 auto 2.5rem auto;
-    font-family: 'Montserrat', sans-serif;
-    color: #1a1a1a;
-  }
+  body {margin:0;background:#f5f7fb;font-family:'Montserrat',sans-serif;}
+  .prospect-page {max-width:960px;margin:0 auto 3rem;padding:1.5rem;color:#1a1a1a;}
 
-  .prospect-hero {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1.25rem;
-    padding: 1.5rem 1.25rem;
-    border-radius: 12px;
-    background: #2E5084;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-  }
+  /* HERO */
+  .prospect-hero {display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.25rem;
+    padding:1.75rem;border-radius:14px;background:#2E5084;color:#fff;margin-bottom:2rem;}
+  .prospect-name {font-family:'Archivo Black';font-size:2rem;margin-bottom:.25rem;text-transform:uppercase;}
+  .prospect-tagline {font-size:1rem;font-weight:600;margin-bottom:.15rem;}
+  .prospect-subtitle {font-size:.9rem;opacity:.9;margin:0;}
 
-  .prospect-name {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.85rem;
-    margin: 0 0 0.25rem;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-  }
+  .prospect-grade-card {min-width:200px;padding:1rem 1.25rem;border-radius:12px;
+    background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(4px);}
+  .grade-label {font-size:.7rem;opacity:.8;text-transform:uppercase;}
+  .grade-score {font-family:'Archivo Black';font-size:2.2rem;margin:.2rem 0;}
+  .grade-tier {font-size:.9rem;font-weight:600;}
 
-  .prospect-tagline {
-    margin: 0 0 0.15rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-  }
+  /* Recommendation Pill */
+  .recommendation-pill {display:flex;align-items:center;gap:6px;background:#fff;color:#2E5084;
+    padding:6px 12px;border-radius:30px;font-weight:600;font-size:.78rem;margin-top:.55rem;width:fit-content;}
+  .pill-box {width:12px;height:12px;border-radius:3px;}
+  .pill-yellow{background:#eab308;} /* Strong Rec */
 
-  .prospect-subtitle {
-    margin: 0;
-    font-size: 0.85rem;
-    opacity: 0.9;
-  }
+  /* META */
+  .prospect-meta{display:flex;flex-wrap:wrap;gap:1.25rem;margin-bottom:2rem;}
+  .meta-column{flex:1 1 280px;background:#fff;border-radius:12px;padding:1rem 1.25rem;border:1px solid #dce2ee;}
+  .meta-title{font-family:'Archivo Black';font-size:.9rem;color:#2E5084;margin-bottom:.7rem;text-transform:uppercase;}
+  .meta-list{list-style:none;margin:0;padding:0;}
+  .meta-list li{display:flex;justify-content:space-between;padding:.28rem 0;
+    border-bottom:1px dotted #e7eaf3;font-size:.87rem;}
+  .meta-value{text-align:right;margin-left:1rem;}
 
-  .prospect-grade-card {
-    min-width: 180px;
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
-    backdrop-filter: blur(4px);
-  }
-
-  .grade-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    opacity: 0.8;
-    margin-bottom: 0.25rem;
-  }
-
-  .grade-score {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.9rem;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-tier {
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-note {
-    font-size: 0.75rem;
-    opacity: 0.85;
-  }
-
-  .prospect-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .meta-column {
-    flex: 1 1 260px;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 1rem 1.1rem;
-    border: 1px solid #dce2ee;
-  }
-
-  .meta-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .meta-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .meta-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.2rem 0;
-    border-bottom: 1px dotted #e5e8f1;
-    font-size: 0.85rem;
-  }
-
-  .meta-value {
-    text-align: right;
-    margin-left: 1rem;
-  }
-
-  .prospect-section {
-    margin-bottom: 1.25rem;
-    padding: 1rem 1.1rem;
-    border-radius: 10px;
-    border: 1px solid #dce2ee;
-    background: #ffffff;
-  }
-
-  .section-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .section-body {
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list {
-    padding-left: 1.1rem;
-    margin: 0;
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list li {
-    margin-bottom: 0.35rem;
-  }
-
-  @media (max-width: 640px) {
-    .meta-list li {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .meta-value {
-      text-align: left;
-      margin-left: 0;
-      margin-top: 0.1rem;
-    }
-  }
+  /* CONTENT SECTIONS */
+  .prospect-section{background:#fff;border-radius:12px;padding:1.15rem 1.35rem;
+    border:1px solid #dce2ee;margin-bottom:1.4rem;}
+  .section-title{font-family:'Archivo Black';font-size:.95rem;color:#2E5084;text-transform:uppercase;margin-bottom:.65rem;}
+  .section-body{font-size:.9rem;line-height:1.52;}
+  .section-list li{font-size:.9rem;line-height:1.52;margin-bottom:.38rem;}
 </style>
+</head>
 
+<body>
 <div class="prospect-page">
 
-  <section class="prospect-hero">
-    <div class="prospect-hero-main">
-      <h1 class="prospect-name">NICOLE GRANOVSKY</h1>
-      <p class="prospect-tagline">⭐️⭐️⭐️⭐️ Prospect · Hustler Archetype · Investment Banking Track</p>
-      <p class="prospect-subtitle">University of Michigan · Rowing 🚣 · Class of 2028</p>
+<!-- ================= HERO ================= -->
+<section class="prospect-hero">
+  <div>
+    <h1 class="prospect-name">Nicole Granovsky</h1>
+    <p class="prospect-tagline">⭐️⭐️⭐️⭐️ Investment Banking Prospect</p>
+    <p class="prospect-subtitle">University of Michigan · Rowing · Class of 2028</p>
+  </div>
+
+  <div class="prospect-grade-card">
+    <div class="grade-label">MAP Prospect Grade</div>
+    <div class="grade-score">90</div>
+    <div class="grade-tier">Round 2–3</div>
+
+    <div class="recommendation-pill">
+      <div class="pill-box pill-yellow"></div>
+      <div class="pill-box pill-yellow"></div>
+      <div class="pill-box pill-yellow"></div>
+      <span>Strong Recommendation</span>
     </div>
+  </div>
+</section>
 
-    <div class="prospect-grade-card">
-      <div class="grade-label">MAP Prospect Grade</div>
-      <div class="grade-score">9.3</div>
-      <div class="grade-tier">Round 3–4 Candidate</div>
-      <div class="grade-note">High-motor, high-initiative communicator</div>
-    </div>
-  </section>
 
-  <section class="prospect-meta">
-    <div class="meta-column">
-      <h2 class="meta-title">Prospect Info</h2>
-      <ul class="meta-list">
-        <li><span class="meta-key">School</span><span class="meta-value">University of Michigan</span></li>
-        <li><span class="meta-key">Major</span><span class="meta-value">Business Administration</span></li>
-        <li><span class="meta-key">Minor</span><span class="meta-value">N/A</span></li>
-        <li><span class="meta-key">Year</span><span class="meta-value">2028</span></li>
-        <li><span class="meta-key">Sport</span><span class="meta-value">Rowing</span></li>
-        <li><span class="meta-key">Hometown</span><span class="meta-value">Roslyn Heights, NY</span></li>
-      </ul>
-    </div>
-
-    <div class="meta-column">
-      <h2 class="meta-title">MAP Profile</h2>
-      <ul class="meta-list">
-        <li><span class="meta-key">Fall Rank</span><span class="meta-value">21 / 63</span></li>
-        <li><span class="meta-key">GPA</span><span class="meta-value">3.6</span></li>
-        <li><span class="meta-key">Personality</span><span class="meta-value">6. Hustler</span></li>
-        <li><span class="meta-key">Secondary</span><span class="meta-value">2. Chip on Your Shoulder</span></li>
-        <li><span class="meta-key">Performance</span><span class="meta-value">Major bounce-back after Week 1; high performer rest of season</span></li>
-        <li><span class="meta-key">Communication</span><span class="meta-value">Trilingual; scheduled Student Support meetings proactively</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="prospect-section">
-    <h2 class="section-title">Overview</h2>
-    <p class="section-body">
-      A true Hustler archetype: high-motor, high-initiative, and relentless in pursuit of improvement.
-      Nicole rebounded from a slow Week 1 to become one of MAP’s most consistently strong performers through
-      the Regular Season and Playoffs. A trilingual communicator who routinely booked Student Support meetings,
-      she combines grit, curiosity, and strong early finance experience across TAMID, Banking at Michigan,
-      Citi’s D1 program, Short Term Trading, and high-growth work at SideShift.
-    </p>
-  </section>
-
-  <section class="prospect-section">
-    <h2 class="section-title">Strengths</h2>
-    <ul class="section-list">
-      <li><strong>Hustler motor:</strong> Sets goals and grinds until they’re done — then sets new ones.</li>
-      <li><strong>Resilience:</strong> Significant performance jump after Week 1.</li>
-      <li><strong>Finance depth:</strong> TAMID, Citi D1, SideShift growth, Banking at Michigan casework.</li>
-      <li><strong>Growth orientation:</strong> Helped scale SideShift from 10K to 50K users.</li>
-      <li><strong>High-quality communication:</strong> Fluent in English, Spanish, Russian; excellent clarity.</li>
-      <li><strong>Active learner:</strong> Routinely met with Student Support to refine skills.</li>
-      <li><strong>Thrives in active environments:</strong> Prefers bustling, high-energy settings.</li>
+<!-- ================= META ================= -->
+<section class="prospect-meta">
+  <div class="meta-column">
+    <h2 class="meta-title">Prospect Info</h2>
+    <ul class="meta-list">
+      <li><span>School</span><span class="meta-value">University of Michigan - Ann Arbor</span></li>
+      <li><span>Major</span><span class="meta-value">Business Administration</span></li>
+      <li><span>Minor</span><span class="meta-value">N/A</span></li>
+      <li><span>Year</span><span class="meta-value">2028</span></li>
+      <li><span>GPA</span><span class="meta-value">3.6</span></li>
+      <li><span>Sport</span><span class="meta-value">Rowing</span></li>
+      <li><span>Hometown</span><span class="meta-value">Pelham, NY</span></li>
     </ul>
-  </section>
+  </div>
 
-  <section class="prospect-section">
-    <h2 class="section-title">Areas for Development</h2>
-    <ul class="section-list">
-      <li>High involvement across roles — tighter prioritization will maximize output.</li>
-      <li>Hustle is excellent — next step is polished technical precision.</li>
-      <li>Continue refining ability to simplify complex ideas for broader audiences.</li>
+  <div class="meta-column">
+    <h2 class="meta-title">MAP Profile</h2>
+    <ul class="meta-list">
+      <li><span>Fellowship Rank</span><span class="meta-value">17 / 78</span></li>
+      <li><span>Interview #1</span><span class="meta-value">97.6%</span></li>
+      <li><span>Interview #2</span><span class="meta-value">92.8%</span></li>
+      <li><span>Interview #3</span><span class="meta-value">85.5%</span></li>
+      <li><span>Personality</span><span class="meta-value">Hustler (Driven, Creative Problem Solving)</span></li>
+      <li><span>Leadership</span><span class="meta-value">Servant Leader (Service, Team-First)</span></li>
+      <li><span>Teamwork</span><span class="meta-value">Logical (Analytical, Structured)</span></li>
     </ul>
-  </section>
+  </div>
+</section>
 
-  <section class="prospect-section">
-    <h2 class="section-title">Projection</h2>
-    <p class="section-body">
-      Round 3–4 MAP prospect for 2027 IB recruiting with strong upside into coverage or capital markets.
-      High-energy, highly coachable, and rapidly improving — a uniquely high-initiative talent.
-    </p>
-  </section>
+
+<!-- ================= WRITE-UPS ================= -->
+<section class="prospect-section">
+  <h2 class="section-title">Overview</h2>
+  <p class="section-body">
+    A true Hustler archetype — high-motor, high-initiative, and relentless in pursuit of growth. Nicole rebounded from a slow Week 1 to
+    become one of MAP’s most consistent performers through the Regular Season and Playoffs. A trilingual communicator who booked repeated
+    Student Support meetings, she blends grit, curiosity, and strong early finance exposure across TAMID, Banking at Michigan, Citi’s D1 
+    program, short-term trading work, and scaling SideShift’s user base from 10K to 50K.
+  </p>
+</section>
+
+<section class="prospect-section">
+  <h2 class="section-title">Strengths</h2>
+  <ul class="section-list">
+    <li>Hustler motor — goal-setter with relentless work ethic.</li>
+    <li>Resilience — clear performance jump after Week 1.</li>
+    <li>Finance depth — TAMID, Citi D1, SideShift, Michigan Banking.</li>
+    <li>Growth mindset — active support sessions and skill development.</li>
+    <li>Trilingual communicator — English, Spanish, Russian.</li>
+    <li>Thrives in fast-paced, high-energy environments.</li>
+  </ul>
+</section>
+
+<section class="prospect-section">
+  <h2 class="section-title">Areas for Development</h2>
+  <ul class="section-list">
+    <li>Prioritization — high involvement across many roles.</li>
+    <li>Next step is sharpening technical precision.</li>
+    <li>Refine ability to simplify complexity for broad audiences.</li>
+  </ul>
+</section>
+
+<section class="prospect-section">
+  <h2 class="section-title">Projection</h2>
+  <p class="section-body">
+    A Round 2–3 MAP prospect for 2027 IB recruiting with real upside. High-energy, coachable, and accelerating quickly — Nicole represents
+    a Hustler profile with meaningful return-on-development potential. Continued technical refinement unlocks long-term impact in coverage or
+    markets environments.
+  </p>
+</section>
 
 </div>
+</body>
+</html>
