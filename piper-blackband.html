@@ -1,287 +1,192 @@
-<!-- ============================= -->
-<!-- MAP BRAND STYLE (GLOBAL) -->
-<!-- ============================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Piper Blackband — MAP Scouting Report</title>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-  .prospect-page {
-    max-width: 960px;
-    margin: 0 auto 2.5rem auto;
-    font-family: 'Montserrat', sans-serif;
-    color: #1a1a1a;
-  }
+  body { margin:0; background:#f5f7fb; font-family:'Montserrat', sans-serif;}
+  .prospect-page { max-width:960px; margin:0 auto 3rem auto; padding:1.5rem 1rem; color:#1a1a1a;}
 
+  /* HERO */
   .prospect-hero {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1.25rem;
-    padding: 1.5rem 1.25rem;
-    border-radius: 12px;
-    background: #2E5084;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
+    display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.25rem;
+    padding:1.75rem 1.25rem; border-radius:14px; background:#2E5084; color:#fff; margin-bottom:2rem;
   }
+  .prospect-name { font-family:'Archivo Black'; font-size:2rem; margin:0 0 .25rem; text-transform:uppercase;}
+  .prospect-tagline { margin:0 0 .15rem; font-size:1rem; font-weight:600;}
+  .prospect-subtitle {margin:0; font-size:.9rem; opacity:.9;}
 
-  .prospect-name {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.85rem;
-    margin: 0 0 0.25rem;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
+  /* GRADE */
+  .prospect-grade-card{
+    min-width:200px; padding:1rem 1.25rem; border-radius:12px; background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.35); backdrop-filter:blur(4px);
   }
+  .grade-label{ font-size:.7rem; opacity:.8; text-transform:uppercase;}
+  .grade-score{ font-family:'Archivo Black'; font-size:2.2rem; margin:.15rem 0;}
+  .grade-tier{ font-size:.9rem; font-weight:600;}
+  .grade-note{ font-size:.75rem; opacity:.9;}
 
-  .prospect-tagline {
-    margin: 0 0 0.15rem;
-    font-size: 0.95rem;
-    font-weight: 600;
+  /* Pills */
+  .recommendation-pill{
+    display:inline-flex; align-items:center; gap:5px; background:#fff; color:#2E5084;
+    padding:4px 10px; border:1px solid #dce2ee; border-radius:30px; font-weight:600;
+    font-size:.78rem; margin-top:.55rem; width:fit-content;
   }
+  .pill-box{width:12px;height:12px;border-radius:3px;}
+  .pill-red{background:#ef4444;}
 
-  .prospect-subtitle {
-    margin: 0;
-    font-size: 0.85rem;
-    opacity: 0.9;
-  }
+  /* META */
+  .prospect-meta{display:flex;flex-wrap:wrap;gap:1.25rem;margin-bottom:2rem;}
+  .meta-column{flex:1 1 280px;background:#fff;border-radius:12px;padding:1rem 1.25rem;border:1px solid #dce2ee;}
+  .meta-title{font-family:'Archivo Black';font-size:.9rem;color:#2E5084;text-transform:uppercase;margin:0 0 .7rem;}
+  .meta-list{list-style:none;padding:0;margin:0;}
+  .meta-list li{display:flex;justify-content:space-between;padding:.28rem 0;border-bottom:1px dotted #e7eaf3;font-size:.87rem;}
+  .meta-value{text-align:right;margin-left:1rem;}
 
-  .prospect-grade-card {
-    min-width: 180px;
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
-    backdrop-filter: blur(4px);
-  }
+  /* CONTENT */
+  .prospect-section{background:#fff;border-radius:12px;padding:1.15rem 1.35rem;border:1px solid #dce2ee;margin-bottom:1.4rem;}
+  .section-title{font-family:'Archivo Black';font-size:.95rem;color:#2E5084;text-transform:uppercase;margin-bottom:.65rem;}
+  .section-body{font-size:.9rem;line-height:1.52;}
+  .section-list{font-size:.9rem;line-height:1.52;padding-left:1.2rem;} 
+  .section-list li{margin-bottom:.38rem;}
 
-  .grade-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    opacity: 0.8;
-    margin-bottom: 0.25rem;
-  }
-
-  .grade-score {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.9rem;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-tier {
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-note {
-    font-size: 0.75rem;
-    opacity: 0.85;
-  }
-
-  .prospect-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .meta-column {
-    flex: 1 1 260px;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 1rem 1.1rem;
-    border: 1px solid #dce2ee;
-  }
-
-  .meta-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .meta-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .meta-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.2rem 0;
-    border-bottom: 1px dotted #e5e8f1;
-    font-size: 0.85rem;
-  }
-
-  .meta-value {
-    text-align: right;
-    margin-left: 1rem;
-  }
-
-  .prospect-section {
-    margin-bottom: 1.25rem;
-    padding: 1rem 1.1rem;
-    border-radius: 10px;
-    border: 1px solid #dce2ee;
-    background: #ffffff;
-  }
-
-  .section-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .section-body {
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list {
-    padding-left: 1.1rem;
-    margin: 0;
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list li {
-    margin-bottom: 0.35rem;
-  }
-
-  @media (max-width: 640px) {
-    .meta-list li {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .meta-value {
-      text-align: left;
-      margin-left: 0;
-      margin-top: 0.1rem;
-    }
+  @media(max-width:650px){
+    .meta-list li{flex-direction:column;align-items:flex-start;}
+    .meta-value{margin-left:0;margin-top:2px;text-align:left;}
   }
 </style>
+</head>
 
+<body>
 <div class="prospect-page">
 
-  <!-- ============================= -->
-  <!-- HERO -->
-  <!-- ============================= -->
-  <section class="prospect-hero">
-    <div class="prospect-hero-main">
-      <h1 class="prospect-name">PIPER BLACKBAND</h1>
-      <p class="prospect-tagline">⭐️⭐️⭐️ Prospect · Point Guard Archetype · Investment Banking Track</p>
-      <p class="prospect-subtitle">Stanford University · Sailing ⛵ · Class of 2028</p>
+<!-- HERO -->
+<section class="prospect-hero">
+  <div>
+    <h1 class="prospect-name">Piper Blackband</h1>
+    <p class="prospect-tagline">⭐️⭐️⭐️ — Investment Banking Prospect</p>
+    <p class="prospect-subtitle">Stanford University · Sailing · Class of 2028</p>
+  </div>
+
+  <div class="prospect-grade-card">
+    <div class="grade-label">MAP Prospect Grade</div>
+    <div class="grade-score">87</div>
+    <div class="grade-tier">Round 3–4</div>
+    <div class="grade-note">Watchlist</div>
+
+    <div class="recommendation-pill">
+      <div class="pill-box pill-red"></div>
+      <div class="pill-box pill-red"></div>
+      <div class="pill-box pill-red"></div>
+      <span>Watchlist Recommendation</span>
     </div>
+  </div>
+</section>
 
-    <div class="prospect-grade-card">
-      <div class="grade-label">MAP Prospect Grade</div>
-      <div class="grade-score">8.5</div>
-      <div class="grade-tier">Round 4–5 Candidate</div>
-      <div class="grade-note">High-upside profile with strong polish + leadership foundation</div>
-    </div>
-  </section>
 
-  <!-- ============================= -->
-  <!-- META -->
-  <!-- ============================= -->
-  <section class="prospect-meta">
-    <div class="meta-column">
-      <h2 class="meta-title">Prospect Info</h2>
-      <ul class="meta-list">
-        <li><span>School</span><span class="meta-value">Stanford University</span></li>
-        <li><span>Major</span><span class="meta-value">Economics</span></li>
-        <li><span>Minor</span><span class="meta-value">N/A</span></li>
-        <li><span>Year</span><span class="meta-value">2028</span></li>
-        <li><span>Sport</span><span class="meta-value">Sailing</span></li>
-        <li><span>Hometown</span><span class="meta-value">Newport Beach, CA</span></li>
-      </ul>
-    </div>
+<!-- META -->
+<section class="prospect-meta">
 
-    <div class="meta-column">
-      <h2 class="meta-title">MAP Profile</h2>
-      <ul class="meta-list">
-        <li><span>Fall Rank</span><span class="meta-value">27 / 63</span></li>
-        <li><span>GPA</span><span class="meta-value">3.5</span></li>
-        <li><span>Personality</span><span class="meta-value">11. Point Guard</span></li>
-        <li><span>Leadership</span>
-          <span class="meta-value">
-            High-energy, empathetic, team-first; natural organizer across her experiences
-          </span>
-        </li>
-        <li><span>Performance</span>
-          <span class="meta-value">
-            Bubbly, positive presence · accomplished profile · struggled with timeliness/assignment instructions
-          </span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============================= -->
-  <!-- OVERVIEW -->
-  <!-- ============================= -->
-  <section class="prospect-section">
-    <h2 class="section-title">Overview</h2>
-    <p class="section-body">
-      Piper is one of the most naturally accomplished and polished candidates on paper — a decorated All-American sailor, 
-      long-standing community leader, former class president, multi-time scholarship winner, and someone who has led teams, 
-      programs, and organizations since middle school. She brings warmth, energy, and a genuinely uplifting presence that 
-      makes her easy to root for. 
-      <br><br>
-      Across MAP, she consistently displayed optimism, emotional intelligence, and strong interpersonal skills — very 
-      Point Guard–like. Her leadership experience is both deep and diverse, spanning athletics, nonprofit work, ASB, 
-      youth programs, and technical roles in A&D casework.
-      <br><br>
-      The main area holding Piper back from a higher MAP grade this cycle was execution reliability: assignments were 
-      often late or not fully aligned with instructions. The upside is that these issues are fixable and not tied to talent. 
-      With more structure, consistency, and attention to detail, Piper has the raw ingredients to outperform her ranking.
-    </p>
-  </section>
-
-  <!-- ============================= -->
-  <!-- STRENGTHS -->
-  <!-- ============================= -->
-  <section class="prospect-section">
-    <h2 class="section-title">Strengths</h2>
-    <ul class="section-list">
-      <li><strong>Extremely accomplished:</strong> national champion sailor, All-American, multi-time scholarship and service award recipient.</li>
-      <li><strong>High EQ + bubbly personality:</strong> naturally makes teams better; optimistic team-first mindset.</li>
-      <li><strong>Deep leadership portfolio:</strong> ASB, nonprofit leadership, youth sailing programs, Stanford involvement.</li>
-      <li><strong>Strong communicator:</strong> capable presenter, organizer, and mentor to younger athletes.</li>
-      <li><strong>High ceiling for IB storytelling:</strong> already comfortable in front of groups and in fast-paced environments.</li>
-      <li><strong>Point Guard archetype:</strong> blends discipline, empathy, and goal-setting.</li>
+  <!-- Prospect Info -->
+  <div class="meta-column">
+    <h2 class="meta-title">Prospect Info</h2>
+    <ul class="meta-list">
+      <li><span>School</span><span class="meta-value">Stanford University</span></li>
+      <li><span>Major</span><span class="meta-value">Economics</span></li>
+      <li><span>Minor</span><span class="meta-value">N/A</span></li>
+      <li><span>Year</span><span class="meta-value">2028</span></li>
+      <li><span>GPA</span><span class="meta-value">3.5</span></li>
+      <li><span>Sport</span><span class="meta-value">Sailing</span></li>
+      <li><span>Hometown</span><span class="meta-value">San Diego, CA</span></li>
     </ul>
-  </section>
+  </div>
 
-  <!-- ============================= -->
-  <!-- AREAS FOR DEVELOPMENT -->
-  <!-- ============================= -->
-  <section class="prospect-section">
-    <h2 class="section-title">Areas for Development</h2>
-    <ul class="section-list">
-      <li>Improve timeliness and consistency in deliverables to match her talent level.</li>
-      <li>Ensure assignment instructions are followed precisely (common miss this cycle).</li>
-      <li>Translate leadership presence into more structure and detail orientation during technical work.</li>
-      <li>Continue sharpening technical rigor — her ceiling rises significantly once execution matches polish.</li>
+  <!-- MAP Profile -->
+  <div class="meta-column">
+    <h2 class="meta-title">MAP Profile</h2>
+    <ul class="meta-list">
+      <li><span>Fellowship Rank</span><span class="meta-value">21 / 78</span></li>
+      <li><span>Interview #1</span><span class="meta-value">87.6%</span></li>
+      <li><span>Interview #2</span><span class="meta-value">86.5%</span></li>
+      <li><span>Interview #3</span><span class="meta-value">82.6%</span></li>
+      <li><span>Personality</span><span class="meta-value">Point Guard (Steady, Facilitative)</span></li>
+      <li><span>Leadership</span><span class="meta-value">Laissez-Faire (Autonomy, Low-Interference)</span></li>
+      <li><span>Teamwork</span><span class="meta-value" id="teamworkField"></span></li>
     </ul>
-  </section>
+  </div>
 
-  <!-- ============================= -->
-  <!-- PROJECTION -->
-  <!-- ============================= -->
-  <section class="prospect-section">
-    <h2 class="section-title">Projection</h2>
-    <p class="section-body">
-      A 3-Star, Round 4–5 MAP prospect with one of the strongest “on-paper” profiles in the entire class and 
-      natural charisma that teams gravitate toward. If she tightens up execution, punctuality, and detail 
-      consistency, Piper has the potential to rise quickly. Her positivity and leadership background give her 
-      a high-upside long-term projection — a candidate who could outperform her grade in future cycles with 
-      the right structure and reps.
-    </p>
-  </section>
+</section>
+
+
+<!-- OVERVIEW -->
+<section class="prospect-section">
+  <h2 class="section-title">Overview</h2>
+  <p class="section-body">
+  Piper is a composed Point Guard profile with a calm, facilitative presence who brings balance to teams rather 
+  than volatility. She operates with maturity, strong social EQ, and low-drama professionalism — a teammate 
+  people enjoy working with. While her MAP season was up-and-down at times, the underlying foundation is real: 
+  she communicates well, learns quickly, and presents with thoughtfulness and poise. With stronger technical 
+  consistency and more repetitions under structured pressure, Piper has the potential to rise as a confident, 
+  reliable analyst candidate.
+  </p>
+</section>
+
+
+<!-- Strengths -->
+<section class="prospect-section">
+  <h2 class="section-title">Strengths</h2>
+  <ul class="section-list">
+    <li>Point Guard profile — strong listener, steady, facilitative teammate.</li>
+    <li>Good communicator with measured pacing and thoughtful framing.</li>
+    <li>Professional polish — strong presence, easy to work with, low-ego.</li>
+    <li>Sailing competitive discipline — high time-management habits.</li>
+    <li>Growing technical base — early modeling awareness and finance curiosity.</li>
+  </ul>
+</section>
+
+
+<!-- Development -->
+<section class="prospect-section">
+  <h2 class="section-title">Areas for Development</h2>
+  <ul class="section-list">
+    <li>Increase intensity in live technical settings; show conviction under pressure.</li>
+    <li>Sharpen accounting + valuation fundamentals to accelerate IB readiness.</li>
+    <li>More visible verbal presence in group cases — speak sooner, not just accurately.</li>
+  </ul>
+</section>
+
+
+<!-- Projection -->
+<section class="prospect-section">
+  <h2 class="section-title">Projection</h2>
+  <p class="section-body">
+    A <strong>Round 3–4 Watchlist</strong> prospect with a steady temperament, interpersonal ease, 
+    and long-term developmental upside. Piper’s leadership style and EQ make her a positive cultural addition, 
+    and with intentional technical ramping she could evolve into a dependable teammate who elevates group clarity 
+    and execution pace. A candidate to monitor — with the right reps, she can grow into a polished analyst 
+    pipeline contender.
+  </p>
+</section>
 
 </div>
+
+
+<!-- AUTO TEAMWORK -->
+<script>
+  const PHASE = "Control"; // from your dataset
+  const teamworkByPhase = {
+    "Initiation": ["Cooperative", "Inclusive, Team-First"],
+    "Planning": ["Detail-Oriented", "Precise, Quality-Focused"],
+    "Execution": ["Idea-Oriented", "Creative, Strategic"],
+    "Control": ["Logical", "Analytical, Evidence-Based"],
+    "Monitoring": ["Supportive", "Steady, Reliable"],
+  };
+  document.getElementById("teamworkField").innerText =
+    `${teamworkByPhase[PHASE][0]} (${teamworkByPhase[PHASE][1]})`;
+</script>
+
+</body>
+</html>
