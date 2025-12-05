@@ -1,284 +1,155 @@
-<!-- ============================= -->
-<!-- MAP BRAND STYLE (GLOBAL) -->
-<!-- ============================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Maggie Howard — MAP Scouting Report</title>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-  .prospect-page {
-    max-width: 960px;
-    margin: 0 auto 2.5rem auto;
-    font-family: 'Montserrat', sans-serif;
-    color: #1a1a1a;
-  }
+  body {margin:0;background:#f5f7fb;font-family:'Montserrat',sans-serif;}
+  .prospect-page {max-width:960px;margin:0 auto 3rem;padding:1.5rem;color:#1a1a1a;}
 
-  .prospect-hero {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1.25rem;
-    padding: 1.5rem 1.25rem;
-    border-radius: 12px;
-    background: #2E5084;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-  }
+  /* HERO */
+  .prospect-hero {display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.25rem;
+    padding:1.75rem;border-radius:14px;background:#2E5084;color:#fff;margin-bottom:2rem;}
+  .prospect-name {font-family:'Archivo Black';font-size:2rem;margin-bottom:.25rem;text-transform:uppercase;}
+  .prospect-tagline {font-size:1rem;font-weight:600;margin-bottom:.15rem;}
+  .prospect-subtitle {font-size:.9rem;opacity:.9;margin:0;}
 
-  .prospect-name {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.85rem;
-    margin: 0 0 0.25rem;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-  }
+  .prospect-grade-card {min-width:200px;padding:1rem 1.25rem;border-radius:12px;
+    background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(4px);}
+  .grade-label {font-size:.7rem;opacity:.8;text-transform:uppercase;}
+  .grade-score {font-family:'Archivo Black';font-size:2.2rem;margin:.2rem 0;}
+  .grade-tier {font-size:.9rem;font-weight:600;}
 
-  .prospect-tagline {
-    margin: 0 0 0.15rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-  }
+  /* Recommendation Pill */
+  .recommendation-pill {display:flex;align-items:center;gap:6px;background:#fff;color:#2E5084;
+    padding:6px 12px;border-radius:30px;font-weight:600;font-size:.78rem;margin-top:.55rem;width:fit-content;}
+  .pill-box {width:12px;height:12px;border-radius:3px;}
+  .pill-yellow{background:#eab308;} /* Strong Rec */
 
-  .prospect-subtitle {
-    margin: 0;
-    font-size: 0.85rem;
-    opacity: 0.9;
-  }
+  /* META */
+  .prospect-meta{display:flex;flex-wrap:wrap;gap:1.25rem;margin-bottom:2rem;}
+  .meta-column{flex:1 1 280px;background:#fff;border-radius:12px;padding:1rem 1.25rem;border:1px solid #dce2ee;}
+  .meta-title{font-family:'Archivo Black';font-size:.9rem;color:#2E5084;margin-bottom:.7rem;text-transform:uppercase;}
+  .meta-list{list-style:none;margin:0;padding:0;}
+  .meta-list li{display:flex;justify-content:space-between;padding:.28rem 0;
+    border-bottom:1px dotted #e7eaf3;font-size:.87rem;}
+  .meta-value{text-align:right;margin-left:1rem;}
 
-  .prospect-grade-card {
-    min-width: 180px;
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
-    backdrop-filter: blur(4px);
-  }
-
-  .grade-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    opacity: 0.8;
-    margin-bottom: 0.25rem;
-  }
-
-  .grade-score {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.9rem;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-tier {
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 0.1rem;
-  }
-
-  .grade-note {
-    font-size: 0.75rem;
-    opacity: 0.85;
-  }
-
-  .prospect-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .meta-column {
-    flex: 1 1 260px;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 1rem 1.1rem;
-    border: 1px solid #dce2ee;
-  }
-
-  .meta-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .meta-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .meta-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.2rem 0;
-    border-bottom: 1px dotted #e5e8f1;
-    font-size: 0.85rem;
-  }
-
-  .meta-value {
-    text-align: right;
-    margin-left: 1rem;
-  }
-
-  .prospect-section {
-    margin-bottom: 1.25rem;
-    padding: 1rem 1.1rem;
-    border-radius: 10px;
-    border: 1px solid #dce2ee;
-    background: #ffffff;
-  }
-
-  .section-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    color: #2E5084;
-    margin: 0 0 0.6rem;
-  }
-
-  .section-body {
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list {
-    padding-left: 1.1rem;
-    margin: 0;
-    font-size: 0.88rem;
-    line-height: 1.48;
-  }
-
-  .section-list li {
-    margin-bottom: 0.35rem;
-  }
-
-  @media (max-width: 640px) {
-    .meta-list li {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .meta-value {
-      text-align: left;
-      margin-left: 0;
-      margin-top: 0.1rem;
-    }
-  }
+  /* CONTENT SECTIONS */
+  .prospect-section{background:#fff;border-radius:12px;padding:1.15rem 1.35rem;
+    border:1px solid #dce2ee;margin-bottom:1.4rem;}
+  .section-title{font-family:'Archivo Black';font-size:.95rem;color:#2E5084;text-transform:uppercase;margin-bottom:.65rem;}
+  .section-body{font-size:.9rem;line-height:1.52;}
+  .section-list li{font-size:.9rem;line-height:1.52;margin-bottom:.38rem;}
 </style>
+</head>
 
+<body>
 <div class="prospect-page">
 
-  <!-- ============================= -->
-  <!-- HERO -->
-  <!-- ============================= -->
-  <section class="prospect-hero">
-    <div class="prospect-hero-main">
-      <h1 class="prospect-name">MAGGIE HOWARD</h1>
-      <p class="prospect-tagline">⭐️⭐️⭐️ Prospect · Goal Keeper Archetype · Investment Banking Track</p>
-      <p class="prospect-subtitle">Georgetown University · Softball 🥎 · Class of 2028</p>
+<!-- ================= HERO ================= -->
+<section class="prospect-hero">
+  <div>
+    <h1 class="prospect-name">Maggie Howard</h1>
+    <p class="prospect-tagline">⭐️⭐️⭐️⭐️ Investment Banking Prospect</p>
+    <p class="prospect-subtitle">Georgetown University · Softball · Class of 2028</p>
+  </div>
+
+  <div class="prospect-grade-card">
+    <div class="grade-label">MAP Prospect Grade</div>
+    <div class="grade-score">90</div>
+    <div class="grade-tier">Round 2–3</div>
+
+    <div class="recommendation-pill">
+      <div class="pill-box pill-yellow"></div>
+      <div class="pill-box pill-yellow"></div>
+      <div class="pill-box pill-yellow"></div>
+      <span>Strong Recommendation</span>
     </div>
+  </div>
+</section>
 
-    <div class="prospect-grade-card">
-      <div class="grade-label">MAP Prospect Grade</div>
-      <div class="grade-score">8.7</div>
-      <div class="grade-tier">Round 3–4 Candidate</div>
-      <div class="grade-note">Structured, reliable operator · emerging résumé depth</div>
-    </div>
-  </section>
 
-  <!-- ============================= -->
-  <!-- META -->
-  <!-- ============================= -->
-  <section class="prospect-meta">
-    <div class="meta-column">
-      <h2 class="meta-title">Prospect Info</h2>
-      <ul class="meta-list">
-        <li><span class="meta-key">School</span><span class="meta-value">Georgetown University</span></li>
-        <li><span class="meta-key">Major</span><span class="meta-value">Global Business</span></li>
-        <li><span class="meta-key">Minor</span><span class="meta-value">N/A</span></li>
-        <li><span class="meta-key">Year</span><span class="meta-value">2028</span></li>
-        <li><span class="meta-key">Sport</span><span class="meta-value">Softball</span></li>
-        <li><span class="meta-key">Hometown</span><span class="meta-value">Greensburg, PA</span></li>
-      </ul>
-    </div>
-
-    <div class="meta-column">
-      <h2 class="meta-title">MAP Profile</h2>
-      <ul class="meta-list">
-        <li><span class="meta-key">Fall Rank</span><span class="meta-value">29 / 63</span></li>
-        <li><span class="meta-key">GPA</span><span class="meta-value">3.7</span></li>
-        <li><span class="meta-key">Personality</span><span class="meta-value">5. Goal Keeper</span></li>
-        <li><span class="meta-key">Performance</span>
-          <span class="meta-value">
-            Proactively returned for another MAP season · steady execution · strong fundraising track record
-          </span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============================= -->
-  <!-- OVERVIEW -->
-  <!-- ============================= -->
-  <section class="prospect-section">
-    <h2 class="section-title">Overview</h2>
-    <p class="section-body">
-      Maggie is a classic Goal Keeper archetype — structured, routine-driven, and motivated by clear objectives.
-      She builds plans, breaks big goals into smaller milestones, and follows through with quiet consistency. Her
-      3.7 GPA in Global Business and involvement in both a Division I program and Georgetown Impact Investing
-      Group reflect strong discipline and time management in a demanding environment.
-      <br><br>
-      Her decision to proactively pursue another MAP fellowship is an important data point: she isn’t just 
-      participating — she’s actively seeking more reps, more structure, and more feedback. That growth mindset, 
-      combined with strong fundraising experience through Mini-THON and genuine interest in consumer/impact 
-      work, positions her as a solid, culture-positive prospect whose current ranking undersells her long-term 
-      potential.
-      <br><br>
-      On paper, the toolkit is still emerging relative to the top of the class — but Maggie shows up prepared,
-      engaged, and organized. She’s the type of candidate who grows meaningfully with each cycle and becomes
-      increasingly valuable as her résumé and technical skills catch up to her mindset and habits.
-    </p>
-  </section>
-
-  <!-- ============================= -->
-  <!-- STRENGTHS -->
-  <!-- ============================= -->
-  <section class="prospect-section">
-    <h2 class="section-title">Strengths</h2>
-    <ul class="section-list">
-      <li><strong>Goal Keeper discipline:</strong> Clear objectives, written routines, and strong follow-through on commitments.</li>
-      <li><strong>Proactive growth mindset:</strong> Sought out another MAP fellowship to keep building skills and reps.</li>
-      <li><strong>Fundraising and community impact:</strong> Mini-THON work helped raise $61K+ with 31 sponsorships.</li>
-      <li><strong>Impact investing exposure:</strong> Analyst in Georgetown Impact Investing Group’s C&amp;R team.</li>
-      <li><strong>Time-management under load:</strong> Balances D1 softball, rigorous coursework, and extracurriculars.</li>
-      <li><strong>Reliable teammate:</strong> Social Engagement Committee role points to glue-player value and culture add.</li>
-      <li><strong>Sector alignment:</strong> Early comfort with C&amp;R themes and thesis work within MAP and GIIG.</li>
+<!-- ================= META ================= -->
+<section class="prospect-meta">
+  <div class="meta-column">
+    <h2 class="meta-title">Prospect Info</h2>
+    <ul class="meta-list">
+      <li><span>School</span><span class="meta-value">Georgetown University</span></li>
+      <li><span>Major</span><span class="meta-value">Global Business</span></li>
+      <li><span>Minor</span><span class="meta-value">N/A</span></li>
+      <li><span>Year</span><span class="meta-value">2028</span></li>
+      <li><span>GPA</span><span class="meta-value">3.7</span></li>
+      <li><span>Sport</span><span class="meta-value">Softball</span></li>
+      <li><span>Hometown</span><span class="meta-value">Glendale, PA</span></li>
     </ul>
-  </section>
+  </div>
 
-  <!-- ============================= -->
-  <!-- AREAS FOR DEVELOPMENT -->
-  <!-- ============================= -->
-  <section class="prospect-section">
-    <h2 class="section-title">Areas for Development</h2>
-    <ul class="section-list">
-      <li>Résumé is still light on formal finance or technical internships compared to top peers.</li>
-      <li>Needs more reps with valuation, modeling, and written IC-style synthesis.</li>
-      <li>Could benefit from taking on more visible leadership moments in team-based deliverables.</li>
-      <li>Next step is translating strong process and fundraising experience into deal-relevant, resume-ready bullets.</li>
+  <div class="meta-column">
+    <h2 class="meta-title">MAP Profile</h2>
+    <ul class="meta-list">
+      <li><span>Fellowship Rank</span><span class="meta-value">18 / 78</span></li>
+      <li><span>Interview #1</span><span class="meta-value">85%</span></li>
+      <li><span>Interview #2</span><span class="meta-value">85%</span></li>
+      <li><span>Interview #3</span><span class="meta-value">85%</span></li>
+      <li><span>Personality</span><span class="meta-value">Goal Keeper (Structured, Disciplined)</span></li>
+      <li><span>Leadership</span><span class="meta-value">Democratic Leader (Team Input, Shared Direction)</span></li>
+      <li><span>Teamwork</span><span class="meta-value">Logical (Organized, Structured)</span></li>
     </ul>
-  </section>
+  </div>
+</section>
 
-  <!-- ============================= -->
-  <!-- PROJECTION -->
-  <!-- ============================= -->
-  <section class="prospect-section">
-    <h2 class="section-title">Projection</h2>
-    <p class="section-body">
-      A 3-star, Round 3–4 fringe MAP prospect whose ranking doesn’t fully capture her reliability, discipline, 
-      and growth trajectory. Maggie is a safe cultural add with real upside in consumer or impact-oriented roles. 
-      As she layers on internships and technical skill-building, she projects as a steady, process-driven analyst 
-      who raises the floor of any team she joins.
-    </p>
-  </section>
+
+<!-- ================= WRITE-UPS ================= -->
+<section class="prospect-section">
+  <h2 class="section-title">Overview</h2>
+  <p class="section-body">
+    Maggie is a classic Goal Keeper archetype — structured, routine-driven, and motivated by clear objectives. She builds plans, breaks 
+    goals into milestones, and follows through with consistency. Her 3.7 GPA in Global Business and involvement across D1 athletics and 
+    Georgetown Impact Investing Group speak to mature time management and professional intent.
+    <br><br>
+    Her decision to proactively pursue another MAP fellowship is highly telling — she wants more reps, more structure, more development. 
+    The current toolkit is still emerging relative to the top of the class, but she shows up prepared, thoughtful, and organized — the 
+    type of candidate who compounds quickly with continued exposure and technical growth.
+  </p>
+</section>
+
+<section class="prospect-section">
+  <h2 class="section-title">Strengths</h2>
+  <ul class="section-list">
+    <li>Goal Keeper discipline — routine, structure, follow-through.</li>
+    <li>High-growth mindset — re-enrolled for another MAP fellowship.</li>
+    <li>Impact + fundraising experience — Mini-THON $61K+ campaign.</li>
+    <li>Analyst exposure — Georgetown Impact Investing Group.</li>
+    <li>Balance under load — D1 sport + coursework intensity.</li>
+    <li>Cultural add — Social Engagement Committee contributor.</li>
+    <li>Sector alignment — early thesis comfort in C&R/impact.</li>
+  </ul>
+</section>
+
+<section class="prospect-section">
+  <h2 class="section-title">Areas for Development</h2>
+  <ul class="section-list">
+    <li>Toolkit still early relative to top peers.</li>
+    <li>Needs more valuation + modeling reps.</li>
+    <li>More visible leadership engagement opportunity.</li>
+    <li>Resume bullets need deal-relevant framing.</li>
+  </ul>
+</section>
+
+<section class="prospect-section">
+  <h2 class="section-title">Projection</h2>
+  <p class="section-body">
+    A Round 2–3 MAP prospect whose ranking undersells her trajectory. Maggie is reliable, organized, and intent on growth — the type of 
+    steady contributor who improves meaningfully with each rep. As she adds internships and technical skill-building, she projects as a 
+    process-driven analyst with real upside — especially in consumer or impact-oriented roles.
+  </p>
+</section>
 
 </div>
+</body>
+</html>
+
