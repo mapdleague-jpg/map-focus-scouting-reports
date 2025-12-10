@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ryan Chang — MAP Pro Bowl Scouting Report</title>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+  body { margin:0; background:#f5f7fb; font-family:'Montserrat', sans-serif;}
+
+  .prospect-page { max-width:960px; margin:0 auto 3rem auto; padding:1.5rem 1rem; color:#1a1a1a;}
+
+  /* ---------------- HERO ---------------- */
+  .prospect-hero {
+    display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.25rem;
+    padding:1.75rem 1.25rem; border-radius:14px; background:#2E5084; color:#fff; margin-bottom:2rem;
+  }
+
+  .prospect-name { font-family:'Archivo Black'; font-size:2rem; letter-spacing:.02em; margin:0 0 .25rem; text-transform:uppercase;}
+  .prospect-tagline { margin:0 0 .15rem; font-size:1rem; font-weight:600;}
+  .prospect-subtitle {margin:0; font-size:.9rem; opacity:.9;}
+
+  /* Grade Card */
+  .prospect-grade-card {
+    min-width:200px; padding:1rem 1.25rem;
+    border-radius:12px; background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.35); backdrop-filter:blur(4px);
+  }
+
+  .grade-label{ font-size:.7rem; opacity:.8; text-transform:uppercase;}
+  .grade-score{ font-family:'Archivo Black'; font-size:2.2rem; margin:.15rem 0;}
+  .grade-tier{ font-size:.9rem; font-weight:600;}
+
+  /* Recommendation Pill */
+  .recommendation-pill{
+    display:inline-flex; align-items:center; gap:5px; background:#fff; color:#2E5084;
+    padding:4px 10px; border:1px solid #dce2ee; border-radius:30px; font-weight:600;
+    font-size:.78rem; margin-top:.55rem; width:fit-content;
+  }
+
+  .pill-box{width:12px;height:12px;border-radius:3px;}
+  .pill-green{background:#22c55e;}
+
+  /* ---------------- META ---------------- */
+  .prospect-meta{display:flex;flex-wrap:wrap;gap:1.25rem;margin-bottom:2rem;}
+  .meta-column{flex:1 1 280px;background:#fff;border-radius:12px;padding:1rem 1.25rem;border:1px solid #dce2ee;}
+  .meta-title{font-family:'Archivo Black';font-size:.9rem;color:#2E5084;text-transform:uppercase;margin:0 0 .7rem;}
+  .meta-list{list-style:none;padding:0;margin:0;}
+  .meta-list li{display:flex;justify-content:space-between;padding:.28rem 0;border-bottom:1px dotted #e7eaf3;font-size:.87rem;}
+  .meta-value{text-align:right;margin-left:1rem;}
+
+  /* ---------------- CONTENT ---------------- */
+  .prospect-section{background:#fff;border-radius:12px;padding:1.15rem 1.35rem;border:1px solid #dce2ee;margin-bottom:1.4rem;}
+  .section-title{font-family:'Archivo Black';font-size:.95rem;color:#2E5084;text-transform:uppercase;margin-bottom:.65rem;}
+  .section-body{font-size:.9rem;line-height:1.52;}
+  .section-list{font-size:.9rem;line-height:1.52;padding-left:1.2rem;} .section-list li{margin-bottom:.38rem;}
+
+  @media(max-width:650px){
+    .meta-list li{flex-direction:column;align-items:flex-start;}
+    .meta-value{margin-left:0;margin-top:2px;text-align:left;}
+  }
+</style>
+</head>
+
+<body>
+<div class="prospect-page">
+
+  <!-- =========================================================
+       🔥 Hero Section
+  ============================================================-->
+  <section class="prospect-hero">
+    <div>
+      <h1 class="prospect-name">Ryan Taylor Chang</h1>
+      <p class="prospect-tagline">⭐️⭐️⭐️⭐️⭐️ All-Star Investment Banking Prospect</p>
+      <p class="prospect-subtitle">University of Pennsylvania · Golf · Class of 2028</p>
+    </div>
+
+    <div class="prospect-grade-card">
+      <div class="grade-label">MAP Prospect Grade</div>
+      <div class="grade-score">95</div>
+      <div class="grade-tier">Round 1</div>
+
+      <div class="recommendation-pill">
+        <div class="pill-box pill-green"></div>
+        <div class="pill-box pill-green"></div>
+        <div class="pill-box pill-green"></div>
+        <span>Top Recommendation</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       🔥 Prospect + MAP Profile (Pro Bowl Version)
+  ============================================================-->
+  <section class="prospect-meta">
+
+    <!-- Prospect Info -->
+    <div class="meta-column">
+      <h2 class="meta-title">Prospect Info</h2>
+      <ul class="meta-list">
+        <li><span>School</span><span class="meta-value">University of Pennsylvania</span></li>
+        <li><span>Major</span><span class="meta-value">Philosophy, Politics & Economics</span></li>
+        <li><span>Minor</span><span class="meta-value">Consumer Psychology (Intended)</span></li>
+        <li><span>Year</span><span class="meta-value">2028</span></li>
+        <li><span>GPA</span><span class="meta-value">3.73</span></li>
+        <li><span>Sport</span><span class="meta-value">Golf</span></li>
+        <li><span>Hometown</span><span class="meta-value">Brookline, MA</span></li>
+      </ul>
+    </div>
+
+    <!-- Pro Bowl MAP Profile -->
+    <div class="meta-column">
+      <h2 class="meta-title">MAP Profile — Pro Bowl Games</h2>
+      <ul class="meta-list">
+        <li><span>Fellowship Rank</span><span class="meta-value">14 / 60</span></li>
+        <li><span>IB Exam #1</span><span class="meta-value">96%</span></li>
+        <li><span>IB Exam #2</span><span class="meta-value">100%</span></li>
+        <li><span>IB Exam #3</span><span class="meta-value">100%</span></li>
+        <li><span>IB Exam #4</span><span class="meta-value">100%</span></li>
+        <li><span>IB Exam #5</span><span class="meta-value">50%</span></li>
+      </ul>
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       🔥 Scouting Body Sections
+  ============================================================-->
+  <section class="prospect-section">
+    <h2 class="section-title">Overview</h2>
+    <p class="section-body">
+      Ryan enters the Pro Bowl Games as one of the most polished operators in the MAP ecosystem — a founder, writer, and analyst whose
+      responses are frequently held up as model answers. As a PPE major with an intended Consumer Psychology minor at Penn, he blends
+      rigorous economic and quantitative training with a deep feel for how people and markets actually behave. His track record spans
+      founding G’EATS (a venture-backed robotic kitchen startup), executing market-entry and operating models at ClearVue Partners,
+      and supporting capital-matching and diligence work at Leader Bank. As a returning MAP fellow and Pro Bowl competitor, Ryan brings
+      both technical reps and institutional exposure, with a demeanor that stays calm, thoughtful, and composed under pressure.
+    </p>
+  </section>
+
+  <section class="prospect-section">
+    <h2 class="section-title">Strengths</h2>
+    <ul class="section-list">
+      <li>Exceptionally polished communicator whose written and verbal work product consistently lands at “model answer” level.</li>
+      <li>Founder DNA through G’EATS — has raised capital, secured a launch customer, and managed a cross-functional team toward execution.</li>
+      <li>Private equity and banking-adjacent experience across ClearVue Partners and Leader Bank, including TAM work, operating models, and unit economics.</li>
+      <li>Strong analytical foundation in economics and statistics, reinforced by real-world application and MAP technical reps.</li>
+      <li>Varsity golfer with demonstrated discipline, consistent performance, and leadership in team environments and community engagement.</li>
+    </ul>
+  </section>
+
+  <section class="prospect-section">
+    <h2 class="section-title">Areas for Development</h2>
+    <ul class="section-list">
+      <li>Continued depth in core IB technicals (LBOs, three-statement builds, advanced sensitivities) will complement his already strong market and strategy intuition.</li>
+      <li>Translating startup and PE experience into classic IB execution cadence — tighter timelines, higher volume — is the natural next step.</li>
+      <li>With so many responsibilities, selectively prioritizing experiences that build direct deal execution reps will maximize his upside.</li>
+    </ul>
+  </section>
+
+  <section class="prospect-section">
+    <h2 class="section-title">Projection</h2>
+    <p class="section-body">
+      Ryan projects as a high-ceiling IB and long-term buy-side candidate who can add value across strategy, analysis, and communication.
+      His combination of entrepreneurial proof-of-work, institutional exposure, and polished writing makes him a uniquely versatile early
+      talent. As technical reps continue to stack through MAP and future roles, he is well-positioned to grow into an analyst who can
+      operate across banking, growth equity, or VC — the type of proven MAP alum teams benefit from having back in the room for years.
+    </p>
+  </section>
+
+</div>
+</body>
+</html>
